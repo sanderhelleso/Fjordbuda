@@ -50,7 +50,7 @@ function sliderProgress() {
         sliderBar.style.width = `${percentage}%`;
 
         if (percentage != 100) {
-            percentage++;
+            percentage = percentage + 0.25;
         }
 
         if (newActive != activeSlider) {
@@ -61,5 +61,5 @@ function sliderProgress() {
                 percentage = 0;
             }, 500);
         }
-    }, 60);
+    }, 15);
 }

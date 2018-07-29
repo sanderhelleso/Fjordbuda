@@ -60,6 +60,5 @@ video {
     position: absolute;
     bottom: 0;
     z-index: 1000;
-    transition: ease-out 0.05s;
     opacity: 0.7;
 }
