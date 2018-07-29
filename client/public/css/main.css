@@ -61,4 +61,5 @@ video {
     bottom: 0;
     z-index: 1000;
     opacity: 0.7;
+    transition: background-color 0.3s ease-in-out;
 }

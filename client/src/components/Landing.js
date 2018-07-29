@@ -21,7 +21,7 @@ export default class Landing extends Component {
             <div>
                 <Hero />
                 <div className="overlay">
-                    <Slider fullscreen indicators={false}>
+                    <Slider fullscreen indicators={false} >
                         <Slide
                             src="/img/landing/landing.jpg" >
                         </Slide>
@@ -51,14 +51,18 @@ function sliderProgress() {
 
         if (percentage != 100) {
             percentage = percentage + 0.25;
+            sliderBar.style.backgroundColor = "#ffffff";
+        }
+
+        else {
         }
 
         if (newActive != activeSlider) {
-            sliderBar.className = 'animated fadeOutRight';
+            sliderBar.className = 'animated zoomOut';
             activeSlider = newActive;
             setTimeout(() => {
-                sliderBar.className = 'animated fadeInLeft';
-                percentage = 0;
+                sliderBar.className = 'animated zoomIn';
+                percentage = 5;
             }, 500);
         }
     }, 15);
