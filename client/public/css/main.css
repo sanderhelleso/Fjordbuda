@@ -27,7 +27,7 @@ body {
     transition: ease-in 0.3s;
 }
 
-#topNav .navbar-brand:hover, #topNav #menuToggler:hover {
+#topNav .navbar-brand:hover {
     opacity: 0.5;
 }
 

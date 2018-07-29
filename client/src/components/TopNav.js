@@ -13,6 +13,8 @@ export default class TopNav extends Component {
 
     _onButtonClick() {
         // change icon and render menu
+        const toggler = document.querySelector("#menuToggler");
+        toggler.className = 'animated fadeIn'
         switch(this.state.showMenu) {
             case false:
                 this.setState({
@@ -26,6 +28,10 @@ export default class TopNav extends Component {
                 });
             break;
         }
+
+        setTimeout(() => {
+            toggler.className = '';
+        }, 500);
     }
 
     render() {
