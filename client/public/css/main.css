@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+
 body {
     overflow-x: hidden;
 }
@@ -5,12 +7,19 @@ body {
 #hero {
     position: absolute;
     top: 40%;
-    left: 7.5%;
+    left: 15%;
     color: white;
+    z-index: 1000;
+}
+
+#hero h1 {
+    font-size: 70px;
+    letter-spacing: 5px;
+    font-family: 'Vidaloka', serif;
 }
 
 #heroText {
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .landingCont {
@@ -35,8 +44,8 @@ video {
     height: 100%;
     width: 100%;
     background: linear-gradient(
-    rgba(20, 20, 20, 0.5), 
-    rgba(0, 0, 0, 0.2));
+    rgba(255, 255, 255, 0.9), 
+    rgba(0, 0, 0, 0.5));
     z-index: 2;
 }
 

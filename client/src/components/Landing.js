@@ -19,6 +19,7 @@ export default class Landing extends Component {
     render() {
         return (
             <div>
+                <Hero />
                 <div className="overlay">
                     <Slider fullscreen indicators={false}>
                         <Slide
@@ -53,8 +54,12 @@ function sliderProgress() {
         }
 
         if (newActive != activeSlider) {
+            sliderBar.className = 'animated fadeOutRight';
             activeSlider = newActive;
-            percentage = -1;
+            setTimeout(() => {
+                sliderBar.className = 'animated fadeInLeft';
+                percentage = 0;
+            }, 500);
         }
     }, 60);
 }
