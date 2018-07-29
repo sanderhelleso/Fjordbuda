@@ -4,7 +4,6 @@ body {
     overflow-x: hidden;
 }
 
-
 #topNav {
     z-index: 1000;
     box-shadow: none;
@@ -16,6 +15,24 @@ body {
     font-family: 'Vidaloka', serif;
     margin-left: 15px;
     color: #212121;
+    transition: ease-in 0.3s;
+}
+
+#topNav .navbar-brand:hover, #topNav #menuToggler:hover {
+    opacity: 0.5;
+}
+
+#topNav #menuToggler {
+    color: #212121;
+    list-style: none;
+    margin-right: 15px;
+    transition: ease-in 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#topNav #menuToggler i {
+    font-size: 27.5px;
 }
 
 #hero {
