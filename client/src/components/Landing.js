@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Mask, View } from 'mdbreact';
 import { Slider, Slide } from 'react-materialize';
 import Hero from './Hero';
+import MainMenu from './MainMenu';
 
 export default class Landing extends Component {
 

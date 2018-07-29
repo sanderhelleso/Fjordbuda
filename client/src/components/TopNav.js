@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, NavbarBrand, NavItem, Fa } from 'mdbreact';
 import { Menu, X } from 'react-feather';
+import MainMenu from './MainMenu';
 
 export default class TopNav extends Component {
     constructor(props) {
@@ -36,20 +37,39 @@ export default class TopNav extends Component {
 
     render() {
         return (
-            <Navbar id='topNav' color="transparent" dark>
-                <NavbarBrand href="/" className='noSelect' >
-                    Vinjenaustet
-                </NavbarBrand>
-                <NavItem id='menuToggler' onClick={this._onButtonClick} >
-                    {this.state.showMenu 
-                        ?
-                        <X size={35} />
-
-                        :
-                        <Menu size={35} />
-                    }
-                </NavItem>
-            </Navbar>
+            <div>
+                <Navbar id='topNav' color="transparent" dark>
+                    <NavbarBrand href="/" className='noSelect' >
+                        Vinjenaustet
+                    </NavbarBrand>
+                    <NavItem id='menuToggler' onClick={this._onButtonClick} >
+                        {toggleMenu(this.state.showMenu)}
+                    </NavItem>
+                </Navbar>
+                {this.state.showMenu
+                    ?
+                    <MainMenu />
+                    :
+                    null
+                }
+            </div>
         )
     }
 }
+
+function toggleMenu(bool) {
+
+    setTimeout(() => {
+        const logo = document.querySelector(".navbar-brand");
+        if (bool) {
+            logo.style.color = '#ffffff';
+        }
+    
+        else {
+            logo.style.color = '#212121';
+        } 
+    }, 100);
+
+    return bool ? <X size={35} color='#ffffff' /> : <Menu size={35} color='#212121' />
+}
+
