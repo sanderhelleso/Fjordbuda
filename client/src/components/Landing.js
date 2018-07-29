@@ -20,7 +20,7 @@ export default class Landing extends Component {
         return (
             <div>
                 <Hero />
-                <div className="overlay">
+                <div className="overlay noSelect">
                     <Slider fullscreen indicators={false} >
                         <Slide
                             src="/img/landing/landing.jpg" >
@@ -45,7 +45,6 @@ function sliderProgress() {
     let percentage = 0;
     let activeSlider = document.querySelector(".active");
     setInterval(() => {
-        console.log(activeSlider);
         let newActive = document.querySelector(".active");
         sliderBar.style.width = `${percentage}%`;
 

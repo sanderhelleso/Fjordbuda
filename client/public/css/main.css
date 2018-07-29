@@ -4,6 +4,15 @@ body {
     overflow-x: hidden;
 }
 
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 #topNav {
     z-index: 1000;
     box-shadow: none;
@@ -29,10 +38,6 @@ body {
     transition: ease-in 0.3s;
     cursor: pointer;
     margin-top: 20px;
-}
-
-#topNav #menuToggler i {
-    font-size: 27.5px;
 }
 
 #hero {
