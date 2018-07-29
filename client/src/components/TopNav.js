@@ -46,12 +46,7 @@ export default class TopNav extends Component {
                         {toggleMenu(this.state.showMenu)}
                     </NavItem>
                 </Navbar>
-                {this.state.showMenu
-                    ?
-                    <MainMenu />
-                    :
-                    null
-                }
+                <MainMenu />
             </div>
         )
     }
@@ -60,13 +55,26 @@ export default class TopNav extends Component {
 function toggleMenu(bool) {
 
     setTimeout(() => {
+        // remove mouse interaction for duration of animation
+        document.querySelector('#menuToggler').style.pointerEvents = 'none';
+        setTimeout(() => {
+            document.querySelector('#menuToggler').style.pointerEvents = 'auto';
+        }, 750);
+
         const logo = document.querySelector(".navbar-brand");
+        const menu = document.querySelector(".menuOverlay");
         if (bool) {
             logo.style.color = '#ffffff';
+            menu.className = 'menuOverlay animated fadeIn';
+            menu.style.display = 'block';
         }
     
         else {
             logo.style.color = '#212121';
+            menu.className = 'menuOverlay animated fadeOut';
+            setTimeout(() => {
+                menu.style.display = 'none';
+            }, 750);
         } 
     }, 100);
 
