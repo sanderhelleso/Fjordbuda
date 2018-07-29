@@ -4,6 +4,20 @@ body {
     overflow-x: hidden;
 }
 
+
+#topNav {
+    z-index: 1000;
+    box-shadow: none;
+}
+
+#topNav .navbar-brand {
+    font-size: 30px;
+    letter-spacing: 2.5px;
+    font-family: 'Vidaloka', serif;
+    margin-left: 15px;
+    color: #212121;
+}
+
 #hero {
     position: absolute;
     top: 40%;
@@ -44,7 +58,7 @@ video {
     height: 100%;
     width: 100%;
     background: linear-gradient(
-    rgba(255, 255, 255, 0.9), 
+    rgba(255, 255, 255, 1), 
     rgba(0, 0, 0, 0.5));
     z-index: 2;
 }

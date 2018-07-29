@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 
+import TopNav from './TopNav';
 import Landing from './Landing';
 
 export default class App extends Component {
@@ -12,6 +13,7 @@ export default class App extends Component {
             <div>
                 <BrowserRouter>
                     <div>
+                        <Route path ='/' component={TopNav} />
                         <Route exact path='/' component={Landing} />
                     </div>
                 </BrowserRouter>
