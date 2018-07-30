@@ -4,7 +4,12 @@ export default class MainMenu extends Component {
     render() {
         return (
             <div className='menuOverlay'>
-            
+                <div className="menuOverlay-content">
+                    <a href="#">Butikker</a>
+                    <a href="#">Varer & Leverandører</a>
+                    <a href="#">Vår Historie</a>
+                    <a href="#">Kontakt Oss</a>
+                </div>
             </div>
         )
     }

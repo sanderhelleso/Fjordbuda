@@ -64,14 +64,16 @@ function toggleMenu(bool) {
         const logo = document.querySelector(".navbar-brand");
         const menu = document.querySelector(".menuOverlay");
         if (bool) {
-            logo.style.color = '#ffffff';
-            menu.className = 'menuOverlay animated fadeIn';
+            setTimeout(() => {
+                logo.style.color = '#ffffff';
+            }, 350);
+            menu.className = 'menuOverlay animated fadeInRight';
             menu.style.display = 'block';
         }
     
         else {
             logo.style.color = '#212121';
-            menu.className = 'menuOverlay animated fadeOut';
+            menu.className = 'menuOverlay animated fadeOutRight';
             setTimeout(() => {
                 menu.style.display = 'none';
             }, 750);
