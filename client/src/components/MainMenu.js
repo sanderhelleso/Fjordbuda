@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
 export default class MainMenu extends Component {
+
+    componentDidMount() {
+        const menuLinks = document.querySelector('.menuOverlay-content').querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('mouseover', changeMenuBg);
+        });
+    }
+
+
     render() {
         return (
             <div className='menuOverlay'>
@@ -14,4 +23,9 @@ export default class MainMenu extends Component {
             </div>
         )
     }
+}
+
+function changeMenuBg() {
+    const linksArr = Array.from(document.querySelector('.menuOverlay-content').querySelectorAll('a'));
+    console.log(linksArr.indexOf(this));
 }
