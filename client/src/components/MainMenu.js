@@ -6,6 +6,7 @@ export default class MainMenu extends Component {
             <div className='menuOverlay'>
                 <div className="menuOverlay-content">
                     <a href="#">Butikker</a>
+                    <a href="#">Nærmest Meg</a>
                     <a href="#">Varer & Leverandører</a>
                     <a href="#">Vår Historie</a>
                     <a href="#">Kontakt Oss</a>
