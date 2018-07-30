@@ -4,7 +4,7 @@ export default class MainMenu extends Component {
     render() {
         return (
             <div className='menuOverlay'>
-                <div className="menuOverlay-content">
+                <div className="menuOverlay-content animated fadeInLeft">
                     <a href="#">Butikker</a>
                     <a href="#">Nærmest Meg</a>
                     <a href="#">Varer & Leverandører</a>

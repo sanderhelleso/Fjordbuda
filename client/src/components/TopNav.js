@@ -67,13 +67,13 @@ function toggleMenu(bool) {
             setTimeout(() => {
                 logo.style.color = '#ffffff';
             }, 350);
-            menu.className = 'menuOverlay animated fadeIn';
+            menu.className = 'menuOverlay animated fadeInRight';
             menu.style.display = 'block';
         }
     
         else {
             logo.style.color = '#212121';
-            menu.className = 'menuOverlay animated fadeOut';
+            menu.className = 'menuOverlay animated fadeOutRight';
             setTimeout(() => {
                 menu.style.display = 'none';
             }, 750);
