@@ -133,6 +133,7 @@ video {
 	background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
+    transform: scale(1.2);
 }
 
 .menuOverlay-content {

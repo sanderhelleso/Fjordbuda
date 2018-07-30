@@ -40,6 +40,30 @@ function changeMenuBg() {
             document.querySelector('#menuBg').style.background = `linear-gradient(rgba(121, 85, 72, 0.7), rgba(20, 20, 20, 0.7)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
             document.querySelector('#menuBg').style.backgroundSize = 'cover';
             lastLink = this;
+
+            animateBg(document.querySelector('#menuBg'));
         }, 400);
     }
+}
+
+let initValue = '1.2';
+let startZoom = true;
+function animateBg(element) {
+    setInterval(() => {
+        if (initValue <= '1') {
+            element.style.transition = 'ease-in 12s';
+            initValue = '1.2';
+            startZoom = false;
+            setTimeout(() => {
+                element.style.transition = 'none';
+                startZoom = true;
+            }, 14000);
+        }
+
+        else if (startZoom) {
+            initValue = initValue - 0.00005;
+        }
+
+        element.style.transform = `scale(${initValue})`
+    }, 50);
 }
