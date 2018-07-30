@@ -27,5 +27,9 @@ export default class MainMenu extends Component {
 
 function changeMenuBg() {
     const linksArr = Array.from(document.querySelector('.menuOverlay-content').querySelectorAll('a'));
-    console.log(linksArr.indexOf(this));
+    const index = linksArr.indexOf(this);
+
+    // set bg related to selected link
+    document.querySelector('.menuOverlay').style.background = `linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
+    document.querySelector('.menuOverlay').style.backgroundSize = 'cover';
 }
