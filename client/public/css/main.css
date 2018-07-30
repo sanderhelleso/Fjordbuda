@@ -50,7 +50,7 @@ body {
 }
 
 #hero h1 {
-    font-size: 70px;
+    font-size: 5vw;
     letter-spacing: 5px;
     font-family: 'Vidaloka', serif;
 }
@@ -113,7 +113,7 @@ video {
     background-color: #212121;
 	background-size: cover;
 	background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-position: center;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -130,9 +130,9 @@ video {
     rgba(121, 85, 72, 0.9), 
     rgba(0, 0, 0, 0.7)),
     url("../img/menu/mainmenu.jpg");
-	background-size: cover;
+    background-size: cover;
+    background-position: center;
 	background-repeat: no-repeat;
-    background-attachment: fixed;
     transform: scale(1.2);
 }
 
@@ -149,13 +149,17 @@ video {
 .menuOverlay a {
     padding: 12px;
     text-decoration: none;
-    font-size: 46px;
+    font-size: 3vw;
     color: #ffffff;
     letter-spacing: 2px;
     display: block; /* Display block instead of inline */
     transition: ease-in-out 0.4s; /* Transition effects on hover (color) */
     font-family: 'Modern Antiqua', cursive;
     margin: 0 auto;
+}
+
+.menuOverlay a span {
+    display: none;
 }
 
 /* When you mouse over the navigation links, change their color */

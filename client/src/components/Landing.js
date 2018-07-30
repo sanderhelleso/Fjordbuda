@@ -58,10 +58,10 @@ function sliderProgress() {
         }
 
         if (newActive != activeSlider) {
-            sliderBar.className = 'animated zoomOut';
+            sliderBar.className = 'animated fadeOutRight';
             activeSlider = newActive;
             setTimeout(() => {
-                sliderBar.className = 'animated zoomIn';
+                sliderBar.className = 'animated fadeInLeft';
                 percentage = 5;
             }, 500);
         }
