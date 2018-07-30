@@ -13,6 +13,7 @@ export default class MainMenu extends Component {
     render() {
         return (
             <div className='menuOverlay'>
+                <div id='menuBg' />
                 <div className="menuOverlay-content animated fadeInLeft">
                     <a href="#">Butikker</a>
                     <a href="#">Nærmest Meg</a>
@@ -25,11 +26,19 @@ export default class MainMenu extends Component {
     }
 }
 
+let lastLink;
 function changeMenuBg() {
     const linksArr = Array.from(document.querySelector('.menuOverlay-content').querySelectorAll('a'));
     const index = linksArr.indexOf(this);
 
-    // set bg related to selected link
-    document.querySelector('.menuOverlay').style.background = `linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
-    document.querySelector('.menuOverlay').style.backgroundSize = 'cover';
+    if (lastLink != this) {
+        // set bg related to selected link
+        document.querySelector('#menuBg').className = 'animated fadeOut';
+        setTimeout(() => {
+            document.querySelector('#menuBg').className = 'animated fadeIn';
+            document.querySelector('#menuBg').style.background = `linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
+            document.querySelector('#menuBg').style.backgroundSize = 'cover';
+            lastLink = this;
+        }, 400);
+    }
 }

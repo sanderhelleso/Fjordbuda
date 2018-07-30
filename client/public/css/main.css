@@ -111,19 +111,32 @@ video {
     top: 0;
     display: none;
     background-color: #222222;
-    background: linear-gradient(
-    rgba(20, 20, 20, 0.9), 
-    rgba(20, 20, 20, 0.9)),
-    url("../img/landing/landing.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
-
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
+#menuBg {
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 9000; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #222222;
+    background: linear-gradient(
+    rgba(0, 0, 0, 1), 
+    rgba(0, 0, 0, 0.7)),
+    url("../img/landing/landing.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .menuOverlay-content {
+    z-index: 1000000;
     position: relative;
     top: 20%; /* 25% from the top */
     width: 100%; /* 100% width */
@@ -133,7 +146,7 @@ video {
 
 /* The navigation links inside the overlay */
 .menuOverlay a {
-    padding: 8px;
+    padding: 12px;
     text-decoration: none;
     font-size: 46px;
     color: #ffffff;
@@ -144,9 +157,8 @@ video {
 }
 
 /* When you mouse over the navigation links, change their color */
-.menuOverlay a:hover, .menuOverlay a:focus {
+.menuOverlay a:hover {
     color: #f1f1f1;
-    opacity: 0.5;
 }
 
 @media screen and (max-height: 450px) {
