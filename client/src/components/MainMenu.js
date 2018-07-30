@@ -26,26 +26,28 @@ export default class MainMenu extends Component {
     }
 }
 
+// change bg on hover
 let lastLink;
-let rgbas = ['rgba(76, 175, 80, 0.7)', 'rgba(63, 81, 181, 0.7)', 'rgba(121, 85, 72, 0.7)', 'rgba(76, 175, 80, 0.7)', 'rgba(255, 152, 0, 0.7)'];
 function changeMenuBg() {
     const linksArr = Array.from(document.querySelector('.menuOverlay-content').querySelectorAll('a'));
     const index = linksArr.indexOf(this);
+    const bg = document.querySelector('#menuBg');
 
     if (lastLink != this) {
         // set bg related to selected link
-        document.querySelector('#menuBg').className = 'animated fadeOut';
+        bg.className = 'animated fadeOut';
         setTimeout(() => {
-            document.querySelector('#menuBg').className = 'animated fadeIn';
-            document.querySelector('#menuBg').style.background = `linear-gradient(rgba(121, 85, 72, 0.7), rgba(20, 20, 20, 0.7)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
-            document.querySelector('#menuBg').style.backgroundSize = 'cover';
+            bg.className = 'animated fadeIn';
+            bg.style.background = `linear-gradient(rgba(121, 85, 72, 0.7), rgba(20, 20, 20, 0.7)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
+            bg.style.backgroundSize = 'cover';
             lastLink = this;
 
-            animateBg(document.querySelector('#menuBg'));
+            animateBg(bg);
         }, 400);
     }
 }
 
+// slowly animate bg
 let initValue = '1.2';
 let startZoom = true;
 function animateBg(element) {
