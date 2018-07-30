@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Vidaloka');
+@import url('https://fonts.googleapis.com/css?family=Vidaloka|Modern+Antiqua');
 
 body {
     overflow-x: hidden;
@@ -110,7 +110,7 @@ video {
     left: 0;
     top: 0;
     display: none;
-    background-color: #222222;
+    background-color: #212121;
 	background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -125,11 +125,11 @@ video {
     z-index: 9000; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: #222222;
+    background-color: #212121;
     background: linear-gradient(
-    rgba(0, 0, 0, 1), 
+    rgba(121, 85, 72, 0.9), 
     rgba(0, 0, 0, 0.7)),
-    url("../img/landing/landing.jpg");
+    url("../img/menu/mainmenu.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
     background-attachment: fixed;
@@ -152,14 +152,16 @@ video {
     color: #ffffff;
     letter-spacing: 2px;
     display: block; /* Display block instead of inline */
-    transition: ease-in 0.3s; /* Transition effects on hover (color) */
-    font-family: 'Vidaloka', serif;
+    transition: ease-in-out 0.4s; /* Transition effects on hover (color) */
+    font-family: 'Modern Antiqua', cursive;
+    margin: 0 auto;
 }
 
 /* When you mouse over the navigation links, change their color */
 .menuOverlay a:hover {
     color: #f1f1f1;
 }
+
 
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}

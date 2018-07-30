@@ -27,6 +27,7 @@ export default class MainMenu extends Component {
 }
 
 let lastLink;
+let rgbas = ['rgba(76, 175, 80, 0.7)', 'rgba(63, 81, 181, 0.7)', 'rgba(121, 85, 72, 0.7)', 'rgba(76, 175, 80, 0.7)', 'rgba(255, 152, 0, 0.7)'];
 function changeMenuBg() {
     const linksArr = Array.from(document.querySelector('.menuOverlay-content').querySelectorAll('a'));
     const index = linksArr.indexOf(this);
@@ -36,7 +37,7 @@ function changeMenuBg() {
         document.querySelector('#menuBg').className = 'animated fadeOut';
         setTimeout(() => {
             document.querySelector('#menuBg').className = 'animated fadeIn';
-            document.querySelector('#menuBg').style.background = `linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
+            document.querySelector('#menuBg').style.background = `linear-gradient(rgba(121, 85, 72, 0.7), rgba(20, 20, 20, 0.7)),url(../img/menu/menubg${index}.jpg) no-repeat fixed`;
             document.querySelector('#menuBg').style.backgroundSize = 'cover';
             lastLink = this;
         }, 400);
