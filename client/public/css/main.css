@@ -101,6 +101,31 @@ video {
     transition: background-color 0.3s ease-in-out;
 }
 
+#loadingScreen {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 10000000; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #212121;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+#loadingScreen div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#loadingScreen h1 {
+    color: white;
+}
+
 .menuOverlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */    
     height: 100%;

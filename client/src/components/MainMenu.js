@@ -16,11 +16,11 @@ export default class MainMenu extends Component {
             <div className='menuOverlay'>
                 <div id='menuBg' />
                 <div className="menuOverlay-content animated fadeIn">
-                    <a href="#"><span className='animated fadeInLeft leftSpan'><Minus /></span> Butikker <span className='animated fadeInRigh rightSpan'><Minus /></span></a>
-                    <a href="#"><span className='animated fadeInLeft leftSpan'><Minus /></span> Nærmest Meg <span className='animated fadeInRight rightSpan'><Minus /></span></a>
-                    <a href="#"><span className='animated fadeInLeft leftSpan'><Minus /></span> Varer & Leverandører <span className='animated fadeInRight rightSpan'><Minus /></span></a>
-                    <a href="#"><span className='animated fadeInLeft leftSpan'><Minus /></span> Vår Historie <span className='animated fadeInRight rightSpan'><Minus /></span></a>
-                    <a href="#"><span className='animated fadeInLeft leftSpan'><Minus /></span> Kontakt Oss <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                    <a href="/butikker"><span className='animated fadeInLeft leftSpan'><Minus /></span> Butikker <span className='animated fadeInRigh rightSpan'><Minus /></span></a>
+                    <a href="/butikker/nermest-meg"><span className='animated fadeInLeft leftSpan'><Minus /></span> Nærmest Meg <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                    <a href="/varer"><span className='animated fadeInLeft leftSpan'><Minus /></span> Varer & Leverandører <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                    <a href="/historie"><span className='animated fadeInLeft leftSpan'><Minus /></span> Vår Historie <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                    <a href="/kontakt"><span className='animated fadeInLeft leftSpan'><Minus /></span> Kontakt Oss <span className='animated fadeInRight rightSpan'><Minus /></span></a>
                 </div>
             </div>
         )
