@@ -23,8 +23,9 @@ export default class MainMenu extends Component {
                     <a href="/kontakt"><span className='animated fadeInLeft leftSpan'><Minus /></span> Kontakt Oss <span className='animated fadeInRight rightSpan'><Minus /></span></a>
                 </div>
                 <div id='socialMedia'>
-                    <Facebook size={35} color='#ffffff' />
-                    <Instagram size={35} color='#ffffff' />
+                    <a href='' target='_blank'><Facebook size={35} color='#ffffff' /></a>
+                    <a href='' target='_blank'><Instagram size={35} color='#ffffff' /></a>
+                    <h5>#fjordfeeling</h5>
                 </div>
                 <div id='developedBy'>
                     <a href='http://semanta.no' target='_blank'>Utviklet av Semanta</a>

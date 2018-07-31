@@ -215,7 +215,7 @@ video {
 .menuOverlay a {
     padding: 12px;
     text-decoration: none;
-    font-size: 3vw;
+    font-size: 5vw;
     color: #ffffff;
     letter-spacing: 2px;
     display: block; /* Display block instead of inline */
@@ -240,8 +240,23 @@ video {
     z-index: 1000000;
 }
 
+#socialMedia a {
+    display: inline-block;
+    padding: 0;
+    transition: ease-in-out 0.3s;
+}
+
+#socialMedia a:hover {
+    opacity: 0.5;
+}
+
 #socialMedia svg {
     margin-right: 10px;
+}
+
+#socialMedia h5 {
+    color: white;
+    font-size: 15.5px;
 }
 
 #developedBy {
@@ -253,6 +268,28 @@ video {
 
 #developedBy a {
     font-size: 16px;
+    transition: ease-in-out 0.3s;
+}
+
+#developedBy a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 900px) {
+
+    .menuOverlay a {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menuOverlay a {
+        font-size: 30px;
+    }
+
+    .menuOverlay-content {
+        top: 27.5%;
+    }
 }
 
 @media screen and (max-height: 450px) {
@@ -261,6 +298,16 @@ video {
         font-size: 40px;
         top: 15px;
         right: 35px;
+    }
+
+    .menuOverlay a {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .menuOverlay-content {
+        top: 12%;
     }
 }
 
@@ -277,5 +324,17 @@ video {
 
     #hero #heroText {
         max-width: 100%;
+    }
+
+    .menuOverlay a {
+        font-size: 22.5px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #developedBy a {
+        font-size: 12px;
+        padding-bottom: 6px;
+        padding-right: 0;
     }
 }
