@@ -25,6 +25,6 @@ function fadeOutLoadingScreen() {
         loadingScreen.className = 'animated fadeOut';
         setTimeout(() => {
             loadingScreen.remove();
-        }, 500);
+        }, 1000);
     }, 2000);
 }
