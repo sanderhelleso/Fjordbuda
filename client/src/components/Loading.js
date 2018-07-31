@@ -8,7 +8,7 @@ export default class Loading extends Component {
 
     render() {
         return (
-            <div id='loadingScreen' className='animated fadeIn'>
+            <div id='loadingScreen'>
                 <div id='loadingHero'>
                     <h1 data-hover="Vinjenaustet">Vinjenaustet</h1>
                 </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Minus } from 'react-feather';
+import { Minus, Facebook, Instagram } from 'react-feather';
 
 export default class MainMenu extends Component {
 
@@ -17,10 +17,17 @@ export default class MainMenu extends Component {
                 <div id='menuBg' />
                 <div className="menuOverlay-content animated fadeIn">
                     <a href="/butikker"><span className='animated fadeInLeft leftSpan'><Minus /></span> Butikker <span className='animated fadeInRigh rightSpan'><Minus /></span></a>
-                    <a href="/butikker/nermest-meg"><span className='animated fadeInLeft leftSpan'><Minus /></span> Nærmest Meg <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                    <a href="/nærmest-meg"><span className='animated fadeInLeft leftSpan'><Minus /></span> Nærmest Meg <span className='animated fadeInRight rightSpan'><Minus /></span></a>
                     <a href="/varer"><span className='animated fadeInLeft leftSpan'><Minus /></span> Varer & Leverandører <span className='animated fadeInRight rightSpan'><Minus /></span></a>
                     <a href="/historie"><span className='animated fadeInLeft leftSpan'><Minus /></span> Vår Historie <span className='animated fadeInRight rightSpan'><Minus /></span></a>
                     <a href="/kontakt"><span className='animated fadeInLeft leftSpan'><Minus /></span> Kontakt Oss <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                </div>
+                <div id='socialMedia'>
+                    <Facebook size={35} color='#ffffff' />
+                    <Instagram size={35} color='#ffffff' />
+                </div>
+                <div id='developedBy'>
+                    <a href='http://semanta.no' target='_blank'>Utviklet av Semanta</a>
                 </div>
             </div>
         )

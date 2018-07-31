@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Vidaloka|Modern+Antiqua');
+@import url('https://fonts.googleapis.com/css?family=Vidaloka|Modern+Antiqua|Poiret+One');
 
 body {
     overflow-x: hidden;
@@ -109,7 +109,7 @@ video {
     z-index: 10000000; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: #f0e3c4;
+    background-color: #48466d;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -123,7 +123,7 @@ video {
 }
 
 #loadingScreen #loadingHero h1 {
-    font-size: 3.5vw;
+    font-size: 3.25vw;
     letter-spacing: 5px;
     font-family: 'Vidaloka', serif;
     color: white;
@@ -233,6 +233,27 @@ video {
     color: #f1f1f1;
 }
 
+#socialMedia {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    z-index: 1000000;
+}
+
+#socialMedia svg {
+    margin-right: 10px;
+}
+
+#developedBy {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1000000;
+}
+
+#developedBy a {
+    font-size: 16px;
+}
 
 @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
