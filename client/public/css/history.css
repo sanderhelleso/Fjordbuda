@@ -47,10 +47,15 @@ header #readMoreBtn {
 
   #historySection h2 {
     padding: 30vh 0;
-    padding-bottom: 50px;
-    font-size: 40px;
-    text-align: center;
+    padding-bottom: 30px;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: left;
     color: #212121;
+  }
+
+  #historySection .part {
+      padding-bottom: 30px;
   }
   
   header #headerSvg {
