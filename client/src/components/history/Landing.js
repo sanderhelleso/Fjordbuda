@@ -1,21 +1,39 @@
 import React, { Component } from 'react'
 
 export default class Landing extends Component {
+    componentDidMount() {
+        window.addEventListener('scroll', scrollSpy);
+    }
+
     render() {
         return (
             <div>
-                <header>
+                <header id='historyHeader'>
                 <h1>Header Content</h1>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
-                    <polygon class="svg--lg" fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
-                </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <polygon className="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
+                        <polygon className="svg--lg" fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+                    </svg>
                 </header>
 
                 <section>
-                <h1>Section Content</h1>
+                    <h1>Section Content</h1>
                 </section>
             </div>
         )
+    }
+}
+
+function scrollSpy() {
+    const header = document.querySelector("#historyHeader");
+    const navbar = document.querySelector("#topNav");
+    if ((window.scrollY + 50) > (header.offsetTop + header.offsetHeight)) {
+        navbar.classList.remove("topNavOnBg");
+        navbar.classList.add("topNavOffBg");
+    }
+
+    else {
+        navbar.classList.remove("topNavOffBg");
+        navbar.classList.add("topNavOnBg");
     }
 }

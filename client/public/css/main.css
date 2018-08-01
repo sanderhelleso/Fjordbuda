@@ -17,6 +17,33 @@ body {
     z-index: 1337000;
     box-shadow: none;
     color: #212121;
+    position: fixed;
+}
+
+.topNavOnBg {
+    color: white !important;
+}
+
+.topNavOnBg .navbar-brand {
+    color: white !important;
+}
+
+.topNavOnBg svg {
+    stroke: white !important;
+}
+
+.topNavOffBg {
+    color: #212121 !important;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0) !important;
+    background-color: #fafafa !important;
+}
+
+.topNavOffBg .navbar-brand {
+    color: #212121 !important;
+}
+
+.topNavOffBg svg {
+    stroke: #212121 !important;
 }
 
 #topNav .navbar-brand {

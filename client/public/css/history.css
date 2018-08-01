@@ -1,20 +1,30 @@
 header {
     position: relative;
-    height: 300px;
-    background-image: linear-gradient(#ff9d2f, #ff6126);
+    height: 500px;
+    background: linear-gradient(
+    rgba(121, 85, 72, 0.9), 
+    rgba(0, 0, 0, 0.7)),
+    url("../img/history/landing.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   
   h1 {
-    padding: 100px 0;
-    font: 44px "Arial";
+    padding: 225px 0;
+    font: 52px "Arial";
     text-align: center;
   }
   
   header h1 {
     color: white;
   }
+
+  section {
+      min-height: 150vh;
+  }
   
-  svg {
+  header svg {
     position: absolute;
     bottom: 0;
     width: 100%;
