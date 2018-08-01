@@ -25,17 +25,21 @@ header {
       opacity: 0.5;
       padding-top: 10px;
   }
-  
-  header #readHistory {
-      margin: 0 auto;
-      position: absolute;
-      margin-top: 30px;
-      left: 50%;
-      transform: translate(-50%);
-      color: white !important;
-      border: 2px solid white !important;
-      padding: 20px;
+
+  header #readMoreBtn {
+    cursor: pointer;
   }
+
+
+header #readMoreBtn {
+    position: absolute;
+    bottom: 10%;
+    width: 50%;
+    height: 50px;
+    left: 50%;
+    opacity: 0.9;
+    cursor: pointer;
+}
 
   #historySection {
       min-height: 150vh;
@@ -48,7 +52,7 @@ header {
     color: #212121;
   }
   
-  header svg {
+  header #headerSvg {
     position: absolute;
     bottom: 0;
     width: 100%;
