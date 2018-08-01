@@ -20,6 +20,10 @@ body {
     position: fixed;
 }
 
+#topNav svg {
+    transition: ease-in-out 0.3s;
+}
+
 .topNavOnBg {
     color: white !important;
 }
@@ -33,6 +37,7 @@ body {
 }
 
 .topNavOffBg {
+    transition: ease-in-out 0.3s;
     color: #212121 !important;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0) !important;
     background-color: #fafafa !important;

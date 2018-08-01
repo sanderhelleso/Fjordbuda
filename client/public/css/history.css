@@ -1,6 +1,6 @@
 header {
     position: relative;
-    height: 500px;
+    height: 80vh;
     background: linear-gradient(
     rgba(121, 85, 72, 0.9), 
     rgba(0, 0, 0, 0.7)),
@@ -10,18 +10,42 @@ header {
     background-repeat: no-repeat;
   }
   
-  h1 {
-    padding: 225px 0;
-    font: 52px "Arial";
-    text-align: center;
-  }
-  
   header h1 {
+    padding-top: 30vh;
+    font-size: 54px;
+    text-align: center;
+    font-family: 'Vidaloka', serif;
     color: white;
+    letter-spacing: 5px;
   }
 
-  section {
+  header p {
+      text-align: center;
+      color: white;
+      opacity: 0.5;
+      padding-top: 10px;
+  }
+  
+  header #readHistory {
+      margin: 0 auto;
+      position: absolute;
+      margin-top: 30px;
+      left: 50%;
+      transform: translate(-50%);
+      color: white !important;
+      border: 2px solid white !important;
+      padding: 20px;
+  }
+
+  #historySection {
       min-height: 150vh;
+  }
+
+  #historySection h2 {
+    padding: 30vh 0;
+    font-size: 40px;
+    text-align: center;
+    color: #212121;
   }
   
   header svg {
