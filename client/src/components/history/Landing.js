@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { ArrowDown } from 'react-feather';
+import $ from 'jquery'; 
+
+import Story from './Story';
 
 export default class Landing extends Component {
     componentDidMount() {
@@ -19,10 +22,7 @@ export default class Landing extends Component {
                         <polygon className="svg--lg" fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
                     </svg>
                 </header>
-
-                <section id ='historySection'>
-                    <h2>Section Content</h2>
-                </section>
+                <Story />
             </div>
         )
     }
@@ -44,10 +44,18 @@ function scrollSpy() {
 
 function animateArrow() {
     const arrow = document.querySelector("#readMoreBtn");
+    arrow.addEventListener('click', scrollToHistory);
     setInterval(() => {
-        arrow.className = 'animated fadeInDown';
+        arrow.className = 'animated fadeIn';
         setTimeout(() => {
             arrow.className = '';
         }, 1500);
     }, 4000);
+}
+
+function scrollToHistory() {
+    console.log(123);
+    $('html,body').animate({
+        scrollTop: $("#historyHeading").offset().top + 150
+    },'slow');
 }
