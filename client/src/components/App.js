@@ -7,6 +7,9 @@ import Loading from './Loading';
 import TopNav from './TopNav';
 import Landing from './Landing';
 
+// history components
+import History from './history/History';
+
 export default class App extends Component {
     render() {
         return (
@@ -16,6 +19,9 @@ export default class App extends Component {
                         <Route path ='/' component={TopNav} />
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/*' component={Loading} />
+
+                        
+                        <Route exact path='/historie' component={History} />
                     </div>
                 </BrowserRouter>
             </div>
