@@ -54,23 +54,29 @@ header #readMoreBtn {
     color: #212121;
   }
 
-  #historySection .part {
+  #historySection p {
       padding-bottom: 30px;
+      padding-top: 50px;
+  }
+
+  #historySection img {
+      margin-bottom: 40px;
   }
 
   #historySection .part p {
       z-index: 1000;
   }
 
-  .part h3 {
-      font-size: 75px;
+  .part  .partId h3 {
+      font-size: 150px;
   }
 
-  .part div {
+  .part .partId {
       position: absolute;
-      right: 12.5%;
+      right: -10%;
       z-index: -1;
       opacity: 0.1;
+      color: grey;
   }
   
   header #headerSvg {
@@ -80,10 +86,13 @@ header #readMoreBtn {
     height: 100px;
   }
 
-  .storyContainer {
-      max-width: 60% !important;
+  @media (max-width: 1700px) {
+    .storyContainer {
+        max-width: 60% !important;
+      }
   }
-  
+
+
   @media (max-width: 699px) {
     .svg--lg {
       display: none;
@@ -94,4 +103,10 @@ header #readMoreBtn {
     .svg--sm {
       display: none;
     }
+  }
+
+  @media (max-width: 600px) {
+      .storyContainer {
+        max-width: 95% !important;
+      }
   }
