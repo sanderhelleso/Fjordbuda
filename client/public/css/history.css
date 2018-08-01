@@ -78,6 +78,12 @@ header #readMoreBtn {
       opacity: 0.1;
       color: grey;
   }
+
+  .part h5 {
+      text-align: center !important;
+      margin-bottom: 10px;
+      font-size: 18px;
+  }
   
   header #headerSvg {
     position: absolute;
