@@ -2,6 +2,12 @@ export function scrollSpy() {
     const header = document.querySelector("#historyHeader");
     const navbar = document.querySelector("#topNav");
     const logo = document.querySelector('#navLogo');
+    const intro = document.querySelector('#historyIntro');
+    console.log(window.scrollY / 10);
+    //intro.style.transform = `scale(0.${+window.scrollY / 10})`;
+    console.log(header.style.height + (window.scrollY / 10));
+    
+
     if ((window.scrollY + 75) > (header.offsetTop + header.offsetHeight)) {
         navbar.classList.remove("topNavOnBg");
         navbar.classList.add("topNavOffBg");
@@ -11,6 +17,7 @@ export function scrollSpy() {
         if (checkIfMobile()) {
             navbar.classList.add("topNavOffBgMobile");
         }
+
     }
 
     else {
@@ -18,6 +25,9 @@ export function scrollSpy() {
         navbar.classList.remove("topNavOffBgMobile");
         navbar.classList.add("topNavOnBg");
         logo.src = 'img/logo/Vinje1_white.png';
+
+        intro.style.paddingTop = (window.scrollY / 5) + 'px';
+
     }
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ArrowDown } from 'react-feather';
+import { Parallax } from 'react-materialize';
 import $ from 'jquery'; 
 import { scrollSpy } from '../../globals/scrollSpy';
 
@@ -20,8 +21,10 @@ export default class Landing extends Component {
         return (
             <div>
                 <header id='historyHeader'>
-                    <h1>En historie uten like</h1>
-                    <p>Stiftet i den idylliske landsbyen Geiranger, Vinjenaustet er ikke som alle andre naust</p>
+                    <div id='historyIntro'>
+                        <h1>En historie uten like</h1>
+                        <p>Stiftet i den idylliske landsbyen Geiranger, Vinjenaustet er ikke som alle andre naust</p>
+                    </div>
                     <span id='readMoreBtn'><ArrowDown size={40} color='#ffffff' /></span>
                     <svg id='headerSvg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                         <polygon className="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
