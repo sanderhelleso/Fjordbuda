@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Navbar, NavbarBrand, NavItem, Fa } from 'mdbreact';
 import { Menu, X } from 'react-feather';
 import MainMenu from './MainMenu';
+import { scrollSpy } from '../globals/scrollSpy';
 
 export default class TopNav extends Component {
     constructor(props) {
@@ -56,11 +57,14 @@ function toggleMenu(bool) {
 
     setTimeout(() => {
         // remove mouse interaction for duration of animation
-        document.querySelector('#menuToggler').style.pointerEvents = 'none';
+        const toggler =  document.querySelector('#menuToggler');
+        toggler.style.pointerEvents = 'none';
+        toggler.querySelector('svg').style.stroke = '#ffffff !important';
         setTimeout(() => {
-            document.querySelector('#menuToggler').style.pointerEvents = 'auto';
+           toggler.style.pointerEvents = 'auto';
         }, 750);
 
+        const nav = document.querySelector("#topNav");
         const logo = document.querySelector("#navLogo");
         const menu = document.querySelector(".menuOverlay");
         if (bool) {
@@ -68,11 +72,18 @@ function toggleMenu(bool) {
                 logo.src = 'img/logo/Vinje1_white.png';
             }, 150);
             menu.className = 'menuOverlay animated fadeIn';
+            nav.classList.remove('topNavOffBg');
             menu.style.display = 'block';
         }
     
         else {
             logo.src = 'img/logo/Vinje1_black.png';
+            nav.classList.add('topNavOffBg');
+
+            // this code decides flow of navigation style depending on page
+            if (getUrl() === 'historie') {
+                scrollSpy();
+            }
             menu.className = 'menuOverlay animated fadeOut';
             setTimeout(() => {
                 menu.style.display = 'none';
@@ -81,5 +92,10 @@ function toggleMenu(bool) {
     }, 100);
 
     return bool ? <X size={35} color='#ffffff' /> : <Menu size={35} color='#212121' />
+}
+
+// get the currernt url and return first route path
+function getUrl() {
+    return window.location.href.split('/')[3];
 }
 
