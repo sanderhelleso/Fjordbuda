@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Open+Sans');
+
 header {
     position: relative;
     height: 80vh;
@@ -24,6 +26,7 @@ header {
       color: white;
       opacity: 0.5;
       padding-top: 10px;
+      font-family: 'Open Sans', sans-serif;
   }
 
   header #readMoreBtn {
@@ -56,6 +59,7 @@ header #readMoreBtn {
     font-weight: 400;
     text-align: left;
     color: #212121;
+    font-weight: 600;
   }
 
   #historySection p {

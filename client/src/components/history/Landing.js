@@ -48,6 +48,6 @@ function animateArrow() {
 // scroll to history start
 function scrollToHistory() {
     $('html,body').animate({
-        scrollTop: $("#historyHeading").offset().top - 100
+        scrollTop: $("#historyHeading").offset().top - 25
     },'slow');
 }

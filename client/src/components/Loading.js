@@ -10,7 +10,7 @@ export default class Loading extends Component {
         return (
             <div id='loadingScreen'>
                 <div id='loadingHero'>
-                    <h1 data-hover="Vinjenaustet">Vinjenaustet</h1>
+                    <img id='loadingLogo' src="img/logo/Vinje1_white.png" height="90"/>
                 </div>
                 <div className="lds-ripple"><div></div><div></div></div>
             </div>
