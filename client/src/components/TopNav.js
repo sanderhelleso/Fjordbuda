@@ -40,7 +40,7 @@ export default class TopNav extends Component {
             <div>
                 <Navbar id='topNav' color="transparent" dark>
                     <NavbarBrand href="/" className='noSelect' >
-                        Vinjenaustet
+                        <img id='navLogo' src="img/logo/Vinje1_black.png" height="30"/>
                     </NavbarBrand>
                     <NavItem id='menuToggler' onClick={this._onButtonClick} >
                         {toggleMenu(this.state.showMenu)}
@@ -61,18 +61,18 @@ function toggleMenu(bool) {
             document.querySelector('#menuToggler').style.pointerEvents = 'auto';
         }, 750);
 
-        const logo = document.querySelector(".navbar-brand");
+        const logo = document.querySelector("#navLogo");
         const menu = document.querySelector(".menuOverlay");
         if (bool) {
             setTimeout(() => {
-                logo.style.color = '#ffffff';
+                logo.src = 'img/logo/Vinje1_white.png';
             }, 150);
             menu.className = 'menuOverlay animated fadeIn';
             menu.style.display = 'block';
         }
     
         else {
-            logo.style.color = '#212121';
+            logo.src = 'img/logo/Vinje1_black.png';
             menu.className = 'menuOverlay animated fadeOut';
             setTimeout(() => {
                 menu.style.display = 'none';

@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { ArrowDown } from 'react-feather';
 import $ from 'jquery'; 
+import { scrollSpy } from '../../globals/scrollSpy';
 
 import Story from './Story';
 
 export default class Landing extends Component {
     componentDidMount() {
+        // set white logo
+        setTimeout(() => {
+            document.querySelector('#navLogo').src = 'img/logo/Vinje1_white.png';
+        }, 1000);
+
         window.addEventListener('scroll', scrollSpy);
         animateArrow();
     }
@@ -28,20 +34,6 @@ export default class Landing extends Component {
     }
 }
 
-function scrollSpy() {
-    const header = document.querySelector("#historyHeader");
-    const navbar = document.querySelector("#topNav");
-    if ((window.scrollY + 75) > (header.offsetTop + header.offsetHeight)) {
-        navbar.classList.remove("topNavOnBg");
-        navbar.classList.add("topNavOffBg");
-    }
-
-    else {
-        navbar.classList.remove("topNavOffBg");
-        navbar.classList.add("topNavOnBg");
-    }
-}
-
 function animateArrow() {
     const arrow = document.querySelector("#readMoreBtn");
     arrow.addEventListener('click', scrollToHistory);
@@ -53,8 +45,8 @@ function animateArrow() {
     }, 4000);
 }
 
+// scroll to history start
 function scrollToHistory() {
-    console.log(123);
     $('html,body').animate({
         scrollTop: $("#historyHeading").offset().top - 100
     },'slow');
