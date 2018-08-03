@@ -74,11 +74,15 @@ function toggleMenu(bool) {
             menu.className = 'menuOverlay animated fadeIn';
             nav.classList.remove('topNavOffBg');
             menu.style.display = 'block';
+
+            // hide scrollbar
+            document.body.style.overflowY = 'hidden';
         }
     
         else {
             logo.src = 'img/logo/Vinje1_black.png';
             nav.classList.add('topNavOffBg');
+            document.body.style.overflowY = 'auto';
 
             // this code decides flow of navigation style depending on page
             if (getUrl() === 'historie') {
