@@ -19,6 +19,8 @@ export default class Story extends Component {
                                 <img className='responsive-img z-depth-1' src='img/menu/menubg1.jpg' />
                                 <h5>Dette er et bilde</h5>
                             </div>
+
+                            <h2>Det var engang...</h2>
                             <div className='part'>
                                 <div className='partId'>
                                         <h3>02</h3>
@@ -30,6 +32,8 @@ export default class Story extends Component {
                                     <img className='responsive-img z-depth-1' src='img/menu/menubg2.jpg' />
                                     <h5>Dette er et bilde</h5>
                             </div>
+
+                            <h2>Det var engang...</h2>
                             <div className='part'>
                                 <div className='partId'>
                                     <h3>03</h3>
@@ -41,6 +45,8 @@ export default class Story extends Component {
                                 <img className='responsive-img z-depth-1' src='img/menu/menubg3.jpg' />
                                 <h5>Dette er et bilde</h5>
                             </div>
+
+                            <h2>Det var engang...</h2>
                             <div className='part'>
                                 <div className='partId'>
                                     <h3>04</h3>
