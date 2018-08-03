@@ -11,6 +11,7 @@ export function scrollSpy() {
         if (logo.src != 'img/logo/Vinje1_black.png') {
             logo.src = 'img/logo/Vinje1_black.png';
         }
+
     }
 
     else {
@@ -22,8 +23,7 @@ export function scrollSpy() {
             logo.src = 'img/logo/Vinje1_white.png';
         }
 
-        intro.style.paddingTop = (window.scrollY / 5) + 'px';
-
+        intro.style.top = '-' + (window.scrollY / 4.5) + 'px';
     }
 }
 
