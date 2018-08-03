@@ -13,6 +13,10 @@ export default class Story extends Component {
                     <Row>
                         <Col s={12}>
                             <Fade>
+                                <div id='quote'>
+                                    <h4>"The earth has music for those who listen."</h4>
+                                    <h5>-William Shakespeare</h5>
+                                </div>
                                 <Fade up>
                                     <h2 id='historyHeading'>Det var engang...</h2>
                                 </Fade>

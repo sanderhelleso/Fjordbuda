@@ -54,7 +54,7 @@ header #readMoreBtn {
 }
 
 .storyContainer {
-  margin-top: 30vh;
+  margin-top: 15vh;
 }
 
   #historySection {
@@ -108,6 +108,22 @@ header #readMoreBtn {
     width: 0%;
     background-color: #80cbc4;
     z-index: 1000;
+  }
+
+  #quote {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 120px;
+    margin-top: 50px;
+    opacity: 0.5;
+  }
+
+  #quote h4 {
+    font-weight: 300;
+  }
+
+   #quote h5 {
+    font-weight: 100;
   }
 
   @media (max-width: 1700px) {
