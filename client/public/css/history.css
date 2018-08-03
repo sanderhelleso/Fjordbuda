@@ -2,7 +2,7 @@
 
 header {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     background: linear-gradient(
     rgba(121, 85, 72, 0.9), 
     rgba(0, 0, 0, 0.7)),
@@ -20,7 +20,7 @@ header {
   }
   
   header h1 {
-    padding-top: 30vh;
+    padding-top: 27.5vh;
     font-size: 54px;
     text-align: center;
     font-family: 'Vidaloka', serif;
@@ -36,19 +36,21 @@ header {
       font-family: 'Open Sans', sans-serif;
   }
 
-  header #readMoreBtn {
-    cursor: pointer;
+  header #readMoreBtn img {
+    height: 75px;
+    filter: invert(100%);
+    z-index: -100;
   }
-
 
 header #readMoreBtn {
     position: absolute;
-    bottom: 0;
+    bottom: -7.5%;
     left: 50%;
     transform: translate(-50%);
     opacity: 0.9;
     cursor: pointer;
     padding: 100px;
+    z-index: 1000;
 }
 
 .storyContainer {
@@ -143,7 +145,7 @@ header #readMoreBtn {
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
       .storyContainer {
         max-width: 95% !important;
       }
@@ -158,5 +160,13 @@ header #readMoreBtn {
 
       header #readMoreBtn {
         bottom: -10%;
+      }
+
+      #historyHeader {
+        height: 100vh;
+      }
+
+      header h1 {
+        padding-top: 32.5vh;
       }
   }
