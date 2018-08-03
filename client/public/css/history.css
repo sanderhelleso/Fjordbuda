@@ -125,7 +125,18 @@ header #readMoreBtn {
       }
   }
 
-  
+  @media (max-width: 770px) {
+
+    #historyIntro h1 {
+      font-size: 45px;
+    }
+
+    #historyIntro p {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+}
+ 
   @media (min-width: 700px) {
     .svg--sm {
       display: none;
@@ -135,5 +146,17 @@ header #readMoreBtn {
   @media (max-width: 600px) {
       .storyContainer {
         max-width: 95% !important;
+      }
+
+      .svg--lg {
+        display: none;
+      }
+
+      .svg--sm {
+        display: none;
+      }
+
+      header #readMoreBtn {
+        bottom: -10%;
       }
   }
