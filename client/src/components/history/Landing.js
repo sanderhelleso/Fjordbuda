@@ -20,6 +20,7 @@ export default class Landing extends Component {
     render() {
         return (
             <div>
+                <div id='progressBar' />
                 <header id='historyHeader'>
                     <div id='historyIntro'>
                         <h1>En historie uten like</h1>

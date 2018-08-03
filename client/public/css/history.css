@@ -110,6 +110,15 @@ header #readMoreBtn {
     height: 100px;
   }
 
+  #progressBar {
+    position: fixed;
+    top: 0;
+    height: 5px;
+    width: 100%;
+    background-color: green;
+    z-index: 1000;
+  }
+
   @media (max-width: 1700px) {
     .storyContainer {
         max-width: 60% !important;
