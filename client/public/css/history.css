@@ -64,7 +64,7 @@ header #readMoreBtn {
   #historySection h2 {
     padding-bottom: 0px;
     margin-bottom: 0px;
-    margin-top: 50px;
+    margin-top: 70px;
     font-size: 50px;
     font-weight: 400;
     text-align: left;
@@ -87,17 +87,6 @@ header #readMoreBtn {
       line-height: 1.6;
   }
 
-  .part  .partId h3 {
-      font-size: 150px;
-  }
-
-  .part .partId {
-      position: absolute;
-      right: -3%;
-      z-index: -1;
-      opacity: 0.1;
-      color: grey;
-  }
 
   .part h5 {
       text-align: center !important;

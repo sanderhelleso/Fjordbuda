@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, NavItem, Fa } from 'mdbreact';
 import { Menu, X } from 'react-feather';
 import MainMenu from './MainMenu';
 import { scrollSpy } from '../globals/scrollSpy';
+import { getUrl } from '../globals/getUrl';
 
 export default class TopNav extends Component {
     constructor(props) {
@@ -96,10 +97,5 @@ function toggleMenu(bool) {
     }, 100);
 
     return bool ? <X size={35} color='#ffffff' /> : <Menu size={35} color='#212121' />
-}
-
-// get the currernt url and return first route path
-function getUrl() {
-    return window.location.href.split('/')[3];
 }
 

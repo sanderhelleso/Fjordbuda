@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getUrl } from '../globals/getUrl';
 
 export default class Loading extends Component {
 
@@ -23,6 +24,16 @@ function fadeOutLoadingScreen() {
     const loadingScreen = document.querySelector('#loadingScreen');
     setTimeout(() => {
         loadingScreen.className = 'animated fadeOut';
+
+        console.log(getUrl());
+        switch (getUrl()) {
+            case 'historie':
+                console.log(123);
+                document.querySelector('#historyIntro').className = 'animated fadeIn';
+            break;
+        }
+
+
         setTimeout(() => {
             loadingScreen.remove();
         }, 1000);
