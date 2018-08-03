@@ -10,13 +10,13 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: white;
   }
 
   #historyIntro {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    min-width: 100%;
   }
   
   header h1 {
@@ -113,9 +113,9 @@ header #readMoreBtn {
   #progressBar {
     position: fixed;
     top: 0;
-    height: 5px;
-    width: 100%;
-    background-color: green;
+    height: 3px;
+    width: 0%;
+    background-color: #80cbc4;
     z-index: 1000;
   }
 
@@ -125,12 +125,6 @@ header #readMoreBtn {
       }
   }
 
-
-  @media (max-width: 699px) {
-    .svg--lg {
-      display: none;
-    }
-  }
   
   @media (min-width: 700px) {
     .svg--sm {

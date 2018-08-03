@@ -20,9 +20,9 @@ export default class Landing extends Component {
     render() {
         return (
             <div>
-                <div id='progressBar' />
+                <div id='progressBar' className='z-depth-1' />
                 <header id='historyHeader'>
-                    <div id='historyIntro'>
+                    <div id='historyIntro' className='container'>
                         <h1>En historie uten like</h1>
                         <p>Stiftet i den idylliske landsbyen Geiranger, Vinjenaustet er ikke som alle andre naust</p>
                     </div>
@@ -52,6 +52,6 @@ function animateArrow() {
 // scroll to history start
 function scrollToHistory() {
     $('html,body').animate({
-        scrollTop: $("#historyHeading").offset().top - 25
+        scrollTop: $("#historyHeading").offset().top - 75
     },'slow');
 }
