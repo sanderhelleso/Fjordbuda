@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Parallax } from 'react-materialize';
 
 import Landing from './Landing';
 
