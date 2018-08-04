@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Loading from './Loading';
 import TopNav from './TopNav';
 import Landing from './Landing';
+import MainFooter from './MainFooter';
 
 // history components
 import History from './history/History';
@@ -22,6 +23,8 @@ export default class App extends Component {
 
                         
                         <Route exact path='/historie' component={History} />
+
+                        <Route path ='/' component={MainFooter} />
                     </div>
                 </BrowserRouter>
             </div>
