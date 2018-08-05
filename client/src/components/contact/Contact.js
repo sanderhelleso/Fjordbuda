@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Parallax } from 'react-materialize';
+import { Row, Input } from 'react-materialize';
 import { Minus } from 'react-feather';
 
 export default class Contact extends Component {
@@ -25,6 +25,13 @@ export default class Contact extends Component {
                 <div className='col col-sm-12 col-md-6 col-lg-6'>
                     <div id='contactCont'>
                         <p>Lurer du på noe eller har spørsmål angående produkter? Send oss gjerne en melding.</p>
+                        <form>
+                            <Row>
+                                <Input placeholder="Placeholder" s={6} label="First Name" />
+                                <Input s={6} label="Last Name" />
+                                <Input type="email" label="Email" s={12} />
+                            </Row>
+                        </form>
                     </div>
                 </div>
             </Row>
