@@ -19,6 +19,7 @@ body {
     color: #212121;
     position: fixed;
     margin-top: 5px;
+    top: 0;
 }
 
 #topNav svg {
@@ -39,7 +40,7 @@ body {
 
 .topNavOffBg {
     transition: ease-in-out 0.3s;
-    color: #212121 !important;
+    color: #212121;
 }
 
 .topNavOffBg .navbar-brand {
@@ -47,7 +48,7 @@ body {
 }
 
 .topNavOffBg svg {
-    stroke: #212121 !important;
+    stroke: #212121;
 }
 
 #topNav .navbar-brand {

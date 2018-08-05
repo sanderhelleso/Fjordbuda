@@ -68,21 +68,22 @@ function toggleMenu(bool) {
         const nav = document.querySelector("#topNav");
         const logo = document.querySelector("#navLogo");
         const menu = document.querySelector(".menuOverlay");
+
+        // hide scrollbar
+        document.body.style.overflowY = 'hidden';
         if (bool) {
             setTimeout(() => {
                 logo.src = 'img/logo/Vinje1_white.png';
             }, 150);
             menu.className = 'menuOverlay animated fadeIn';
-            nav.classList.remove('topNavOffBg');
+            nav.className = 'navbar navbar-dark transparent'
+            nav.querySelector('svg').style.stroke = '#ffffff';
             menu.style.display = 'block';
-
-            // hide scrollbar
-            document.body.style.overflowY = 'hidden';
         }
     
         else {
             logo.src = 'img/logo/Vinje1_black.png';
-            nav.classList.add('topNavOffBg');
+            nav.className = 'navbar navbar-dark transparent topNavOffBg';
             document.body.style.overflowY = 'auto';
 
             // this code decides flow of navigation style depending on page
