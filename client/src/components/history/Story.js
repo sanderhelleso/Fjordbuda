@@ -3,7 +3,7 @@ import { Row, Col } from 'react-materialize';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import { Minus, ChevronUp } from 'react-feather';
-
+import $ from 'jquery'; 
 
 export default class Story extends Component {
 
@@ -97,5 +97,7 @@ export default class Story extends Component {
 }
 
 function  backToTop() {
-    console.log(123);
+    $('html,body').animate({
+        scrollTop: $("#historyHeader").offset().top
+    },'slow');
 }
