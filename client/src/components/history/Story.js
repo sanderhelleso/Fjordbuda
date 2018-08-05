@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { Row, Col } from 'react-materialize';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
-import { Minus } from 'react-feather';
+import { Minus, ChevronUp } from 'react-feather';
 
 
 export default class Story extends Component {
+
+    componentDidMount() {
+        document.querySelector('#backToTop').addEventListener('click', backToTop);
+    }
+
     render() {
         return (
             <section id ='historySection'>
@@ -80,7 +85,17 @@ export default class Story extends Component {
                         </Col>
                     </Row>
                 </div>
+                <Fade up>
+                    <div id='backToTop' className='noSelect'>
+                        <ChevronUp size={50} color='#10ddc2'/>
+                        <h5>Tilbake til toppen</h5>
+                    </div>
+                </Fade>
             </section>
         )
     }
+}
+
+function  backToTop() {
+    console.log(123);
 }

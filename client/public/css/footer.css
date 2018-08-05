@@ -13,7 +13,7 @@ footer #footerRow {
 }
 
 footer #footerRow div {
-
+    min-height: 175px;
 }
 
 footer #footerRow h5 {
