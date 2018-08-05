@@ -49,6 +49,7 @@ export default class MainFooter extends Component {
                                 <li><a>qweqeq</a></li>
                             </ul>
                         </div>
+                        <a id='semanta' href='http://semanta.no' target='_blank'>Utviklet av Semanta</a>
                     </Row>
                 </div>
             </footer>
