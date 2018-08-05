@@ -63,6 +63,7 @@
     font-weight: 600;
     color: #8A99C0;
     line-height: 28px;
+    letter-spacing: 1px;
 }
 
 #contactCont form {
@@ -72,7 +73,7 @@
 }
 
 #contactCont .materialize-textarea {
-    margin-bottom: 10px;
+    margin-bottom: 7.5px;
 }
 
 #contactCont .input-field {
@@ -81,6 +82,21 @@
 
 #contactCont #sendMessage {
     float: right;
+    background-color: #10ddc2;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-right: 10px;
+}
+
+#contactCont .input-field input:focus, #contactCont .input-field textarea:focus  {
+    border-bottom: 1px solid #10ddc2;
+    box-shadow: 0 1px 0 0 #10ddc2;
+}
+
+@media (min-height: 1000px) {
+    #contact h1 {
+        top: 20%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -98,7 +114,8 @@
 
     #contact .row #contactImg {
         min-width: 100%;
-        min-height: 30vh;
+        min-height: 45vh;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 
     h1 {
@@ -109,5 +126,43 @@
 
     #menuToggler svg {
         stroke: white;
+    }
+
+    #contactCont p {
+        position: absolute;
+        top: 5%;
+        right: 0;
+        max-width: 90%;
+        margin-left: 10px;
+    }
+
+    #contactCont form {
+        top: 22.5%;
+    }
+}
+
+@media (max-height: 550px) {
+    #contactCont form {
+        top: 60%;
+    }
+
+    #contactCont p {
+        max-width: 55%;
+    }
+}
+
+@media (max-height: 450px) {
+    #contactCont form {
+        top: 70%;
+    }
+
+    #contact {
+        margin-bottom: 200px;
+    }
+}
+
+@media (max-height: 450px) {
+    #contactCont form {
+        top: 85%;
     }
 }
