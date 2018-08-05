@@ -1,10 +1,28 @@
-#contact {
-    min-height: 35vh;
-    margin-top: 50px;
-}
-
 #contact .row {
     margin: 0;
+}
+
+#contact .row #contactImg {
+    padding: 0;
+    background: linear-gradient(
+    rgba(121, 85, 72, 0.9), 
+    rgba(0, 0, 0, 0.7)),
+    url("../img/menu/mainmenu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    box-shadow: 5px 0 5px -5px #333;
+}
+
+#contactCont {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+}
+
+#contactCont h1 {
+    text-align: center;
 }
 
 @media (max-width: 600px) {

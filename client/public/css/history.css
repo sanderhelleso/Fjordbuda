@@ -145,6 +145,7 @@ header #readMoreBtn {
     width: 150px;
     margin: 0 auto;
     margin-top: 15vh;
+    margin-bottom: 15vh;
   }
 
   #backToTop:hover > svg {
