@@ -8,6 +8,12 @@ footer {
 footer #footerRow {
     margin-top: 75px;
     margin-bottom: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+footer #footerRow div {
+
 }
 
 footer #footerRow h5 {
@@ -28,4 +34,10 @@ footer #languages ul .copyright {
     position: absolute;
     bottom: 0;
     color: #cfd7df;
+}
+
+@media screen and (max-width: 600px) {
+    footer #footerRow div {
+        width: 50%;
+    }
 }
