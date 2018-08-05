@@ -8,7 +8,7 @@ export function scrollSpy() {
 
     progressBar(window.scrollY);
 
-    if ((window.scrollY + 70) > (header.offsetTop + header.offsetHeight)) {
+    if ((window.scrollY + 20) > (header.offsetTop + header.offsetHeight)) {
         navbar.classList.remove("topNavOnBg");
         navbar.classList.add("topNavOffBg");
 
@@ -27,6 +27,7 @@ export function scrollSpy() {
             logo.src = 'img/logo/Vinje1_white.png';
         }
 
+        // animate bg overlay on scroll
         intro.style.top = '-' + (window.scrollY / 4.5) + 'px';
     }
 }
