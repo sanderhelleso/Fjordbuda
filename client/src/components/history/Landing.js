@@ -37,12 +37,6 @@ export default class Landing extends Component {
 function animateArrow() {
     const arrow = document.querySelector("#readMoreBtn");
     arrow.addEventListener('click', scrollToHistory);
-    setInterval(() => {
-        arrow.className = 'animated fadeIn';
-        setTimeout(() => {
-            arrow.className = '';
-        }, 1500);
-    }, 4000);
 }
 
 // scroll to history start

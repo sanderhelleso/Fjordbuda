@@ -39,18 +39,31 @@ header {
   header #readMoreBtn img {
     height: 75px;
     filter: invert(100%);
-    z-index: -100;
+    position: relative;
+    transition: ease-in-out;
+    animation-name: scrollMe;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes scrollMe {
+    0%   {    top: 0px;    }
+    25% {    top: 0px;    }
+    50%  {    top: -10px;    }
+    75%  {    top: 10px;    }
+    100% {    top: 0px;    }
   }
 
 header #readMoreBtn {
     position: absolute;
-    bottom: -5%;
+    bottom: -7.5%;
     left: 50%;
     transform: translate(-50%);
     opacity: 0.9;
     cursor: pointer;
     padding: 100px;
     z-index: 1000;
+    margin-bottom: 50px;
 }
 
 .storyContainer {
@@ -137,7 +150,6 @@ header #readMoreBtn {
   #backToTop:hover > svg {
     animation-name: toTop;
     animation-duration: 1s;
-    animation-iteration-count: infinite;
   }
 
   #backToTop svg {
@@ -156,6 +168,10 @@ header #readMoreBtn {
     50%  {    top: -10px;    }
     100% {    top: 0px;    }
   }
+}
+
+.storyContainer {
+  max-width: 67.5% !important;
 }
 
   @media (max-width: 1700px) {
@@ -183,9 +199,6 @@ header #readMoreBtn {
   }
 
   @media (max-width: 700px) {
-      .storyContainer {
-        max-width: 95% !important;
-      }
 
       .svg--lg {
         display: none;
@@ -206,4 +219,10 @@ header #readMoreBtn {
       header h1 {
         padding-top: 32.5vh;
       }
+  }
+
+  @media (max-width: 600px) {
+    .storyContainer {
+      max-width: 90% !important;
+    }
   }
