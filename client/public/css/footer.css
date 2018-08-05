@@ -47,6 +47,5 @@ footer #languages ul .copyright {
 
 @media screen and (max-width: 600px) {
     footer #footerRow div {
-        width: 50%;
     }
 }

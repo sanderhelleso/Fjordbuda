@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Parallax } from 'react-materialize';
+import { Minus } from 'react-feather';
 
 export default class Contact extends Component {
     componentWillMount() {
@@ -16,12 +17,14 @@ export default class Contact extends Component {
     render() {
         return (
         <div id='contact'>
+            <div id='square' />
+            <h1>Kontakt</h1>
             <Row>
-                <div id='contactImg' className='col col-sm-12 col-md-7 col-lg-7 z-depth-5'>
+                <div id='contactImg' className='col col-sm-12 col-md-6 col-lg-6 z-depth-5'>
                 </div>
-                <div className='col col-sm-12 col-md-5 col-lg-5'>
+                <div className='col col-sm-12 col-md-6 col-lg-6'>
                     <div id='contactCont'>
-                        <h1>Kontakt</h1>
+                        <p>Lurer du på noe eller har spørsmål angående produkter? Send oss gjerne en melding.</p>
                     </div>
                 </div>
             </Row>
