@@ -4,6 +4,10 @@ body {
     overflow-x: hidden !important;
 }
 
+#main {
+    margin-top: 70px;
+}
+
 .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;

@@ -8,13 +8,13 @@ import TopNav from './TopNav';
 import Landing from './Landing';
 import MainFooter from './MainFooter';
 
-// history components
 import History from './history/History';
+import Contact from './contact/Contact';
 
 export default class App extends Component {
     render() {
         return (
-            <div>
+            <div id='main'>
                 <BrowserRouter>
                     <div>
                         <Route path ='/' component={TopNav} />
@@ -23,6 +23,8 @@ export default class App extends Component {
 
                         
                         <Route exact path='/historie' component={History} />
+                        <Route exact path='/kontakt' component={Contact} />
+
 
                         <Route path ='/' component={MainFooter} />
                     </div>

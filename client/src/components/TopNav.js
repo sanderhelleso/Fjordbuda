@@ -39,7 +39,7 @@ export default class TopNav extends Component {
 
     render() {
         return (
-            <div>
+            <div id='navMenu'>
                 <Navbar id='topNav' color="transparent" dark>
                     <NavbarBrand href="/" className='noSelect' >
                         <img id='navLogo' src="img/logo/Vinje1_black.png" height="30"/>
