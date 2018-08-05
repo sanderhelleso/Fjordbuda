@@ -1,3 +1,7 @@
+#contact {
+    margin-bottom: 25px;
+}
+
 #contact .row {
     margin: 0;
 }
@@ -17,6 +21,7 @@
 #contactCont {
     min-height: 75vh;
     position: relative !important;
+    width: 100%;
 }
 
 #contactCont {
@@ -62,7 +67,20 @@
 
 #contactCont form {
     position: absolute;
-    top: 55%;
+    top: 52.5%;
+    width: 100%;
+}
+
+#contactCont .materialize-textarea {
+    margin-bottom: 10px;
+}
+
+#contactCont .input-field {
+    min-width: 50%;
+}
+
+#contactCont #sendMessage {
+    float: right;
 }
 
 @media (max-width: 600px) {
