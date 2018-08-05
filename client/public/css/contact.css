@@ -1,3 +1,14 @@
+#contact {
+    min-height: 35vh;
+    margin-top: 50px;
+}
+
 #contact .row {
     margin: 0;
+}
+
+@media (max-width: 600px) {
+    #contact .row div {
+        min-width: 100%;
+    }
 }

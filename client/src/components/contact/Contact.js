@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Row } from 'react-materialize';
 
 export default class Contact extends Component {
+    componentWillMount() {
+        document.title = '✉️ Kontakt | Fjordbuda';
+    }
+
     render() {
         return (
         <div id='contact'>

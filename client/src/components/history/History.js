@@ -4,8 +4,14 @@ import Landing from './Landing';
 
 export default class History extends Component {
 
+    componentWillMount() {
+        document.title = '📖 Historie | Fjordbuda';
+    }
+
     componentDidMount() {
-        document.querySelector("#topNav").classList.add("topNavOnBg");
+        const nav = document.querySelector("#topNav");
+        nav.classList.add("topNavOnBg");
+        nav.style.position = 'fixed';
     }
 
     render() {

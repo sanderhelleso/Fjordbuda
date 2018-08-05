@@ -4,10 +4,6 @@ body {
     overflow-x: hidden !important;
 }
 
-#main {
-    margin-top: 70px;
-}
-
 .noSelect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -21,7 +17,6 @@ body {
     z-index: 1337000;
     box-shadow: none;
     color: #212121;
-    position: fixed;
     margin-top: 5px;
     top: 0;
 }
