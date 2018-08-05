@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row } from 'react-materialize';
+import { Row, Parallax } from 'react-materialize';
 
 export default class Contact extends Component {
     componentWillMount() {
@@ -11,7 +11,7 @@ export default class Contact extends Component {
         <div id='contact'>
             <Row>
                 <div className='col col-sm-12 col-md-6 col-lg-6'>
-                    qweqwe
+                    <Parallax imageSrc="http://materializecss.com/images/parallax1.jpg"/>
                 </div>
                 <div className='col col-sm-12 col-md-6 col-lg-6'>
                     qweqwe
