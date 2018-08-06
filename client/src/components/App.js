@@ -10,7 +10,7 @@ import MainFooter from './MainFooter';
 
 import History from './history/History';
 import Contact from './contact/Contact';
-import Merch from './merch/Merch';
+import Lookbook from './lookbook/Lookbook';
 
 export default class App extends Component {
     render() {
@@ -22,7 +22,7 @@ export default class App extends Component {
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/*' component={Loading} />
 
-                        <Route exact path='/varer' component={Merch} />
+                        <Route exact path='/lookbook' component={Lookbook} />
                         <Route exact path='/historie' component={History} />
                         <Route exact path='/kontakt' component={Contact} />
 
