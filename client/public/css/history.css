@@ -17,6 +17,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    width: 100%;
   }
   
   header h1 {

@@ -84,6 +84,8 @@ function toggleMenu(bool) {
         else {
             logo.src = 'img/logo/Vinje1_black.png';
             nav.className = 'navbar navbar-dark transparent topNavOffBg';
+            nav.querySelector('svg').style.stroke = '#212121';
+
             document.body.style.overflowY = 'auto';
 
             // this code decides flow of navigation style depending on page
