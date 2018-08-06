@@ -92,6 +92,7 @@
 #arrowDown {
     margin-top: 25px;
     opacity: 1 !important;
+    transition: ease-in-out 0.3s;
 }
 
 #lookBookMenu #lookBookCategories h2:hover .categorySpan  {
@@ -111,4 +112,12 @@
 
 .hiddenSpan {
     opacity: 0;
+}
+
+#seeAllCategories {
+    cursor: pointer;
+}
+
+#seeAllCategories:hover #arrowDown {
+    margin-top: 45px;
 }

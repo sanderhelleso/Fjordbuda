@@ -25,7 +25,7 @@ export default class Lookbook extends Component {
                                 <h2><span>04.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                                 <h2><span>05.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                             </div>
-                            <div className='lookBookMenuOption'>
+                            <div id='seeAllCategories' className='lookBookMenuOption'>
                                 <h5>Eller se alle</h5>
                                 <Minus color='#363F54' />
                                 <br />
