@@ -28,8 +28,14 @@ function fadeOutLoadingScreen() {
         console.log(getUrl());
         switch (getUrl()) {
             case 'historie':
-                console.log(123);
                 document.querySelector('#historyIntro').className = 'animated fadeIn';
+            break;
+
+            case 'kontakt':
+            console.log(123);
+                document.querySelector('#square').className = 'animated zoomIn';
+                document.querySelector('#contact > h1').className = 'animated fadeIn';
+                document.querySelector('#contactImg').className = 'col col-sm-4 col-md-6 col-lg-6 z-depth-5 animated fadeInLeft';
             break;
         }
 
