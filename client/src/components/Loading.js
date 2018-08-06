@@ -31,8 +31,24 @@ function fadeOutLoadingScreen() {
                 document.querySelector('#historyIntro').className = 'animated fadeIn';
             break;
 
+            case 'lookbook':
+                document.querySelector('#lookBookImg').className = 'col col-sm-4 col-md-6 col-lg-5 z-depth-5 animated fadeInRight';
+                const categories = Array.from(document.querySelector('#lookBookMenu').querySelectorAll('h2'));
+                console.log(categories);
+
+                categories.forEach(category => {
+                    console.log(categories.indexOf(category));
+                    if (categories.indexOf(category) % 2 === 0 ) {
+                        category.className = 'animated fadeInLeft';
+                    }
+
+                    else {
+                        category.className = 'animated fadeInRight';
+                    }
+                });
+            break;
+
             case 'kontakt':
-            console.log(123);
                 document.querySelector('#square').className = 'animated zoomIn';
                 document.querySelector('#contact > h1').className = 'animated fadeIn';
                 document.querySelector('#contactImg').className = 'col col-sm-4 col-md-6 col-lg-6 z-depth-5 animated fadeInLeft';
