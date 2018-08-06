@@ -24,8 +24,6 @@ function fadeOutLoadingScreen() {
     const loadingScreen = document.querySelector('#loadingScreen');
     setTimeout(() => {
         loadingScreen.className = 'animated fadeOut';
-
-        console.log(getUrl());
         switch (getUrl()) {
             case 'historie':
                 document.querySelector('#historyIntro').className = 'animated fadeIn';
@@ -33,11 +31,13 @@ function fadeOutLoadingScreen() {
 
             case 'lookbook':
                 document.querySelector('#lookBookImg').className = 'col col-sm-4 col-md-6 col-lg-5 z-depth-5 animated fadeInRight';
-                const categories = Array.from(document.querySelector('#lookBookMenu').querySelectorAll('h2'));
-                console.log(categories);
 
+                const options = document.querySelectorAll('.lookBookMenuOption');
+                options[0].className = 'lookBookMenuOption animated fadeInDown';
+                options[1].className = 'lookBookMenuOption animated fadeInUp';
+
+                const categories = Array.from(document.querySelector('#lookBookMenu').querySelectorAll('h2'));
                 categories.forEach(category => {
-                    console.log(categories.indexOf(category));
                     if (categories.indexOf(category) % 2 === 0 ) {
                         category.className = 'animated fadeInLeft';
                     }

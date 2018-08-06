@@ -14,8 +14,10 @@ export default class Lookbook extends Component {
                 <Row>
                     <div id='lookBookCont' className='col col-sm-8 col-md-6 col-lg-7'>
                         <div id='lookBookMenu' className='container'>
-                            <h5>Velg ditt merke</h5>
-                            <Minus color='#363F54' />
+                            <div className='lookBookMenuOption'>
+                                <h5>Velg ditt merke</h5>
+                                <Minus color='#363F54' />
+                            </div>
                             <div id='lookBookCategories'>
                                 <h2><span>01.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                                 <h2><span>02.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
@@ -23,10 +25,12 @@ export default class Lookbook extends Component {
                                 <h2><span>04.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                                 <h2><span>05.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                             </div>
-                            <h5>Eller se alle</h5>
-                            <Minus color='#363F54' />
-                            <br />
-                            <ArrowDown id='arrowDown' color='#363F54' />
+                            <div className='lookBookMenuOption'>
+                                <h5>Eller se alle</h5>
+                                <Minus color='#363F54' />
+                                <br />
+                                <ArrowDown id='arrowDown' color='#363F54' />
+                            </div>
                         </div>
                     </div>
                     <div id='lookBookImg' className='col col-sm-4 col-md-6 col-lg-5 z-depth-5'>
