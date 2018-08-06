@@ -51,12 +51,14 @@ function animateContact() {
     const logo = document.querySelector('#navLogo');
     const heading = document.querySelector('h1');
     const square = document.querySelector('#square');
+    const paragrapgh = document.querySelector('#contactCont > p');
 
     // animate on scroll
-    heading.style.marginLeft = (window.scrollY / 10) + 'px';
-    square.style.marginLeft = (window.scrollY / 5) + 'px';
-    square.style.marginTop = (window.scrollY / 10) + 'px';
+    heading.style.marginLeft = (window.scrollY / 11) + 'px';
+    square.style.marginLeft = (window.scrollY / 11) + 'px';
+    square.style.marginTop = (window.scrollY / 11) + 'px';
     square.style.transform = 'rotate('+  (35 + (window.scrollY / 15)) + 'deg)';
+    paragrapgh.style.marginRight = (window.scrollY / 11) + 'px';
 
     const halfWidth = (headerImg.offsetTop + headerImg.offsetHeight) / 2;
     if ((window.scrollY + halfWidth) > (halfWidth * 2)) {

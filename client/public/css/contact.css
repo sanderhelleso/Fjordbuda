@@ -1,5 +1,13 @@
+body {
+    overflow-x: hidden !important;
+}
+
 #contact {
     margin-bottom: 25px;
+}
+
+#contact div {
+ 
 }
 
 #contact .row {
@@ -10,8 +18,8 @@
     padding: 0;
     background: linear-gradient(
     rgba(121, 85, 72, 0.9), 
-    rgba(255, 255, 255, 0.9)),
-    url("../img/menu/mainmenu.jpg");
+    rgba(255, 255, 255, 0.5)),
+    url("../img/contact/contact.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +27,7 @@
 }
 
 #contactCont {
-    min-height: 75vh;
+    min-height: 60vh;
     position: relative !important;
     width: 100%;
 }
@@ -39,6 +47,7 @@
     left: 45%;
     transform: translate(-55%);
     transform: rotate(30deg);
+    opacity: 0.1;
 }
 
 #contact h1 {
@@ -184,9 +193,9 @@
     }
 }
 
-@media (max-height: 450px) {
+@media (max-height: 480px) {
     #contactCont form {
-        top: 70%;
+        top: 50%;
     }
 
     #contact {
@@ -194,8 +203,19 @@
     }
 }
 
-@media (max-height: 450px) {
+@media (max-height: 350px) {
     #contactCont form {
         top: 85%;
+    }
+}
+
+@media (max-width: 350px) {
+    #contact h1 {
+        padding-left: 15px !important;
+        font-size: 40px !important;
+    }
+
+    #contactCont p {
+        min-width: 90% !important;
     }
 }
