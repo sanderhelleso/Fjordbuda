@@ -1,10 +1,33 @@
-#lookBook {
-    height: 100vh;
+#lookBookImg {
     background: linear-gradient(
-    rgba(121, 85, 72, 0.9), 
-    rgba(0, 0, 0, 0.7)),
+    rgba(121, 85, 72, 0.5), 
+    rgba(0, 0, 0, 0.5)),
     url("../img/lookbook/lookbook.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#lookBookCont {
+    margin-top: 75px;
+    min-height: 100vh;
+}
+
+#lookBookHeader {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-50%);
+    padding-left: 25px;
+    border-left: 2px solid #F0E68C;
+    min-height: 100px;
+}
+
+#lookBookHeader h1 {
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: -10px;
 }
