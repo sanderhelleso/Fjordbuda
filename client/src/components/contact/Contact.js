@@ -8,13 +8,9 @@ export default class Contact extends Component {
     }
 
     componentDidMount() {
-        console.log(document.querySelector('#navLogo'));
-        setTimeout(() => {
-            document.querySelector('#navLogo').src = 'img/logo/Vinje1_white.png';
-        }, 100);
-
         // run animation for contacts
         window.addEventListener('scroll', animateContact);
+        document.querySelector('#menuToggler > svg').style.stroke = '#212121';
     }
 
     render() {
@@ -24,6 +20,7 @@ export default class Contact extends Component {
             <h1>Kontakt</h1>
             <Row>
                 <div id='contactImg' className='col col-sm-4 col-md-6 col-lg-6 z-depth-5'>
+                    <h5>Lets go on an adventure</h5>
                 </div>
                 <div className='col col-sm-8 col-md-6 col-lg-6'>
                     <div id='contactCont'>
@@ -61,15 +58,4 @@ function animateContact() {
     paragrapgh.style.marginRight = (window.scrollY / 11) + 'px';
 
     const halfWidth = (headerImg.offsetTop + headerImg.offsetHeight) / 2;
-    if ((window.scrollY + halfWidth) > (halfWidth * 2)) {
-        if (logo.src != 'img/logo/Vinje1_white.png') {
-            logo.src = 'img/logo/Vinje1_black.png';
-        }
-    }
-
-    else {
-        if (logo.src != 'img/logo/Vinje1_black.png') {
-            logo.src = 'img/logo/Vinje1_white.png';
-        }
-    }
 }
