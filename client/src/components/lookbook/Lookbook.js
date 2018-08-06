@@ -6,6 +6,7 @@ export default class Lookbook extends Component {
 
     componentDidMount() {
         document.title = `🔥 Lookbook ${new Date().getFullYear()} | Fjordbuda`;
+        window.addEventListener('scroll', animateLookBook);
     }
 
     render() {
@@ -44,4 +45,9 @@ export default class Lookbook extends Component {
             </div>
         )
     }
+}
+
+function animateLookBook() {
+    const heading = document.querySelector('#lookBookHeader');
+    heading.style.bottom = (45 + (window.scrollY / 20)) + '%';
 }
