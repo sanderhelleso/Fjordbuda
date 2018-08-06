@@ -99,6 +99,20 @@
     }
 }
 
+@media (max-width: 770px) {
+    #contact h1 {
+        left: 35%;
+    }
+
+    #square {
+        height: 200px;
+        width: 200px;
+        top: 17.5%;
+        left: 27.5%;
+        opacity: 0.1;
+    }
+}
+
 @media (max-width: 600px) {
     #square {
         height: 150px;

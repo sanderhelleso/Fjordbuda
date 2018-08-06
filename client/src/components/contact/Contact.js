@@ -12,6 +12,9 @@ export default class Contact extends Component {
         setTimeout(() => {
             document.querySelector('#navLogo').src = 'img/logo/Vinje1_white.png';
         }, 100);
+
+        // run animation for contacts
+        window.addEventListener('scroll', animateContact);
     }
 
     render() {
@@ -20,9 +23,9 @@ export default class Contact extends Component {
             <div id='square' />
             <h1>Kontakt</h1>
             <Row>
-                <div id='contactImg' className='col col-sm-12 col-md-6 col-lg-6 z-depth-5'>
+                <div id='contactImg' className='col col-sm-4 col-md-6 col-lg-6 z-depth-5'>
                 </div>
-                <div className='col col-sm-12 col-md-6 col-lg-6'>
+                <div className='col col-sm-8 col-md-6 col-lg-6'>
                     <div id='contactCont'>
                         <p>Lurer du på noe eller har spørsmål angående produkter? Send oss gjerne en melding.</p>
                         <form>
@@ -41,4 +44,8 @@ export default class Contact extends Component {
         </div>
         )
     }
+}
+
+function animateContact() {
+    console.log(123);
 }
