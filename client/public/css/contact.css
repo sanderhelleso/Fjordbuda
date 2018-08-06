@@ -58,12 +58,15 @@
     position: absolute;
     top: 25%;
     right: 0;
+    padding-right: 20px;
     margin-right: 25px;
-    max-width: 40vh;
+    margin-left: 5px;
+    max-width: 45vh;
     font-weight: 600;
     color: #8A99C0;
     line-height: 28px;
     letter-spacing: 1px;
+    border-right: 3px solid #10ddc2;
 }
 
 #contactCont form {
@@ -93,13 +96,25 @@
     box-shadow: 0 1px 0 0 #10ddc2;
 }
 
+@media (min-height: 1025px) {
+    #contactCont p {
+        top: 35%;
+    }
+}
+
 @media (min-height: 1000px) {
     #contact h1 {
         top: 20%;
     }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 1000px) {
+    #square {
+        opacity: 0.1;
+    }
+}
+
+@media (max-width: 750px) {
     #contact h1 {
         left: 35%;
     }
@@ -120,7 +135,7 @@
         border: 6px solid #333;
         position: absolute;
         top: 37.5%;
-        left: 45%;
+        left: 15%;
         transform: translate(-55%);
         transform: rotate(30deg);
         opacity: 0.1;
@@ -132,8 +147,8 @@
         box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     }
 
-    h1 {
-        top: 42.5%;
+    #contactCont h1 {
+        top: 50% !important;
         left: 50%;
         font-size: 50px !important;
     }
@@ -152,6 +167,10 @@
 
     #contactCont form {
         top: 22.5%;
+    }
+
+    #contactCont p {
+        top: 0%;
     }
 }
 

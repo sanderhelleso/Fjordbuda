@@ -47,5 +47,27 @@ export default class Contact extends Component {
 }
 
 function animateContact() {
-    console.log(123);
+    const headerImg = document.querySelector('#contactImg');
+    const logo = document.querySelector('#navLogo');
+    const heading = document.querySelector('h1');
+    const square = document.querySelector('#square');
+
+    // animate on scroll
+    heading.style.marginLeft = (window.scrollY / 10) + 'px';
+    square.style.marginLeft = (window.scrollY / 5) + 'px';
+    square.style.marginTop = (window.scrollY / 10) + 'px';
+    square.style.transform = 'rotate('+  (35 + (window.scrollY / 15)) + 'deg)';
+
+    const halfWidth = (headerImg.offsetTop + headerImg.offsetHeight) / 2;
+    if ((window.scrollY + halfWidth) > (halfWidth * 2)) {
+        if (logo.src != 'img/logo/Vinje1_white.png') {
+            logo.src = 'img/logo/Vinje1_black.png';
+        }
+    }
+
+    else {
+        if (logo.src != 'img/logo/Vinje1_black.png') {
+            logo.src = 'img/logo/Vinje1_white.png';
+        }
+    }
 }
