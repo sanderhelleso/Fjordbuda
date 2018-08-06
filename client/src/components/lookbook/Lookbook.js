@@ -17,11 +17,11 @@ export default class Lookbook extends Component {
                             <h5>Velg ditt merke</h5>
                             <Minus color='#363F54' />
                             <div id='lookBookCategories'>
-                                <h2><span>01.</span>Klesmerke<span className='categorySpan'></span></h2>
-                                <h2><span>02.</span>Klesmerke<span className='categorySpan'></span></h2>
-                                <h2><span>03.</span>Klesmerke<span className='categorySpan'></span></h2>
-                                <h2><span>04.</span>Klesmerke<span className='categorySpan'></span></h2>
-                                <h2><span>05.</span>Klesmerke<span className='categorySpan'></span></h2>
+                                <h2><span>01.</span>Klesmerke<span className='categorySpan animated fadeInRight'><span className='hiddenSpan'>.</span></span></h2>
+                                <h2><span>02.</span>Klesmerke<span className='categorySpan animated fadeInRight'><span className='hiddenSpan'>.</span></span></h2>
+                                <h2><span>03.</span>Klesmerke<span className='categorySpan animated fadeInRight'><span className='hiddenSpan'>.</span></span></h2>
+                                <h2><span>04.</span>Klesmerke<span className='categorySpan animated fadeInRight'><span className='hiddenSpan'>.</span></span></h2>
+                                <h2><span>05.</span>Klesmerke<span className='categorySpan animated fadeInRight'><span className='hiddenSpan'>.</span></span></h2>
                             </div>
                             <h5>Eller se alle</h5>
                             <Minus color='#363F54' />
