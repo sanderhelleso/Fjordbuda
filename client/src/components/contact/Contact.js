@@ -20,7 +20,7 @@ export default class Contact extends Component {
             <h1>Kontakt</h1>
             <Row>
                 <div id='contactImg' className='col col-sm-4 col-md-6 col-lg-6 z-depth-5'>
-                    <h5>Lets go on an adventure</h5>
+                    <h5>Let's go on an adventure</h5>
                 </div>
                 <div className='col col-sm-8 col-md-6 col-lg-6'>
                     <div id='contactCont'>
