@@ -30,7 +30,7 @@ function fadeOutLoadingScreen() {
             break;
 
             case 'lookbook':
-                document.querySelector('#lookBookImg').className = 'col col-sm-4 col-md-6 col-lg-5 z-depth-5 animated fadeInRight';
+                document.querySelector('#lookBookImg').className = 'col col-sm-12 col-md-5 col-lg-5 z-depth-5 animated fadeInRight';
 
                 const options = document.querySelectorAll('.lookBookMenuOption');
                 options[0].className = 'lookBookMenuOption animated fadeInDown';
