@@ -12,11 +12,31 @@ export default class ClothingGallery extends React.Component {
 const PHOTO_SET = [
     {
         src: '../img/menu/menubg0.jpg',
-        width: 4,
-        height: 3
+        width: 1,
+        height: 1
     },
     {
-        src: '../img/menu/menubg0.jpg',
+        src: '../img/menu/menubg1.jpg',
+        width: 1,
+        height: 1
+    },
+    {
+        src: '../img/menu/menubg2.jpg',
+        width: 1,
+        height: 1
+    },
+    {
+        src: '../img/menu/menubg3.jpg',
+        width: 1,
+        height: 1
+    },
+    {
+        src: '../img/menu/menubg4.jpg',
+        width: 1,
+        height: 1
+    },
+    {
+        src: '../img/menu/mainmenu.jpg',
         width: 1,
         height: 1
     }
