@@ -6,7 +6,14 @@ export default class Lookbook extends Component {
 
     componentDidMount() {
         document.title = `🔥 Lookbook ${new Date().getFullYear()} | Fjordbuda`;
+        console.log(document.querySelector('#menuToggler > svg'));
+        setTimeout(() => {
+            document.querySelector('#menuToggler > svg').style.stroke = 'white';
+        }, 500);
         window.addEventListener('scroll', animateLookBook);
+
+        getScreenSize();
+        window.addEventListener('resize', getScreenSize);
     }
 
     render() {
@@ -50,4 +57,32 @@ export default class Lookbook extends Component {
 function animateLookBook() {
     const heading = document.querySelector('#lookBookHeader');
     heading.style.bottom = (45 + (window.scrollY / 20)) + '%';
+}
+
+
+function getScreenSize() {
+    const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const logo = document.querySelector('#navLogo');
+    window.addEventListener('scroll', scrollSpyLookBook);
+
+    if (width <= 768) {
+        console.log(123);
+        setTimeout(() => {
+            logo.src = 'img/logo/Vinje1_white.png';
+        }, 200);
+    }
+
+    else {
+        logo.src = 'img/logo/Vinje1_black.png';
+    }
+    console.log(width);
+}
+
+function scrollSpyLookBook(width) {
+    if (width <= 768) {
+        console.log(123);
+        setTimeout(() => {
+            logo.src = 'img/logo/Vinje1_white.png';
+        }, 200);
+    }
 }
