@@ -6,10 +6,6 @@ export default class Lookbook extends Component {
 
     componentDidMount() {
         document.title = `🔥 Lookbook ${new Date().getFullYear()} | Fjordbuda`;
-        console.log(document.querySelector('#menuToggler > svg'));
-        setTimeout(() => {
-            document.querySelector('#menuToggler > svg').style.stroke = 'white';
-        }, 500);
         window.addEventListener('scroll', animateLookBook);
 
         getScreenSize();
@@ -63,13 +59,17 @@ function animateLookBook() {
 function getScreenSize() {
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const logo = document.querySelector('#navLogo');
-    window.addEventListener('scroll', scrollSpyLookBook);
+    const menuIcon = document.querySelector('#menuToggler > svg');
+    const header = document.querySelector('#lookBookImg')
+
+    window.addEventListener('scroll', manipulateNav);
+
+    setTimeout(() => {
+        menuIcon.style.stroke = 'white';
+    }, 200);
 
     // small screen
-    if (width <= 768) {
-        window.addEventListener('scroll', () => {
-
-        });
+    if (isSmall()) {
         setTimeout(() => {
             logo.src = 'img/logo/Vinje1_white.png';
         }, 200);
@@ -78,8 +78,44 @@ function getScreenSize() {
     // tablet +
     else {
         logo.src = 'img/logo/Vinje1_black.png';
-        window.addEventListener('scroll', () => {
-            
-        });
+    }
+
+    // check if small or large
+    function isSmall() {
+        if (width <= 768) {
+            return true;
+        }
+
+        return false;
+    }
+
+    // stype nav logo and icon depending on scrolle position and screen size
+    function manipulateNav() {
+        switch (isSmall()) {
+            case true:
+                if ((window.scrollY + 20) > (header.offsetTop + header.offsetHeight)) {
+                    if (logo.src != 'img/logo/Vinje1_black.png') {
+                        logo.src = 'img/logo/Vinje1_black.png';
+                    }
+                }
+        
+                else {
+                    if (logo.src != 'img/logo/Vinje1_white.png') {
+                        logo.src = 'img/logo/Vinje1_white.png';
+                    }
+                }
+            break;
+        }
+
+        // icon shall always change on certain scroll length
+        if ((window.scrollY + 20) > (header.offsetTop + header.offsetHeight)) {
+            if (menuIcon.style.stroke === 'white') {
+                menuIcon.style.stroke = '#212121';
+            }
+        }
+
+        else {
+            menuIcon.style.stroke = 'white';
+        }
     }
 }
