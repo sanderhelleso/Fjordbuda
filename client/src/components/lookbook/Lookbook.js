@@ -60,7 +60,9 @@ function getScreenSize() {
     const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const logo = document.querySelector('#navLogo');
     const menuIcon = document.querySelector('#menuToggler > svg');
-    const header = document.querySelector('#lookBookImg')
+    const header = document.querySelector('#lookBookImg');
+
+    console.log(width);
 
     window.addEventListener('scroll', manipulateNav);
 
@@ -88,7 +90,7 @@ function getScreenSize() {
 
         return false;
     }
-
+    console.log(isSmall());
     // stype nav logo and icon depending on scrolle position and screen size
     function manipulateNav() {
         switch (isSmall()) {
@@ -103,6 +105,12 @@ function getScreenSize() {
                     if (logo.src != 'img/logo/Vinje1_white.png') {
                         logo.src = 'img/logo/Vinje1_white.png';
                     }
+                }
+            break;
+
+            case false:
+                 if (logo.src != 'img/logo/Vinje1_black.png') {
+                    logo.src = 'img/logo/Vinje1_black.png';
                 }
             break;
         }
