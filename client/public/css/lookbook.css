@@ -213,3 +213,33 @@
         cursor: pointer;
     }
 }
+
+@media (max-width: 600px) {
+
+    #lookBookHeader #lookBookYear {
+        font-size: 140px;
+        bottom: -100%;
+        margin-left: 10px;
+    }
+
+    #lookBookMenu {
+        margin-left: 25%;
+    }
+}
+
+@media(max-width: 400px) {
+    #lookBookCont {
+        max-width: 50%;
+    }
+
+    #lookBookHeader #lookBookYear {
+        font-size: 140px;
+        bottom: -100%;
+        margin-left: 10px;
+    }
+
+    #lookBookMenu {
+        margin-left: 0%;
+        padding-left: 40%;
+    }
+}

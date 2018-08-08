@@ -90,7 +90,7 @@ function getScreenSize() {
 
         return false;
     }
-    console.log(isSmall());
+    
     // stype nav logo and icon depending on scrolle position and screen size
     function manipulateNav() {
         switch (isSmall()) {
