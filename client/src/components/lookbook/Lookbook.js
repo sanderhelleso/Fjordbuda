@@ -65,24 +65,21 @@ function getScreenSize() {
     const logo = document.querySelector('#navLogo');
     window.addEventListener('scroll', scrollSpyLookBook);
 
+    // small screen
     if (width <= 768) {
-        console.log(123);
+        window.addEventListener('scroll', () => {
+
+        });
         setTimeout(() => {
             logo.src = 'img/logo/Vinje1_white.png';
         }, 200);
     }
 
+    // tablet +
     else {
         logo.src = 'img/logo/Vinje1_black.png';
-    }
-    console.log(width);
-}
-
-function scrollSpyLookBook(width) {
-    if (width <= 768) {
-        console.log(123);
-        setTimeout(() => {
-            logo.src = 'img/logo/Vinje1_white.png';
-        }, 200);
+        window.addEventListener('scroll', () => {
+            
+        });
     }
 }
