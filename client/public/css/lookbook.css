@@ -140,6 +140,12 @@
     }
 }
 
+@media (max-height: 500px) {
+    #lookBookCont {
+        min-height: 170vh;
+    }
+}
+
 @media (max-width: 1100px) {
     #lookBookHeader #lookBookYear {
         font-size: 140px;
@@ -241,5 +247,38 @@
     #lookBookMenu {
         margin-left: 0%;
         padding-left: 40%;
+    }
+
+    #lookBook .row {
+        margin-right: 0 !important;
+    }
+
+    #lookBookCont {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 320px) {
+    #lookBookHeader h1 {
+        font-size: 40px;
+    }
+    
+    #lookBookHeader #lookBookYear {
+        font-size: 110px;
+        bottom: -65%;
+        margin-left: 10px;
+    }
+
+    #lookBookMenu {
+        margin-left: 0%;
+    }
+    
+    #lookBookMenu #lookBookCategories h2  {
+        font-size: 20px;
+    }
+
+    #lookBookMenu {
+        padding-left: 30%;
     }
 }
