@@ -1,3 +1,4 @@
+import React, { Component } from 'react';
 import Gallery from 'react-photo-gallery';
  
 export default class ClothingGallery extends React.Component {

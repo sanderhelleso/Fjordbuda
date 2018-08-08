@@ -11,7 +11,7 @@ export default class Loading extends Component {
         return (
             <div id='loadingScreen'>
                 <div id='loadingHero'>
-                    <img id='loadingLogo' src="img/logo/Vinje1_white.png" height="90"/>
+                    <img id='loadingLogo' src="../img/logo/Vinje1_white.png" height="90"/>
                 </div>
                 <div className="lds-ripple"><div></div><div></div></div>
             </div>
@@ -24,28 +24,30 @@ function fadeOutLoadingScreen() {
     const loadingScreen = document.querySelector('#loadingScreen');
     setTimeout(() => {
         loadingScreen.className = 'animated fadeOut';
-        switch (getUrl()) {
+        switch (getUrl()[0]) {
             case 'historie':
                 document.querySelector('#historyIntro').className = 'animated fadeIn';
             break;
 
             case 'lookbook':
-                document.querySelector('#lookBookImg').className = 'col col-sm-12 col-md-5 col-lg-5 z-depth-5 animated fadeInRight';
+                if (getUrl()[1] === undefined) {
+                    document.querySelector('#lookBookImg').className = 'col col-sm-12 col-md-5 col-lg-5 z-depth-5 animated fadeInRight';
 
-                const options = document.querySelectorAll('.lookBookMenuOption');
-                options[0].className = 'lookBookMenuOption animated fadeInDown';
-                options[1].className = 'lookBookMenuOption animated fadeInUp';
+                    const options = document.querySelectorAll('.lookBookMenuOption');
+                    options[0].className = 'lookBookMenuOption animated fadeInDown';
+                    options[1].className = 'lookBookMenuOption animated fadeInUp';
 
-                const categories = Array.from(document.querySelector('#lookBookMenu').querySelectorAll('h2'));
-                categories.forEach(category => {
-                    if (categories.indexOf(category) % 2 === 0 ) {
-                        category.className = 'animated fadeInLeft';
-                    }
+                    const categories = Array.from(document.querySelector('#lookBookMenu').querySelectorAll('h2'));
+                    categories.forEach(category => {
+                        if (categories.indexOf(category) % 2 === 0 ) {
+                            category.className = 'animated fadeInLeft';
+                        }
 
-                    else {
-                        category.className = 'animated fadeInRight';
-                    }
-                });
+                        else {
+                            category.className = 'animated fadeInRight';
+                        }
+                    });
+                }
             break;
 
             case 'kontakt':
