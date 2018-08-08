@@ -140,6 +140,12 @@
     }
 }
 
+@media (max-height: 813px) and (max-width: 376px) {
+    #lookBookCont {
+        min-height: 100vh;
+    }
+}
+
 @media (max-height: 500px) {
     #lookBookCont {
         min-height: 170vh;

@@ -11,6 +11,7 @@ import MainFooter from './MainFooter';
 import History from './history/History';
 import Contact from './contact/Contact';
 import Lookbook from './lookbook/Lookbook';
+import Showcase from './lookbook/Showcase';
 
 export default class App extends Component {
     render() {
@@ -23,6 +24,7 @@ export default class App extends Component {
                         <Route exact path='/*' component={Loading} />
 
                         <Route exact path='/lookbook' component={Lookbook} />
+                        <Route exact path='/lookbook/*' component={Showcase} />
                         <Route exact path='/historie' component={History} />
                         <Route exact path='/kontakt' component={Contact} />
 
