@@ -5,7 +5,7 @@ import Gallery from './ClothingGallery';
 export default class Showcase extends Component {
 
     componentWillMount() {
-        document.title = `${toTitleCase(url())} | Lookbook | Fjordbuda`;
+        document.title = `🔥 ${toTitleCase(url())} | Lookbook | Fjordbuda`;
     }
 
     render() {
