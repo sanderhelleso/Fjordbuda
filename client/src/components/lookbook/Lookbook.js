@@ -20,7 +20,15 @@ export default class Lookbook extends Component {
             if (index < 10) {
                 index = `0${index}`;
             }
-            return <h2 key={index}><a href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+
+            // check if norøna due to ÆØÅ 
+            if (brand.toLowerCase() === 'norøna') {
+                return <h2 key={index}><a href={`/lookbook/norona`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+            }
+
+            else {
+                return <h2 key={index}><a href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+            }
         });
 
     }

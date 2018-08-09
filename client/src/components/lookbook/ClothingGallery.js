@@ -4,7 +4,7 @@ import Gallery from 'react-photo-gallery';
 export default class ClothingGallery extends React.Component {
     render() {
         return (
-            <Gallery photos={PHOTO_SET} />
+            <Gallery photos={PHOTO_SET} margin={5} />
         );
     }
 }
