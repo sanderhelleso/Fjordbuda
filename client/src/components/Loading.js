@@ -24,6 +24,7 @@ function fadeOutLoadingScreen() {
     const loadingScreen = document.querySelector('#loadingScreen');
     setTimeout(() => {
         loadingScreen.className = 'animated fadeOut';
+        console.log(getUrl()[0]);
         switch (getUrl()[0]) {
             case 'historie':
                 document.querySelector('#historyIntro').className = 'animated fadeIn';

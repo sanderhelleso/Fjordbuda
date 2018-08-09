@@ -70,6 +70,10 @@
     letter-spacing: 2px;
 }
 
+#lookBookMenu #lookBookCategories h2 a {
+    color: #363F54 !important;
+}
+
 #lookBookMenu #lookBookCategories h2 span {
     font-weight: 200;
     font-size: 35px;

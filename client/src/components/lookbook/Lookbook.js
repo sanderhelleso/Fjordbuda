@@ -12,6 +12,15 @@ export default class Lookbook extends Component {
         window.addEventListener('resize', getScreenSize);
     }
 
+    renderBrands() {
+        const brands = ['Dale of Norway'];
+        return brands.map(brand => {
+            console.log(123);
+            <h2><a href='/'><span>{brands.indexOf(brand) + 1}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+        });
+
+    }
+
     render() {
         return (
             <div id='lookBook'>
@@ -23,7 +32,8 @@ export default class Lookbook extends Component {
                                 <Minus color='#363F54' />
                             </div>
                             <div id='lookBookCategories'>
-                                <h2><span>01.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
+                                {this.renderBrands()}
+                                <h2><a href='/'><span>01.</span>Dale of Norway<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
                                 <h2><span>02.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                                 <h2><span>03.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                                 <h2><span>04.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
