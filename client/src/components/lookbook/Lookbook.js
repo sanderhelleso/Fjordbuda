@@ -14,7 +14,7 @@ export default class Lookbook extends Component {
 
     // insert brands into page
     renderBrands() {
-        const brands = ['Dale of Norway'];
+        const brands = ['Dale of Norway', 'Norøna', 'Arcyeyx', 'Waynor', 'North Suvenir', 'Scandinavian Explorer'];
         return brands.map(brand => {
             let index = brands.indexOf(brand) + 1;
             if (index < 10) {
@@ -37,11 +37,6 @@ export default class Lookbook extends Component {
                             </div>
                             <div id='lookBookCategories'>
                                 {this.renderBrands()}
-                                <h2><a href='/'><span>01.</span>Dale of Norway<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
-                                <h2><span>02.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
-                                <h2><span>03.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
-                                <h2><span>04.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
-                                <h2><span>05.</span>Klesmerke<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2>
                             </div>
                             <div id='seeAllCategories' className='lookBookMenuOption'>
                                 <h5>Eller se alle</h5>
