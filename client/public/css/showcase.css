@@ -27,6 +27,7 @@
 
 #brandLogo {
     max-height: 200px;
+    max-width: 30vw;
     width: auto;
     opacity: 0.1;
     position: relative;
