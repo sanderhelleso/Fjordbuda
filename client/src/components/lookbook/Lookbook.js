@@ -12,11 +12,15 @@ export default class Lookbook extends Component {
         window.addEventListener('resize', getScreenSize);
     }
 
+    // insert brands into page
     renderBrands() {
         const brands = ['Dale of Norway'];
         return brands.map(brand => {
-            console.log(123);
-            <h2><a href='/'><span>{brands.indexOf(brand) + 1}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+            let index = brands.indexOf(brand) + 1;
+            if (index < 10) {
+                index = `0${index}`;
+            }
+            return <h2 key={index}><a href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
         });
 
     }
