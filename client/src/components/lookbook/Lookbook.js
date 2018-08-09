@@ -14,7 +14,7 @@ export default class Lookbook extends Component {
 
     // insert brands into page
     renderBrands() {
-        const brands = ['Dale of Norway', 'Norøna', 'Arcyeyx', 'Waynor', 'North Suvenir', 'Scandinavian Explorer'];
+        const brands = ['Dale of Norway', 'Norrøna', 'Arcteryx', 'Waynor', 'North Suvenir', 'Scandinavian Explorer'];
         return brands.map(brand => {
             let index = brands.indexOf(brand) + 1;
             if (index < 10) {
@@ -22,8 +22,8 @@ export default class Lookbook extends Component {
             }
 
             // check if norøna due to ÆØÅ 
-            if (brand.toLowerCase() === 'norøna') {
-                return <h2 key={index}><a href={`/lookbook/norona`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+            if (brand.toLowerCase() === 'norrøna') {
+                return <h2 key={index}><a href={`/lookbook/norrona`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
             }
 
             else {

@@ -27,8 +27,8 @@ export default class Showcase extends Component {
 
 function url() {
     const brand = window.location.href.split('/')[4];
-    if (brand === 'norona') {
-        return 'norøna';
+    if (brand === 'norrona') {
+        return 'norrøna';
     }
 
     else {
