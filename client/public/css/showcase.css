@@ -53,3 +53,20 @@
         margin: 0 auto;
     }
 }
+
+@media (max-width: 768px) {
+    #galleryCont img {
+        min-width: 100%;
+        min-height: 400px;
+        margin: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    #showcaseHero p {
+        max-width: 90%;
+    }
+
+    #galleryCont {
+        margin-top: 75px !important;
+    }
+}
