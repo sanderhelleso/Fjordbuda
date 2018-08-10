@@ -13,6 +13,8 @@ export default class ClothingGallery extends React.Component {
                 brand: window.location.href.split('/')[4]
             }
         })
+
+        // get all images for folder and push to array
         .then(res => {
             res.data.galleryImgs.forEach(img => {
                 photo_set.push({
@@ -21,18 +23,12 @@ export default class ClothingGallery extends React.Component {
                     height: 1
                 });
             });
-        });
-    }
+        })
 
-    componentDidMount() {
-        const container = document.querySelector('.react-photo-gallery--gallery');
-        const firstItem = container.querySelectorAll('img')[0];
-        const lastItem = container.querySelectorAll('img');
-        console.log(firstItem, lastItem);
-        //container.insertBefore(lastItem, firstItem);
-
-        this.forceUpdate();
-        console.log(photo_set);
+        // when done, force the component to update
+        .then(done => {
+            this.forceUpdate();
+        })
     }
 
     render() {
@@ -42,5 +38,5 @@ export default class ClothingGallery extends React.Component {
     }
 }
 
-let photo_set = [
-];
+// photo set
+let photo_set = [];
