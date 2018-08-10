@@ -49,6 +49,11 @@ function fadeOutLoadingScreen() {
                         }
                     });
                 }
+
+                else {
+                    document.querySelector('#showcaseHero').className = 'animated fadeIn';
+                    
+                }
             break;
 
             case 'kontakt':
