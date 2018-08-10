@@ -17,6 +17,9 @@ const host = process.env.HOST || 'localhost';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// routes
+require("./routes/gallery")(app);
+
 // serve out production assets
 app.use(express.static("client/build"));
 

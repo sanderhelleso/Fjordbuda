@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import Gallery from './ClothingGallery';
 
 export default class Showcase extends Component {
