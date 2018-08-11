@@ -16,7 +16,12 @@ module.exports = app => {
                 const galleryPath = `${url}${folder}/gallery`;
                 readdir(galleryPath)
                 .then(files => {
-                    imgs.push(files);
+                    // send along an object with brand and files
+                    const obj = {
+                        brand: folder,
+                        files: files
+                    }
+                    imgs.push(obj);
                     galleryCount++;
                 })
                 .catch(err => {
@@ -29,7 +34,7 @@ module.exports = app => {
                     // send AFTER all data is loaded into array
                     if (galleryCount === folderCount) {
                         res.send({
-                            galleryImgs: [].concat.apply([], imgs) // flatten array
+                            galleryImgs: imgs
                         });
                     }
                 });
