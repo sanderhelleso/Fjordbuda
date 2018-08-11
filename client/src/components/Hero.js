@@ -20,5 +20,8 @@ function initExplore() {
     setTimeout(() => {
         window.scrollBy(0,1);
         document.querySelector('.parallax-container').style.display = 'block';
+        setTimeout(() => {
+            document.querySelector('#mainSectionIntro').style.display = 'block';
+        }, 500);
     }, 500);
 }

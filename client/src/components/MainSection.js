@@ -9,6 +9,10 @@ export default class MainSection extends Component {
                     <Parallax imageSrc="http://materializecss.com/images/parallax1.jpg" className='animated fadeIn z-depth-2'/>
                     <h5>Fjodbuda 2006</h5>
                 </div>
+                <div id='mainSectionIntro' className='animated fadeInUp'>
+                    <h5>Velkommen til</h5>
+                    <h2>Fjordbuda</h2>
+                </div>
             </section>
         )
     }
