@@ -358,33 +358,32 @@ video {
 }
 
 #mainSection {
-    height: 100vh;
+    min-height: 100vh;
     display: none;
 }
 
 #mainSection #mainHero {
-    height: 45vh;
+    height: 55vh;
     position: relative;
+    background: linear-gradient(
+    rgba(20, 20, 20, 0.5), 
+    rgba(20, 20, 20, 0.5)),
+    url("../img/landing/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
 }
 
 #mainSection #mainHero h5 {
     color: white;
     position: absolute;
-    bottom: -12.5%;
+    bottom: 5%;
     margin-left: 20px;
     font-size: 12px;
     font-weight: 100;
     letter-spacing: 2px;
-    opacity: 0.8;
-}
-
-.parallax img {
-    display: block;
-    filter: grayscale(100%);
-}
-
-.parallax-container {
-    display: none;
+    opacity: 1;
 }
 
 #mainSectionIntro {
@@ -406,6 +405,10 @@ video {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 5px;
+}
+
+#section1 img {
+ 
 }
 
 @media screen and (min-width: 900px) {

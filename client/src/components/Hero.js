@@ -19,9 +19,9 @@ function initExplore() {
     document.querySelector('#mainSection').style.display = 'block';
     setTimeout(() => {
         window.scrollBy(0,1);
-        document.querySelector('.parallax-container').style.display = 'block';
+        document.querySelector('#mainHero').style.display = 'block';
         setTimeout(() => {
             document.querySelector('#mainSectionIntro').style.display = 'block';
         }, 500);
-    }, 500);
+    }, 750);
 }
