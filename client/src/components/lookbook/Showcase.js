@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ChevronRight } from 'react-feather';
 import Gallery from './ClothingGallery';
 
 export default class Showcase extends Component {
@@ -9,6 +10,11 @@ export default class Showcase extends Component {
 
     componentDidMount() {
         document.querySelector('#brandDescription').innerHTML = setDescription();
+
+        // remove brand logo if all brands are present
+        if (url() === 'alle merker') {
+            document.querySelector('#brandLogo').remove();
+        }
     }
 
     render() {
@@ -22,6 +28,9 @@ export default class Showcase extends Component {
                 </div>
                 <div id='galleryCont'>
                     <Gallery />
+                </div>
+                <div id='breadcrumb'>
+                    <a href='/lookbook'>lookbook </a> <ChevronRight size={20} color={'#10ddc2'} /> <a href={window.location.href}>{url()} </a>
                 </div>
             </div>
         )

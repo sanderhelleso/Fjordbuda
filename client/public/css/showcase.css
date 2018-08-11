@@ -47,6 +47,21 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+#breadcrumb {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10vh;
+}
+
+#breadcrumb a {
+    font-size: 16px;
+    color: #999999;
+}
+
+#breadcrumb svg {
+    margin-bottom: -5px;
+}
+
 @media (min-width: 1000px) {
     #galleryCont {
         max-width: 80%;
