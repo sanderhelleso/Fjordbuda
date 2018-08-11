@@ -15,8 +15,20 @@ export default class ClothingGallery extends React.Component {
                 }
             })
             .then(res => {
-                console.log(res);
+                res.data.galleryImgs.forEach(obj => {
+                    obj.files.forEach(file => {
+                        photo_set.push({
+                            src: `../img/lookbook/${obj.brand}/gallery/${file}`,
+                            width: 1,
+                            height: 1
+                        });
+                    });
+                });
             })
+            .then(done => {
+                this.forceUpdate();
+                setAlts();
+            });
         }
 
         else {
@@ -43,13 +55,7 @@ export default class ClothingGallery extends React.Component {
             // when done, force the component to update
             .then(done => {
                 this.forceUpdate();
-
-                // set alt tags
-                const imgs = Array.from(document.querySelector('#galleryCont').querySelectorAll('img'));
-                imgs.forEach(img => {
-                    const file = img.src.split('/');
-                    img.alt = `Gallery image ${file[file.length - 1].split('.')[0]}`;
-                });
+                setAlts();
             });
         }
     }
@@ -59,6 +65,16 @@ export default class ClothingGallery extends React.Component {
             <Gallery photos={photo_set} margin={5} />
         );
     }
+}
+
+// set alt tags for gallery imgs
+function setAlts() {
+    // set alt tags
+    const imgs = Array.from(document.querySelector('#galleryCont').querySelectorAll('img'));
+    imgs.forEach(img => {
+        const file = img.src.split('/');
+        img.alt = `Gallery image ${file[file.length - 1].split('.')[0]}`;
+    });
 }
 
 // photo set
