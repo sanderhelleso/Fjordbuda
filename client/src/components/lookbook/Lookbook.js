@@ -46,7 +46,7 @@ export default class Lookbook extends Component {
                             <div id='lookBookCategories'>
                                 {this.renderBrands()}
                             </div>
-                            <a href='/' >
+                            <a href='/lookbook/alle-merker' >
                                 <div id='seeAllCategories' className='lookBookMenuOption'>
                                     <h5>Eller se alle</h5>
                                     <Minus color='#363F54' />

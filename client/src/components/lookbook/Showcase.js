@@ -49,6 +49,10 @@ function brandDescriptions() {
     return [
         {   brand: 'dale of norway',
             description: 'Dale of Norway har med sin unike kompetanse og erfaring vært ledende innen utvikling av nye ullkvaliteter. I utgangspunktet er ull et overlegent materiale, som isolerer, puster, transporterer fuktighet fra kroppen og hindrer svettelukt. Med Weatherproof og Knitshell har Dale of Norway lansert innovative ytterplagg av vannavstøtende ullgarn, foret med en vindtett kvalitetsmembran som puster. Dette gir perfekt beskyttelse mot både kulde, vind, regn og snø. Da garnet også avstøter smuss, holdes lyse farger pene og rene. Plaggene kan anvendes i tøffe værforhold, er ideelle i skibakken, men er også flotte til daglig bruk.'
+        },
+        {
+            brand: 'alle merker',
+            description: 'test'
         }
     ]
 }
