@@ -23,11 +23,11 @@ export default class Lookbook extends Component {
 
             // check if norøna due to ÆØÅ 
             if (brand.toLowerCase() === 'norrøna') {
-                return <h2 key={index}><a href={`/lookbook/norrona`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+                return <a href={`/lookbook/norrona`}><h2 key={index}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2></a>
             }
 
             else {
-                return <h2 key={index}><a href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></a></h2>
+                return <a href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><h2 key={index}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2></a>
             }
         });
 
@@ -46,12 +46,14 @@ export default class Lookbook extends Component {
                             <div id='lookBookCategories'>
                                 {this.renderBrands()}
                             </div>
-                            <div id='seeAllCategories' className='lookBookMenuOption'>
-                                <h5>Eller se alle</h5>
-                                <Minus color='#363F54' />
-                                <br />
-                                <ArrowDown id='arrowDown' color='#363F54' />
-                            </div>
+                            <a href='/' >
+                                <div id='seeAllCategories' className='lookBookMenuOption'>
+                                    <h5>Eller se alle</h5>
+                                    <Minus color='#363F54' />
+                                    <br />
+                                    <ArrowDown id='arrowDown' color='#363F54' />
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div id='lookBookImg' className='col col-sm-12 col-md-5 col-lg-5 z-depth-5'>
