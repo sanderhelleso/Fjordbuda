@@ -25,10 +25,9 @@ export default class MainMenu extends Component {
                 <div id='socialMedia'>
                     <a href='' target='_blank'><Facebook size={35} color='#ffffff' /></a>
                     <a href='' target='_blank'><Instagram size={35} color='#ffffff' /></a>
-                    <h5>#fjordfeeling</h5>
                 </div>
-                <div id='developedBy'>
-                    <a href='http://semanta.no' target='_blank'>Utviklet av Semanta</a>
+                <div id='hashtag'>
+                    <h5>#fjordfeeling</h5>
                 </div>
             </div>
         )

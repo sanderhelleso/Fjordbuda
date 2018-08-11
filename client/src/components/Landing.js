@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Slider, Slide } from 'react-materialize';
 import Hero from './Hero';
+import MainSection from './MainSection';
 
 export default class Landing extends Component {
 
@@ -32,8 +33,8 @@ export default class Landing extends Component {
                         </Slide>
                     </Slider>
                 </div>
-
                 <div id="landingProgress" />
+                <MainSection />
             </div>
         )
     }
