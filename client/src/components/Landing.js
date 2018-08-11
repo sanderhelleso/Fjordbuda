@@ -18,24 +18,26 @@ export default class Landing extends Component {
 
     render() {
         return (
-            <div>
-                <Hero />
-                <div className="overlay noSelect">
-                    <Slider fullscreen indicators={false} >
-                        <Slide
-                            src="/img/landing/landing.jpg" >
-                        </Slide>
-                        <Slide
-                            src="/img/landing/landing2.jpg" >
-                        </Slide>
-                        <Slide
-                            src="/img/landing/landing3.jpg" >
-                        </Slide>
-                    </Slider>
+            <section>
+                <div id='landingSection'>
+                    <Hero />
+                    <div className="overlay noSelect">
+                        <Slider fullscreen indicators={false} >
+                            <Slide
+                                src="/img/landing/landing.jpg" >
+                            </Slide>
+                            <Slide
+                                src="/img/landing/landing2.jpg" >
+                            </Slide>
+                            <Slide
+                                src="/img/landing/landing3.jpg" >
+                            </Slide>
+                        </Slider>
+                    </div>
+                    <div id="landingProgress" />
                 </div>
-                <div id="landingProgress" />
                 <MainSection />
-            </div>
+            </section>
         )
     }
 }
