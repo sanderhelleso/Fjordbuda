@@ -15,7 +15,7 @@ export default class Showcase extends Component {
         return (
             <div id='showcase' className='container'>
                 <div id='showcaseHero'>
-                    <img id='brandLogo' src={`../img/lookbook/${window.location.href.split('/')[4]}/logo.png`} />
+                    <img id='brandLogo' src={`../img/lookbook/${window.location.href.split('/')[4]}/logo.png`} alt={`${url()} logo`} />
                     <h1>{url()}</h1>
                     <p id='brandDescription'></p>
                     <div id='showcaseBorder' />
