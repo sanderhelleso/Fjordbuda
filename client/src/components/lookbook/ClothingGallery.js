@@ -28,6 +28,13 @@ export default class ClothingGallery extends React.Component {
         // when done, force the component to update
         .then(done => {
             this.forceUpdate();
+
+            // set alt tags
+            const imgs = Array.from(document.querySelector('#galleryCont').querySelectorAll('img'));
+            imgs.forEach(img => {
+                const file = img.src.split('/');
+                img.alt = `Gallery image ${file[file.length - 1].split('.')[0]}`;
+            });
         })
     }
 
