@@ -21,6 +21,7 @@ function initExplore() {
         document.querySelector('#mainHero').style.display = 'block';
         setTimeout(() => {
             document.querySelector('#mainSectionIntro').style.display = 'block';
+            document.querySelector('#sections').style.display = 'block';
         }, 500);
     }, 500);
 }
