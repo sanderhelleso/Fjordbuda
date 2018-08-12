@@ -510,8 +510,8 @@ video {
     background-color: white;
     position: absolute;
     top: 15%;
-    left: 20%;
-    transform: translate(-20%);
+    left: 12%;
+    transform: translate(-12%);
 }
 
 #section3 .para3 {
@@ -536,12 +536,12 @@ video {
 
 #section4 .para4 {
     min-height: 450px;
-    max-width: 700px;
+    max-width: 650px;
     background-image: url('../img/landing/kontakt1.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    margin-left: 5%;
+    margin-left: 40%;
 }
 
 #section4 .intro4 {
@@ -550,8 +550,8 @@ video {
     background-color: white;
     position: absolute;
     top: 15%;
-    right: 4%;
-    transform: translate(-4%);
+    right: 52.5%;
+    transform: translate(-52.5%);
 }
 
 @media screen and (min-width: 900px) {

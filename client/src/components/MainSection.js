@@ -16,9 +16,9 @@ export default class MainSection extends Component {
                 <div id='sections' className='container animated fadeIn'>
                     <div id='section1'>
                         <div className='para1' />
-                        <Fade right>
+                        <Fade>
                             <div className='intro1 intro z-depth-3'>
-                                <Fade right>
+                                <Fade>
                                     <h5>sjarmerende og unike</h5>
                                     <h3>Butikker</h3>
                                 </Fade>
@@ -29,9 +29,9 @@ export default class MainSection extends Component {
                     <div className='introLine animated slideInUp' />
                     <div id='section2'>
                         <div className='para2' />
-                        <Fade left>
+                        <Fade>
                             <div className='intro2 intro z-depth-3'>
-                                <Fade left>
+                                <Fade>
                                     <h5>det beste fra Norge</h5>
                                     <h3>Lookbook</h3>
                                 </Fade>
@@ -42,9 +42,9 @@ export default class MainSection extends Component {
                     <div className='introLine animated slideInUp' />
                     <div id='section3'>
                         <div className='para3' />
-                        <Fade right>
+                        <Fade>
                             <div className='intro3 intro z-depth-3'>
-                                <Fade right>
+                                <Fade>
                                     <h5>en fantastisk historie</h5>
                                     <h3>Historie</h3>
                                 </Fade>
@@ -55,9 +55,9 @@ export default class MainSection extends Component {
                     <div className='introLine animated slideInUp' />
                     <div id='section4'>
                         <div className='para4' />
-                        <Fade right>
+                        <Fade>
                             <div className='intro4 intro z-depth-3'>
-                                <Fade right>
+                                <Fade>
                                     <h5>er det noe du lurer på?</h5>
                                     <h3>Kontakt</h3>
                                 </Fade>
