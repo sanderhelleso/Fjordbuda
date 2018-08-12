@@ -16,6 +16,9 @@ export default class MainSection extends Component {
                     <div id='section1'>
                         <div className='para1' />
                         <div className='intro1 z-depth-3'>
+                            <h5>sjarmerende og unike</h5>
+                            <h3>Butikker</h3>
+                            <button className='btn'>Se butikker</button>
                         </div>
                     </div>
                 </div>
