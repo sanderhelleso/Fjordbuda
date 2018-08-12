@@ -18,10 +18,9 @@ function initExplore() {
     document.querySelector('#landingSection').className = 'animated fadeOut';
     document.querySelector('#mainSection').style.display = 'block';
     setTimeout(() => {
-        window.scrollBy(0,1);
         document.querySelector('#mainHero').style.display = 'block';
         setTimeout(() => {
             document.querySelector('#mainSectionIntro').style.display = 'block';
         }, 500);
-    }, 750);
+    }, 500);
 }
