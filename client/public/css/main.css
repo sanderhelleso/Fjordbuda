@@ -426,7 +426,7 @@ video {
 }
 
 #section1 {
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
     position: relative;
 }
 
@@ -477,6 +477,11 @@ video {
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 0;
+    transition: ease-in 0.4;
+}
+
+#section1 .intro1 button:hover {
+    border: 4px solid #212121 !important;
 }
 
 

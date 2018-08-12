@@ -18,9 +18,10 @@ export default class MainSection extends Component {
                         <div className='intro1 z-depth-3'>
                             <h5>sjarmerende og unike</h5>
                             <h3>Butikker</h3>
-                            <button className='btn'>Se butikker</button>
+                            <a href='/butikker'><button className='btn'>Se butikker</button></a>
                         </div>
                     </div>
+                    <div className='introLine animated slideInUp' />
                 </div>
             </section>
         )
