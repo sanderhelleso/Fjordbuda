@@ -15,7 +15,9 @@ export default class MainSection extends Component {
                 </div>
                 <div id='sections' className='container animated fadeIn'>
                     <div id='section1'>
-                        <div className='para1' />
+                        <Fade>
+                            <div className='para1' />
+                        </Fade>
                         <Fade>
                             <div className='intro1 intro z-depth-3'>
                                 <Fade>
@@ -28,7 +30,9 @@ export default class MainSection extends Component {
                     </div>
                     <div className='introLine animated slideInUp' />
                     <div id='section2'>
-                        <div className='para2' />
+                        <Fade>
+                            <div className='para2' />
+                        </Fade>
                         <Fade>
                             <div className='intro2 intro z-depth-3'>
                                 <Fade>
@@ -41,7 +45,9 @@ export default class MainSection extends Component {
                     </div>
                     <div className='introLine animated slideInUp' />
                     <div id='section3'>
-                        <div className='para3' />
+                        <Fade>
+                            <div className='para3' />
+                        </Fade>
                         <Fade>
                             <div className='intro3 intro z-depth-3'>
                                 <Fade>
@@ -54,7 +60,9 @@ export default class MainSection extends Component {
                     </div>
                     <div className='introLine animated slideInUp' />
                     <div id='section4'>
-                        <div className='para4' />
+                        <Fade>
+                            <div className='para4' />
+                        </Fade>
                         <Fade>
                             <div className='intro4 intro z-depth-3'>
                                 <Fade>
