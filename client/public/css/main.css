@@ -388,8 +388,10 @@ video {
 
 #mainSectionIntro {
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
     display: none;
+    position: relative;
 }
 
 #mainSectionIntro h5 {
@@ -405,11 +407,50 @@ video {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 5px;
+    margin-bottom: 0;
 }
 
-#section1 img {
- 
+.introLine {
+    height: 200px;
+    width: 1px;
+    background-color: #212121;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0.2;
 }
+
+@keyframes line {
+    from { height: 0px; }
+    to {height: 200px; }
+}
+
+#section1 {
+    margin-bottom: 15vh;
+    position: relative;
+}
+
+#section1 .para1 {
+    min-height: 450px;
+    max-width: 700px;
+    background-image: url('../img/landing/door.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5%;
+}
+
+#section1 .intro1 {
+    height: 200px;
+    min-width: 400px;
+    background-color: white;
+    position: absolute;
+    top: 15%;
+    right: 4%;
+    transform: translate(-4%);
+}
+
 
 @media screen and (min-width: 900px) {
 
