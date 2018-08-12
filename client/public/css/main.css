@@ -648,6 +648,116 @@ video {
     }
 }
 
+@media (max-width: 700px) {
+    #section1 .para1 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    #section1 .intro1 {
+        top: -15%;
+        right: 15%;
+        min-width: 70%;
+        max-width: 70%;
+        transform: translate(-15%);
+    }
+    
+    #section2 .para2 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    #section2 .intro2 {
+        top: -15%;
+        left: 15%;
+        min-width: 70%;
+        max-width: 70%;
+        transform: translate(-15%);
+    }
+
+    #section3 .para3 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    #section3 .intro3 {
+        top: -15%;
+        right: 15%;
+        min-width: 70%;
+        max-width: 70%;
+        transform: translate(-15%);
+    }
+    
+    #section4 .para4 {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    
+    #section4 .intro4 {
+        top: -15%;
+        right: 15%;
+        min-width: 70%;
+        max-width: 70%;
+        transform: translate(-15%);
+    }
+}
+
+@media (max-width: 500px) {
+
+    #section1, #section2, #section3, #section4 {
+        margin-bottom: 5vh;
+        margin-top: 15vh;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    #section1 .para1 {
+        max-width: 95%;
+    }
+    
+    #section1 .intro1 {
+        min-width: 85%;
+        max-width: 85%;
+        right: 7.5%;
+        transform: translate(-7.5%);
+    }
+    
+    #section2 .para2 {
+        max-width: 95%;
+    }
+    
+    #section2 .intro2 {
+        min-width: 85%;
+        max-width: 85%;
+        left: 7.5%;
+        transform: translate(-7.5%);
+    }
+
+    #section3 .para3 {
+        max-width: 95%;
+    }
+    
+    #section3 .intro3 {
+        min-width: 85%;
+        max-width: 85%;
+        right: 7.5%;
+        transform: translate(-7.5%);
+    }
+    
+    #section4 .para4 {
+        max-width: 95%;
+    }
+    
+    #section4 .intro4 {
+        min-width: 85%;
+        max-width: 85%;
+        right: 7.5%;
+        transform: translate(-7.5%);
+    }
+}
+
 @media screen and (min-width: 900px) {
 
     .menuOverlay a {
