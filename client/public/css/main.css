@@ -155,7 +155,7 @@ video {
     z-index: 10000000; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: #48466d;
+    background-color: black;
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -164,8 +164,7 @@ video {
     position: absolute;
     top: 45%;
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 }
 
 #loadingScreen #loadingHero h1 {
@@ -175,43 +174,73 @@ video {
     color: white;
 }
 
-.lds-ripple {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  }
-  .lds-ripple div {
-    position: absolute;
-    border: 4px solid #fff;
-    opacity: 1;
-    border-radius: 50%;
-    animation: lds-ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-  }
-  .lds-ripple div:nth-child(2) {
-    animation-delay: -0.6s;
-  }
-  @keyframes lds-ripple {
-    0% {
-      top: 28px;
-      left: 28px;
-      width: 0;
-      height: 0;
-      opacity: 1;
-    }
-    100% {
-      top: -1px;
-      left: -1px;
-      width: 58px;
-      height: 58px;
-      opacity: 0;
-    }
-  }
-  
+#loadingLogo1 {
+    filter: invert(100%);
+    animation-name: fade;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#loadingLogo2 {
+    -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        filter: FlipV;
+        -ms-filter: "FlipV";
+    animation-name: fade2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 1; }
+    5% { opacity: 0.9; }
+    10% { opacity: 0.8; }
+    15% { opacity: 0.7; }
+    20% { opacity: 0.6; }
+    25% { opacity: 0.5; }
+    30% { opacity: 0.4; }
+    35% { opacity: 0.3; }
+    40% { opacity: 0.2; }
+    45% { opacity: 0.1; }
+    50% { opacity: 0.1; }
+    55% { opacity: 0.2; }
+    60% { opacity: 0.3; }
+    65% { opacity: 0.4; }
+    70% { opacity: 0.5; }
+    75% { opacity: 0.6; }
+    80% { opacity: 0.7; }
+    85% { opacity: 0.8; }
+    90% { opacity: 0.9; }
+    95% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+@keyframes fade2 {
+    0% { opacity: 0.5; }
+    5% { opacity: 0.45; }
+    10% { opacity: 0.40; }
+    15% { opacity: 0.35; }
+    20% { opacity: 0.30; }
+    25% { opacity: 0.25; }
+    30% { opacity: 0.20; }
+    35% { opacity: 0.15; }
+    40% { opacity: 0.10; }
+    45% { opacity: 0.0; }
+    50% { opacity: 0.05; }
+    55% { opacity: 0.10; }
+    60% { opacity: 0.15; }
+    65% { opacity: 0.20; }
+    70% { opacity: 0.25; }
+    75% { opacity: 0.30; }
+    80% { opacity: 0.35; }
+    85% { opacity: 0.40; }
+    90% { opacity: 0.45; }
+    95% { opacity: 0.5; }
+    100% { opacity: 0.5; }
+}
+
 
 .menuOverlay {
     /* Height & width depends on how you want to reveal the overlay (see JS below) */    

@@ -11,16 +11,20 @@ export default class Loading extends Component {
         return (
             <div id='loadingScreen'>
                 <div id='loadingHero'>
-                    <img id='loadingLogo' src="../img/logo/Vinje1_white.png" height="90"/>
+                    <div>
+                        <img id='loadingLogo1' className='loadingLogo' src="../img/logo/FjordB_1.png" height="100"/>
+                    </div>
+                    <div>
+                        <img id='loadingLogo2' className='loadingLogo' src="../img/logo/FjordB_1.png" height="100"/>
+                    </div>
                 </div>
-                <div className="lds-ripple"><div></div><div></div></div>
             </div>
         )
     }
 }
 
 // fade out loadingscreen when content is loaded
-/*function fadeOutLoadingScreen() {
+function fadeOutLoadingScreen() {
     const loadingScreen = document.querySelector('#loadingScreen');
     setTimeout(() => {
         loadingScreen.className = 'animated fadeOut';
@@ -72,4 +76,4 @@ export default class Loading extends Component {
             loadingScreen.remove();
         }, 1000);
     }, 2000);
-}*/
+}
