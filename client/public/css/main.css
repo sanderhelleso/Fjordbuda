@@ -587,6 +587,13 @@ video {
     overflow-y: hidden !important;
 }
 
+@media (max-width: 1300px) {
+    #hero img {
+        max-height: 140px;
+        width: auto;
+    }
+}
+
 @media (max-width: 999px) {
     #mainSection .container {
         max-width: 975px !important;

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { scrollSpy } from '../globals/scrollSpy';
 
 export default class Hero extends Component {
     render() {
@@ -23,6 +24,7 @@ function initExplore() {
         setTimeout(() => {
             document.querySelector('#mainSectionIntro').style.display = 'block';
             document.querySelector('#sections').style.display = 'block';
+            window.addEventListener('scroll', scrollSpy);
         }, 500);
     }, 500);
 }

@@ -8,13 +8,22 @@ export function scrollSpy() {
     const logo = document.querySelector('#navLogo');
 
     console.log(getUrl());
-    if (getUrl()[0] === 'historie' || getUrl()[0] === '') {
-        
+    if (getUrl()[0] === 'historie') {
+
         // history
         const header = document.querySelector("#historyHeader");
         const intro = document.querySelector('#historyIntro');
         progressBar(window.scrollY);
+        modifyNav(header, intro);
+    }
 
+    if (getUrl()[0] === '') {
+        // main
+        const header = document.querySelector("#mainHero");
+        modifyNav(header);
+    }
+
+    function modifyNav(header, intro, bool) {
         if ((window.scrollY + 20) > (header.offsetTop + header.offsetHeight)) {
             navbar.classList.remove("topNavOnBg");
             navbar.classList.add("topNavOffBg");
@@ -22,7 +31,6 @@ export function scrollSpy() {
             if (logo.src != 'img/logo/Vinje1_black.png') {
                 logo.src = 'img/logo/Vinje1_black.png';
             }
-
         }
 
         else {
@@ -34,8 +42,10 @@ export function scrollSpy() {
                 logo.src = 'img/logo/Vinje1_white.png';
             }
 
-            // animate bg overlay on scroll
-            intro.style.top = '-' + (window.scrollY / 4.5) + 'px';
+            if (intro) {
+                // animate bg overlay on scroll
+                intro.style.top = '-' + (window.scrollY / 4.5) + 'px';
+            }
         }
     }
 }
