@@ -5,6 +5,10 @@ import MainSection from './MainSection';
 
 export default class Landing extends Component {
 
+    componentWillMount() {
+        document.body.id = 'mainBody'; 
+    }
+
     componentDidMount() {
         const sliderImgs = document.querySelector(".slider").querySelectorAll("img");
         sliderImgs.forEach(img => {
