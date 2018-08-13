@@ -861,6 +861,14 @@ video {
         max-height: 125px;
         width: auto;
     }
+
+    #mainSection h2 {
+        font-size: 40px;
+    }
+
+    #mainSection h3 {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-height: 500px) and (max-width: 400px) {

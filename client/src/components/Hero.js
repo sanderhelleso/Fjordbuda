@@ -15,6 +15,7 @@ export default class Hero extends Component {
 }
 
 function initExplore() {
+    document.body.id = '';
     document.querySelector('#landingSection').className = 'animated fadeOut';
     document.querySelector('#mainSection').style.display = 'block';
     setTimeout(() => {
