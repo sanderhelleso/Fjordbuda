@@ -20,12 +20,16 @@ export default class Loading extends Component {
 }
 
 // fade out loadingscreen when content is loaded
-function fadeOutLoadingScreen() {
+/*function fadeOutLoadingScreen() {
     const loadingScreen = document.querySelector('#loadingScreen');
     setTimeout(() => {
         loadingScreen.className = 'animated fadeOut';
         console.log(getUrl()[0]);
         switch (getUrl()[0]) {
+            case '':
+                document.querySelector('#hero').className = 'animated fadeIn';
+            break;
+
             case 'historie':
                 document.querySelector('#historyIntro').className = 'animated fadeIn';
             break;
@@ -68,4 +72,4 @@ function fadeOutLoadingScreen() {
             loadingScreen.remove();
         }, 1000);
     }, 2000);
-}
+}*/
