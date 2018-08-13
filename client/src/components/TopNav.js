@@ -89,7 +89,7 @@ function toggleMenu(bool) {
             document.body.style.overflowY = 'auto';
 
             // this code decides flow of navigation style depending on page
-            if (getUrl() === 'historie') {
+            if (getUrl()[0] === 'historie') {
                 scrollSpy();
             }
             menu.className = 'menuOverlay animated fadeOut';

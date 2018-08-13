@@ -5,9 +5,9 @@ export default class MainSection extends Component {
     render() {
         return (
             <section id='mainSection' className='animated fadeIn'>
-                <div id='mainHero' className='animated fadeIn z-depth-2'>
+                <header id='mainHero' className='animated fadeIn z-depth-2'>
                     <h5>Fjodbuda 2006</h5>
-                </div>
+                </header>
                 <div id='mainSectionIntro' className='animated fadeIn'>
                     <h5>Velkommen til</h5>
                     <h2>Fjordbuda</h2>

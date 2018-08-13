@@ -1,34 +1,42 @@
 import $ from 'jquery'; 
+import { getUrl } from '../globals/getUrl';
 
 export function scrollSpy() {
-    const header = document.querySelector("#historyHeader");
+
+    // navigation
     const navbar = document.querySelector("#topNav");
     const logo = document.querySelector('#navLogo');
-    const intro = document.querySelector('#historyIntro');
 
-    progressBar(window.scrollY);
+    console.log(getUrl());
+    if (getUrl()[0] === 'historie' || getUrl()[0] === '') {
+        
+        // history
+        const header = document.querySelector("#historyHeader");
+        const intro = document.querySelector('#historyIntro');
+        progressBar(window.scrollY);
 
-    if ((window.scrollY + 20) > (header.offsetTop + header.offsetHeight)) {
-        navbar.classList.remove("topNavOnBg");
-        navbar.classList.add("topNavOffBg");
+        if ((window.scrollY + 20) > (header.offsetTop + header.offsetHeight)) {
+            navbar.classList.remove("topNavOnBg");
+            navbar.classList.add("topNavOffBg");
 
-        if (logo.src != 'img/logo/Vinje1_black.png') {
-            logo.src = 'img/logo/Vinje1_black.png';
+            if (logo.src != 'img/logo/Vinje1_black.png') {
+                logo.src = 'img/logo/Vinje1_black.png';
+            }
+
         }
 
-    }
+        else {
+            navbar.classList.remove("topNavOffBg");
+            navbar.classList.remove("topNavOffBgMobile");
+            navbar.classList.add("topNavOnBg");
 
-    else {
-        navbar.classList.remove("topNavOffBg");
-        navbar.classList.remove("topNavOffBgMobile");
-        navbar.classList.add("topNavOnBg");
+            if (logo.src != 'img/logo/Vinje1_white.png') {
+                logo.src = 'img/logo/Vinje1_white.png';
+            }
 
-        if (logo.src != 'img/logo/Vinje1_white.png') {
-            logo.src = 'img/logo/Vinje1_white.png';
+            // animate bg overlay on scroll
+            intro.style.top = '-' + (window.scrollY / 4.5) + 'px';
         }
-
-        // animate bg overlay on scroll
-        intro.style.top = '-' + (window.scrollY / 4.5) + 'px';
     }
 }
 
