@@ -52,7 +52,7 @@ p {
 }
 
 .topNavOffBg svg {
-    stroke: #212121;
+    stroke: #212121 !important;
 }
 
 #topNav .navbar-brand {

@@ -83,7 +83,7 @@ function toggleMenu(bool) {
     
         else {
             logo.src = '../img/logo/Vinje1_white.png';
-            nav.className = 'navbar navbar-dark transparent topNavOffBg';
+            nav.className = 'navbar navbar-dark transparent';
             nav.querySelector('svg').style.stroke = '#ffffff';
 
             document.body.style.overflowY = 'auto';
