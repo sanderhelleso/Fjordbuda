@@ -9,7 +9,7 @@ export default class Stores extends Component {
                     <div id='selectStore' className='container'>
                         <div id='selectStoreRow' className='row z-depth-5'>
                             <div className='col s6 findStore'>
-                                <h5>Finn din Fjordbuda</h5>
+                                <h5>Finn din <span>Fjordbuda</span></h5>
                             </div>
                             <div className='col s6 selectStoreOption'>
                                 <h5><MapPin size={22} color={'#10ddc2'} /> Velg sted</h5>
