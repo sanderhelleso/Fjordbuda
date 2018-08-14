@@ -12,7 +12,7 @@ export default class Stores extends Component {
                                 <h5>Finn din Fjordbuda</h5>
                             </div>
                             <div className='col s6 selectStoreOption'>
-                                <h5><MapPin size={22} /> Velg sted</h5>
+                                <h5><MapPin size={22} color={'#10ddc2'} /> Velg sted</h5>
                                 <span>
                                     <ChevronDown size={22} color={'#9e9e9e'} />
                                 </span>
