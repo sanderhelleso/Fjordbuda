@@ -15,6 +15,14 @@ export default class Stores extends Component {
         }
     }
 
+    renderStores() {
+        const stores = ['123', '12345', '123423'];
+        return stores.map(store => {
+            console.log(store);
+            return <DropdownItem key={store}>{store}</DropdownItem>
+        });
+    }
+
     render() {
         return (
             <div>
@@ -32,11 +40,7 @@ export default class Stores extends Component {
                                 <Dropdown dropup>
                                     <DropdownToggle />
                                     <DropdownMenu className='z-depth-3 animated fadeIn'>
-                                        <DropdownItem>Action</DropdownItem>
-                                        <DropdownItem>Another Action</DropdownItem>
-                                        <DropdownItem >Something else here</DropdownItem>
-                                        <DropdownItem divider/>
-                                        <DropdownItem>Separated link</DropdownItem>
+                                        {this.renderStores()}
                                     </DropdownMenu>
                                 </Dropdown>
                             </div>
