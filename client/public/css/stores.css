@@ -24,6 +24,8 @@
 
 #storesHeader #selectStoreRow div {
     padding: 25px;
+    padding-top: 25px;
+    padding-bottom: 10px
 }
 
 #storesHeader #selectStoreRow h5 {
@@ -50,8 +52,21 @@
     float: left;
 }
 
+.selectStoreOption .dropdown .Ripple-parent {
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
 .selectStoreOption .dropdown {
-    display: none;
+    height: 0px;
+    width: 0px;
+}
+
+.selectStoreOption .dropdown-menu {
+    top: -45px !important;
+    left: -53px !important;
+    border-radius: 0px !important;
 }
 
 .selectStoreOption span svg {

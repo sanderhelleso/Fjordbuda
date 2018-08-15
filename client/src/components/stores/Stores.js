@@ -5,7 +5,11 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 export default class Stores extends Component {
 
     dropUp() {
-        console.log(123);
+        document.querySelector('.dropdown > button').click();
+        setTimeout(() => {
+            const menu = document.querySelector('.dropdown-menu');
+            menu.style.width = document.querySelector('.selectStoreOption').getBoundingClientRect().width + 'px';
+        }, 100);
     }
 
     render() {
@@ -24,7 +28,7 @@ export default class Stores extends Component {
                                 </span>
                                 <Dropdown dropup>
                                     <DropdownToggle />
-                                    <DropdownMenu>
+                                    <DropdownMenu className='z-depth-3 animated fadeIn'>
                                         <DropdownItem>Action</DropdownItem>
                                         <DropdownItem>Another Action</DropdownItem>
                                         <DropdownItem >Something else here</DropdownItem>
