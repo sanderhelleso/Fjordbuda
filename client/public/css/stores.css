@@ -43,10 +43,15 @@
 .findStore h5 {
     font-weight: 400;
     text-transform: uppercase;
+    color: #35373b;
 }
 
 .selectStoreOption h5 {
     float: left;
+}
+
+.selectStoreOption .dropdown {
+    display: none;
 }
 
 .selectStoreOption span svg {
