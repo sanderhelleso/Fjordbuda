@@ -16,7 +16,7 @@ export default class Stores extends Component {
     }
 
     renderStores() {
-        const stores = ['Trondheim', 'Geiranger', 'Ålesund', 'Molde'];
+        const stores = ['Fjordbuda Geiranger', 'Fjordbuda Molde', 'Fjordbuda Trondheim', 'House Trondheim', 'Fjordbuda Ålesund', 'House Ålesund', 'Sweatershop Ålesund', 'Fjordbuda Hellesylt', 'Fjordbuda Stryn', 'Fjordbuda Olden', 'Fjordbuda Haugesund', 'Fjordbuda Stavanger', 'Strandbuda Stavanger', 'House Stavanger', 'Fjordbuda Skagen', 'Suvenir Ålesund'];
         return stores.sort().map(store => {
             console.log(store);
             return <DropdownItem key={store}>{store}</DropdownItem>
