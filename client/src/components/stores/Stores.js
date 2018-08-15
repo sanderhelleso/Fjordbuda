@@ -5,11 +5,14 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 export default class Stores extends Component {
 
     dropUp() {
-        document.querySelector('.dropdown > button').click();
-        setTimeout(() => {
-            const menu = document.querySelector('.dropdown-menu');
-            menu.style.width = document.querySelector('.selectStoreOption').getBoundingClientRect().width + 'px';
-        }, 100);
+        // check if menu is active
+        if (!document.querySelector('.dropdown').classList.contains('show')) {
+            document.querySelector('.dropdown > button').click();
+            setTimeout(() => {
+                const menu = document.querySelector('.dropdown-menu');
+                menu.style.width = document.querySelector('.selectStoreOption').getBoundingClientRect().width + 'px';
+            }, 100);
+        }
     }
 
     render() {
