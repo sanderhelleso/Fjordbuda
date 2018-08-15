@@ -67,6 +67,8 @@
     top: -45px !important;
     left: -54px !important;
     border-radius: 0px !important;
+    max-height: 300px;
+    overflow-y: scroll;
 }
 
 .selectStoreOption .dropdown-menu button {
