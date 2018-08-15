@@ -16,8 +16,8 @@ export default class Stores extends Component {
     }
 
     renderStores() {
-        const stores = ['123', '12345', '123423'];
-        return stores.map(store => {
+        const stores = ['Trondheim', 'Geiranger', 'Ålesund', 'Molde'];
+        return stores.sort().map(store => {
             console.log(store);
             return <DropdownItem key={store}>{store}</DropdownItem>
         });
