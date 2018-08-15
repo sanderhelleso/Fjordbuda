@@ -29,10 +29,6 @@ export default class Stores extends Component {
         });
     }
 
-    componentDidMount() {
-
-    }
-
     render() {
         return (
             <div>
