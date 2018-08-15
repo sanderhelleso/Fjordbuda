@@ -9,8 +9,15 @@ export default class Stores extends Component {
         if (!document.querySelector('.dropdown').classList.contains('show')) {
             document.querySelector('.dropdown > button').click();
             setTimeout(() => {
+
+                // set width of menu
                 const menu = document.querySelector('.dropdown-menu');
                 menu.style.width = document.querySelector('.selectStoreOption').getBoundingClientRect().width + 'px';
+
+                // set event to naviate to selected store
+                document.querySelector('.dropdown-menu').querySelectorAll('button').forEach(button => {
+                    button.addEventListener('click', selectStore);
+                });
             }, 100);
         }
     }
@@ -18,9 +25,12 @@ export default class Stores extends Component {
     renderStores() {
         const stores = ['Fjordbuda Geiranger', 'Fjordbuda Molde', 'Fjordbuda Trondheim', 'House Trondheim', 'Fjordbuda Ålesund', 'House Ålesund', 'Sweatershop Ålesund', 'Fjordbuda Hellesylt', 'Fjordbuda Stryn', 'Fjordbuda Olden', 'Fjordbuda Haugesund', 'Fjordbuda Stavanger', 'Strandbuda Stavanger', 'House Stavanger', 'Fjordbuda Skagen', 'Suvenir Ålesund'];
         return stores.sort().map(store => {
-            console.log(store);
-            return <DropdownItem key={store}>{store}</DropdownItem>
+            return <a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store}>{store}</DropdownItem></a>
         });
+    }
+
+    componentDidMount() {
+
     }
 
     render() {
@@ -33,7 +43,7 @@ export default class Stores extends Component {
                                 <h5 className='noSelect'>Finn din <span>Fjordbuda</span></h5>
                             </div>
                             <div className='col s6 selectStoreOption' onClick={this.dropUp} >
-                                <h5 className='noSelect'><MapPin size={22} color={'#10ddc2'} /> Velg sted</h5>
+                                <h5 className='noSelect'><MapPin size={22} color={'#10ddc2'} /> <span id='setStore'>Velg sted</span></h5>
                                 <span>
                                     <ChevronDown size={22} color={'#9e9e9e'} />
                                 </span>
@@ -52,4 +62,8 @@ export default class Stores extends Component {
             </div>
         )
     }
+}
+
+function selectStore() {
+    document.querySelector('#setStore').innerHTML = this.innerHTML;
 }
