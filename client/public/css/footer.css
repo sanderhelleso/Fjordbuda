@@ -5,7 +5,7 @@ footer {
 }
 
 footer a {
-    color: #8898aa !important;
+    color: #8898aa;
 }
 
 footer #footerRow {
@@ -26,7 +26,7 @@ footer #footerRow h5 {
 footer #languages ul li a {
     font-size: 16px;
     font-weight: 400;
-    color: #10ddc2;
+    color: #10ddc2 !important;
 }
 
 footer #languages ul li {
