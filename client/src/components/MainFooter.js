@@ -5,12 +5,6 @@ import { getStores } from '../globals/stores';
 
 export default class MainFooter extends Component {
 
-    renderStores() {
-        return getStores().sort().map(store => {
-            return <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>
-        });
-    }
-
     render() {
         return (
             <footer>
@@ -27,18 +21,12 @@ export default class MainFooter extends Component {
                         <div className='col-sm-6 col-md-6 col-lg-3'>
                             <h5>Butikker</h5>
                             <ul>
-                                {this.renderStores()}
+                                {renderStores(1)}
                             </ul>
                         </div>
                         <div className='col-sm-6 col-md-6 col-lg-3'>
-                            <h5>Selskapet</h5>
                             <ul>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
+                                {renderStores(2)}
                             </ul>
                         </div>
                         <div className='col-sm-6 col-md-6 col-lg-3'>
@@ -58,4 +46,22 @@ export default class MainFooter extends Component {
             </footer>
         )
     }
+}
+
+// render footer stores
+function renderStores(col) {
+    return getStores().sort().map(store => {
+
+        if (col === 1) {
+            while (getStores().indexOf(store) < getStores().length / 2) {
+                return <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>
+            }
+        }
+
+        else {
+            while (getStores().indexOf(store) >= getStores().length / 2) {
+                return <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>
+            }
+        }
+    });
 }

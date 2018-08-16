@@ -4,6 +4,10 @@ footer {
     line-height: 30px;
 }
 
+footer a {
+    color: #8898aa !important;
+}
+
 footer #footerRow {
     margin-top: 75px;
     margin-bottom: 25px;
