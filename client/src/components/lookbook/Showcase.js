@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ChevronRight } from 'react-feather';
 import Gallery from './ClothingGallery';
+import { toTitleCase } from '../../globals/toTitleCase';
 
 export default class Showcase extends Component {
 
@@ -46,12 +47,6 @@ function url() {
     else {
         return brand.split('-').join(' ');
     }
-}
-
-function toTitleCase(str) {
-    return str.replace(/\w\S*/g, function(txt){
-        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
 }
 
 function brandDescriptions() {

@@ -80,9 +80,7 @@ function getScreenSize() {
     const logo = document.querySelector('#navLogo');
     const menuIcon = document.querySelector('#menuToggler > svg');
     const header = document.querySelector('#lookBookImg');
-
-    console.log(width);
-
+    
     window.addEventListener('scroll', manipulateNav);
 
     setTimeout(() => {

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand|Open+Sans');
 
-header {
+#historyHeader {
     position: relative;
     height: 100vh;
     background: linear-gradient(
@@ -20,7 +20,7 @@ header {
     width: 100%;
   }
   
-  header h1 {
+  #historyHeader h1 {
     padding-top: 27.5vh;
     font-size: 54px;
     text-align: center;
@@ -29,7 +29,7 @@ header {
     letter-spacing: 5px;
   }
 
-  header p {
+  #historyHeader p {
       text-align: center;
       color: white;
       opacity: 0.5;
@@ -37,7 +37,7 @@ header {
       font-family: 'Open Sans', sans-serif;
   }
 
-  header #readMoreBtn img {
+  #historyHeader #readMoreBtn img {
     height: 75px;
     filter: invert(100%);
     position: relative;
@@ -55,7 +55,7 @@ header {
     100% {    top: 0px;    }
   }
 
-header #readMoreBtn {
+  #historyHeader #readMoreBtn {
     position: absolute;
     bottom: -7.5%;
     left: 50%;
@@ -108,7 +108,7 @@ header #readMoreBtn {
       font-size: 16px;
   }
   
-  header #headerSvg {
+  #historyHeader #headerSvg {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -210,7 +210,7 @@ header #readMoreBtn {
         display: none;
       }
 
-      header #readMoreBtn {
+      #historyHeader #readMoreBtn {
         bottom: -10%;
       }
 
@@ -218,7 +218,7 @@ header #readMoreBtn {
         height: 100vh;
       }
 
-      header h1 {
+      #historyHeaderheader h1 {
         padding-top: 32.5vh;
       }
   }
