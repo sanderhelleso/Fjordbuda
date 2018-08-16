@@ -29,6 +29,10 @@ footer #languages ul li a {
     color: #10ddc2 !important;
 }
 
+footer .hidden {
+    opacity: 0;
+}
+
 footer #languages ul li {
     margin-bottom: 15px;
 }

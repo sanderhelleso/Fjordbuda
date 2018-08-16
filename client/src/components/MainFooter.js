@@ -25,6 +25,7 @@ export default class MainFooter extends Component {
                             </ul>
                         </div>
                         <div className='col-sm-6 col-md-6 col-lg-3'>
+                            <h5 className='noSelect hidden'>hidden</h5>
                             <ul>
                                 {renderStores(2)}
                             </ul>
@@ -51,16 +52,16 @@ export default class MainFooter extends Component {
 // render footer stores
 function renderStores(col) {
     return getStores().sort().map(store => {
-
+        const li = <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>;
         if (col === 1) {
             while (getStores().indexOf(store) < getStores().length / 2) {
-                return <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>
+                return li;
             }
         }
 
         else {
             while (getStores().indexOf(store) >= getStores().length / 2) {
-                return <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>
+                return li;
             }
         }
     });
