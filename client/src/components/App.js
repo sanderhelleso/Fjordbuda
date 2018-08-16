@@ -13,6 +13,7 @@ import Contact from './contact/Contact';
 import Lookbook from './lookbook/Lookbook';
 import Showcase from './lookbook/Showcase';
 import Stores from './stores/Stores';
+import SelectedStore from './stores/SelectedStore';
 
 export default class App extends Component {
     render() {
@@ -25,6 +26,7 @@ export default class App extends Component {
                         <Route exact path='/*' component={Loading} />
 
                         <Route exact path='/butikker' component={Stores} />
+                        <Route exact path='/butikker/*' component={SelectedStore} />
                         <Route exact path='/lookbook' component={Lookbook} />
                         <Route exact path='/lookbook/*' component={Showcase} />
                         <Route exact path='/historie' component={History} />
