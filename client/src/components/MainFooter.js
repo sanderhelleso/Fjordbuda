@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
 import { Row } from 'react-materialize';
 import { Navigation, MessageCircle } from 'react-feather';
+import { getStores } from '../globals/stores';
 
 export default class MainFooter extends Component {
+
+    renderStores() {
+        return getStores().sort().map(store => {
+            return <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>
+        });
+    }
+
     render() {
         return (
             <footer>
@@ -19,12 +27,7 @@ export default class MainFooter extends Component {
                         <div className='col-sm-6 col-md-6 col-lg-3'>
                             <h5>Butikker</h5>
                             <ul>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
+                                {this.renderStores()}
                             </ul>
                         </div>
                         <div className='col-sm-6 col-md-6 col-lg-3'>
