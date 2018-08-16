@@ -32,7 +32,7 @@ export default class Stores extends Component {
     render() {
         return (
             <div>
-                <header id='storesHeader'>
+                <header id='storesHeader' className='z-depth-3'>
                     <div id='selectStore' className='container'>
                         <div id='selectStoreRow' className='row z-depth-5'>
                             <div className='col s6 findStore'>

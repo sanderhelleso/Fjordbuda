@@ -52,7 +52,7 @@ export default class MainFooter extends Component {
 // render footer stores
 function renderStores(col) {
     return getStores().sort().map(store => {
-        const li = <li key={store}><a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>;
+        const li = <li key={store}><a href={`/butikker/${store.toLowerCase().split(' ').join('-')}`}>{store}</a></li>;
         if (col === 1) {
             while (getStores().indexOf(store) < getStores().length / 2) {
                 return li;
