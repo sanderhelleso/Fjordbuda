@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { MapPin, ChevronDown } from 'react-feather';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { getStores } from '../../globals/stores';
 
 export default class Stores extends Component {
 
@@ -23,8 +24,7 @@ export default class Stores extends Component {
     }
 
     renderStores() {
-        const stores = ['Fjordbuda Geiranger', 'Fjordbuda Molde', 'Fjordbuda Trondheim', 'House Trondheim', 'Fjordbuda Ålesund', 'House Ålesund', 'Sweatershop Ålesund', 'Fjordbuda Hellesylt', 'Fjordbuda Stryn', 'Fjordbuda Olden', 'Fjordbuda Haugesund', 'Fjordbuda Stavanger', 'Strandbuda Stavanger', 'House Stavanger', 'Fjordbuda Skagen', 'Suvenir Ålesund'];
-        return stores.sort().map(store => {
+        return getStores().sort().map(store => {
             return <a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store}>{store}</DropdownItem></a>
         });
     }
