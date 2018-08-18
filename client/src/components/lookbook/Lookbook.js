@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row } from 'react-materialize';
 import { Minus, ArrowDown } from 'react-feather';
+import { getBrands } from '../../globals/getBrands';
 
 export default class Lookbook extends Component {
 
@@ -14,7 +15,7 @@ export default class Lookbook extends Component {
 
     // insert brands into page
     renderBrands() {
-        const brands = ['Dale of Norway', 'Norrøna', 'Arcteryx', 'Waynor', 'North Suvenir', 'Scandinavian Explorer'];
+        const brands = getBrands();
         return brands.map(brand => {
             let index = brands.indexOf(brand) + 1;
             if (index < 10) {

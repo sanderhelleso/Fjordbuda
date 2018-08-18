@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Phone, Map, Mail } from 'react-feather';
+import { Phone, Map, Mail, CheckCircle } from 'react-feather';
+import { getBrands } from '../../globals/getBrands';
 
 export default class StoreInfo extends Component {
 
-    renderInfo() {
+    renderOpeningHours() {
         const openingHours = {
             Mandag: '09.00 - 17.00',
             Tirsdag: '09.00 - 17.00',
@@ -17,6 +18,12 @@ export default class StoreInfo extends Component {
         return Object.keys(openingHours).map(key => 
             <li key={key}>{key.toUpperCase()} <span>{`${openingHours[key]}`}</span></li>
         )
+    }
+
+    renderGotBrands() {
+        return getBrands().map(brand => {
+            return <li key={brand}><CheckCircle size={22} className='mr-3' /> <span>{brand}</span></li>
+        });
     }
 
     render() {
@@ -36,11 +43,14 @@ export default class StoreInfo extends Component {
                         <div className='col s4'>
                             <h2>ÅPNINGSTIDER</h2>
                             <ul id='openingHours'>
-                                {this.renderInfo()}
+                                {this.renderOpeningHours()}
                             </ul>
                         </div>
                         <div className='col s4'>
                             <h2>MERKEVARER</h2>
+                            <ul id='gotBrands'>
+                                {this.renderGotBrands()}
+                            </ul>
                         </div>
                     </div>
                 </div>

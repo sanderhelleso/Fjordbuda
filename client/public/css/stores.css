@@ -35,6 +35,10 @@
     border-bottom: 1px solid #eeeeee;
 }
 
+#storeInfo .col {
+    padding: 2rem;
+}
+
 #storeInfo ul {
     margin-top: 8vh;
 }
@@ -46,7 +50,7 @@
     margin-bottom: 20px;
 }
 
-#storeInfo #openingHours li {
+#storeInfo #openingHours li, #storeInfo #gotBrands li {
     margin-bottom: 0px;
 }
 
