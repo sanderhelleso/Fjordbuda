@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
  
 export class StoreMap extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   componentDidMount() {
       // add shadow to map
       const mapCont = document.querySelector('#storeMap').querySelectorAll('div');
       mapCont[1].classList.add('z-depth-1');
+
+      console.log(this.props);
   }
 
   render() {
@@ -16,8 +21,8 @@ export class StoreMap extends Component {
         style={style}
         zoom={14} 
         initialCenter={{
-          lat: 63.44,
-          lng: 10.4
+          lat: this.props.coords.lat,
+          lng: this.props.coords.lng
         }}>
             <Marker onClick={this.onMarkerClick} name={'Current location'} />
         </Map>

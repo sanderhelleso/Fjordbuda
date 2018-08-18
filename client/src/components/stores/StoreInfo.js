@@ -18,6 +18,7 @@ export default class StoreInfo extends Component {
                     mail: store.mail,
                     adress: store.adress,
                     zip: store.zip,
+                    coordinates: store.coordinates,
                     tlf: store.tlf,
                     openingHours: store.openingHours,
                     brands: store.brands
@@ -81,7 +82,7 @@ export default class StoreInfo extends Component {
                         </div>
                     </div>
                 </div>
-                <StoreMap />
+                <StoreMap coords={this.state.coordinates} />
             </div>
         )
     }
