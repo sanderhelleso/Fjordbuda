@@ -2,28 +2,13 @@ import React, { Component } from 'react';
 import { Phone, Map, Mail, CheckCircle } from 'react-feather';
 import { getBrands } from '../../globals/getBrands';
 import { getStores } from '../../globals/stores';
-import { toTitleCase } from '../../globals/toTitleCase';
+import { renderStoreTitle } from '../../globals/renderTitle';
 
 export default class StoreInfo extends Component {
 
-    renderStoreTitle() {
-        // get selected store from url
-        const store = toTitleCase(window.location.href.split('/')[4].split('-').join(' '));
-        
-        // if store contains %C3%A5 (å), replace with correct store name
-        const splittedStore = store.split(' ')[1].split('')[0];
-        if (splittedStore === '%') {
-            return `${store.split(' ')[0]} Ålesund`;
-        }
-
-        return store;
-    }
-
     renderOpeningHours() {
-        console.log(document.querySelector('#hero'));
         return getStores().sort().map(store => {
-            console.log(store, this.renderStoreTitle());
-            if (this.renderStoreTitle() === store.name) {
+            if (renderStoreTitle() === store.name) {
                 return Object.keys(store.openingHours).map(key => 
                     <li key={key}>{key.toUpperCase()} <span>{`${store.openingHours[key]}`}</span></li>
                 )
