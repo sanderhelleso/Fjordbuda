@@ -19,7 +19,7 @@ export default class SelectedStore extends Component {
     }
 
     componentDidMount() {
-        document.querySelector('footer').style.marginTop = '110vh';
+        document.querySelector('footer').style.marginTop = '70vh';
     }
 
     render() {

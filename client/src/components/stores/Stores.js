@@ -24,9 +24,10 @@ export default class Stores extends Component {
     }
 
     renderStores() {
-        return getStores().sort().map(store => {
+        console.log(getStores());
+        /*return getStores().sort().map(store => {
             return <a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store}>{store}</DropdownItem></a>
-        });
+        });*/
     }
 
     render() {

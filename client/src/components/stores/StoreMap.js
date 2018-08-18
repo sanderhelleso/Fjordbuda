@@ -28,7 +28,7 @@ export class StoreMap extends Component {
 
 const style = {
   width: '100%',
-  height: '100%'
+  height: '60%'
 }
  
 export default GoogleApiWrapper({

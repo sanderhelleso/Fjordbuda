@@ -23,8 +23,7 @@
 
 #storeInfo {
     margin-top: 15vh;
-    margin-bottom: 15vh;
-    min-height: 70vh;
+    margin-bottom: 5vh;
 }
 
 #storeInfo h2 {
@@ -36,7 +35,7 @@
 }
 
 #storeInfo .col {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 #storeInfo ul {
