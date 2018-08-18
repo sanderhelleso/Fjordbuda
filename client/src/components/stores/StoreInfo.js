@@ -50,6 +50,7 @@ export default class StoreInfo extends Component {
                             <h2>MERKEVARER</h2>
                             <ul id='gotBrands'>
                                 {this.renderGotBrands()}
+                                <li>... og mer</li>
                             </ul>
                         </div>
                     </div>
