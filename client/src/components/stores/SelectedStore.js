@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StoreMap from './StoreMap';
 import { toTitleCase } from '../../globals/toTitleCase';
 
 export default class SelectedStore extends Component {
@@ -23,6 +24,9 @@ export default class SelectedStore extends Component {
                     <div id='hero' className='container'>
                         <h1>{this.renderStoreTitle()}</h1>
                         <h5>Rasmus Rønnebergs gate 4, Ålesund</h5>
+                    </div>
+                    <div>
+                        <StoreMap />
                     </div>
                 </header>
             </section>
