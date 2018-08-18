@@ -22,6 +22,7 @@ export default class SelectedStore extends Component {
                 <header id='selectedStoreHeader' className='z-depth-3'>
                     <div id='hero' className='container'>
                         <h1>{this.renderStoreTitle()}</h1>
+                        <h5>Rasmus Rønnebergs gate 4, Ålesund</h5>
                     </div>
                 </header>
             </section>

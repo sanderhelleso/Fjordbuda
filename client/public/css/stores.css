@@ -18,15 +18,24 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
-    margin-bottom: 10vh;
+    min-height: 50vh;
 }
 
 #selectedStoreHeader #hero {
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
+}
+
+#selectedStoreHeader #hero h1 {
+    font-size: 45px;
+}
+
+#selectedStoreHeader #hero h5 {
+    font-size: 16px;
+    margin-top: 15px;
+    opacity: 0.7;
 }
 
 #storesHeader #selectStore {
