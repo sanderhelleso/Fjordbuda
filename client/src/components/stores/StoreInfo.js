@@ -16,12 +16,17 @@ export default class StoreInfo extends Component {
                     name: store.name,
                     mail: store.mail,
                     adress: store.adress,
+                    zip: store.zip,
                     tlf: store.tlf,
                     openingHours: store.openingHours,
                     brands: store.brands
                 });
             }
         });
+    }
+
+    componentDidMount() {
+        document.querySelector('#hero > h5').innerHTML = `${this.state.adress} ${this.state.zip}`;
     }
 
     renderOpeningHours() {
@@ -54,7 +59,7 @@ export default class StoreInfo extends Component {
                         <div className='col s4'>
                             <h2>ADRESSE</h2>
                             <ul>
-                                <li>{this.state.adress}</li>
+                                <li>{this.state.adress}<br />{this.state.zip}</li>
                                 <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
                                 <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> {this.state.tlf}</a></li>
                                 <li><Mail size={20} className='mr-3'/><a href='mailto:'> {this.state.mail}</a></li>

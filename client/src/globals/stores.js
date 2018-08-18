@@ -4,7 +4,8 @@ export function getStores() {
             name: 'Fjordbuda Geiranger',
             mail: 'fjorbudageiranger@gmail.com',
             tlf: '+47 95163672',
-            adress: 'Rasmus Rønnebergs gate 4 6002 Ålesund',
+            adress: 'Rasmus Rønnebergs gate 4',
+            zip: '6002 Ålesund',
             openingHours: {
                 Mandag: '09.00 - 17.00',
                 Tirsdag: '09.00 - 17.00',
@@ -26,8 +27,9 @@ export function getStores() {
         {
             name: 'Fjordbuda Ålesund',
             mail: 'fjorbudageiranger@gmail.com',
-            tlf: '+47 95163672',
-            adress: 'Rasmus Rønnebergs gate 4 6002 Ålesund',
+            tlf: '+47 95 16 36 72',
+            adress: 'Rasmus Rønnebergs gate 4',
+            zip: '6002 Ålesund',
             openingHours: {
                 Mandag: '09.00 - 17.00',
                 Tirsdag: '09.00 - 17.00',
