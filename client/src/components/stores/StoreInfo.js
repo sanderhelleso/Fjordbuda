@@ -1,23 +1,34 @@
 import React, { Component } from 'react';
 import { Phone, Map, Mail, CheckCircle } from 'react-feather';
 import { getBrands } from '../../globals/getBrands';
+import { getStores } from '../../globals/stores';
+import { toTitleCase } from '../../globals/toTitleCase';
 
 export default class StoreInfo extends Component {
 
-    renderOpeningHours() {
-        const openingHours = {
-            Mandag: '09.00 - 17.00',
-            Tirsdag: '09.00 - 17.00',
-            Onsdag: '09.00 - 17.00',
-            Torsdag: '09.00 - 17.00',
-            Fredag: '09.00 - 17.00',
-            Lørdag: '10.00 - 16.00',
-            Søndag: '10.00 - 16.00',
-        };
+    renderStoreTitle() {
+        // get selected store from url
+        const store = toTitleCase(window.location.href.split('/')[4].split('-').join(' '));
+        
+        // if store contains %C3%A5 (å), replace with correct store name
+        const splittedStore = store.split(' ')[1].split('')[0];
+        if (splittedStore === '%') {
+            return `${store.split(' ')[0]} Ålesund`;
+        }
 
-        return Object.keys(openingHours).map(key => 
-            <li key={key}>{key.toUpperCase()} <span>{`${openingHours[key]}`}</span></li>
-        )
+        return store;
+    }
+
+    renderOpeningHours() {
+        console.log(document.querySelector('#hero'));
+        return getStores().sort().map(store => {
+            console.log(store, this.renderStoreTitle());
+            if (this.renderStoreTitle() === store.name) {
+                return Object.keys(store.openingHours).map(key => 
+                    <li key={key}>{key.toUpperCase()} <span>{`${store.openingHours[key]}`}</span></li>
+                )
+            }
+        });
     }
 
     renderGotBrands() {

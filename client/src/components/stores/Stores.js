@@ -24,10 +24,9 @@ export default class Stores extends Component {
     }
 
     renderStores() {
-        console.log(getStores());
-        /*return getStores().sort().map(store => {
-            return <a href={`${window.location.href}/${store.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store}>{store}</DropdownItem></a>
-        });*/
+        return getStores().sort().map(store => {
+            return <a href={`${window.location.href}/${store.name.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store.name}>{store.name}</DropdownItem></a>
+        });
     }
 
     render() {
