@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StoreMap from './StoreMap';
+import StoreInfo from './StoreInfo';
 import { toTitleCase } from '../../globals/toTitleCase';
 
 export default class SelectedStore extends Component {
@@ -27,11 +28,10 @@ export default class SelectedStore extends Component {
                 <header id='selectedStoreHeader' className='z-depth-3'>
                     <div id='hero' className='container'>
                         <h1>{this.renderStoreTitle()}</h1>
-                        <h5>Rasmus Rønnebergs gate 4, Ålesund</h5>
+                        <h5>Rasmus Rønnebergs gate 4 <br />6020 Ålesund</h5>
                     </div>
                 </header>
-                <div id='storeInfo'>
-                </div>
+                <StoreInfo />
                 <StoreMap />
             </section>
         )
