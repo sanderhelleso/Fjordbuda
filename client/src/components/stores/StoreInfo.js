@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Phone } from 'react-feather';
+import { Phone, Map, Mail } from 'react-feather';
 
 export default class StoreInfo extends Component {
     render() {
@@ -10,9 +10,10 @@ export default class StoreInfo extends Component {
                         <div className='col s4'>
                             <h2>ADRESSE</h2>
                             <ul>
-                                <li>Rasmus Rønnebergs gate 4 6002 Ålesund</li>
-                                <li> Veibeskrivelse</li>
-                                <li><Phone  size={18}/> +47 70 11 73 00</li>
+                                <li>Rasmus Rønnebergs gate 4<br />6002 Ålesund</li>
+                                <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
+                                <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> +47 70 11 73 00</a></li>
+                                <li><Mail size={20} className='mr-3'/><a href='mailto:'>  test@hotmail.com</a></li>
                             </ul>
                         </div>
                         <div className='col s4'>

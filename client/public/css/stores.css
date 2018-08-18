@@ -31,6 +31,7 @@
     padding-bottom: 15px;
     letter-spacing: 2px;
     font-weight: 600;
+    font-size: 27.5px;
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -40,7 +41,21 @@
 
 #storeInfo ul li {
     font-size: 18px;
+    color: #9e9e9e;
+    line-height: 40px;
     margin-bottom: 20px;
+}
+
+#storeInfo ul li a {
+    color: #212121;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #10ddc2;
+}
+
+#storeInfo ul li svg {
+    margin-bottom: -4px;
+    stroke: #10ddc2;
 }
 
 #selectedStoreHeader #hero {
