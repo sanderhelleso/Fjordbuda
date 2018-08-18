@@ -15,7 +15,7 @@ export default class StoreInfo extends Component {
         };
 
         return Object.keys(openingHours).map(key => 
-            <li key={key}>{`${key} ${openingHours[key]}`}</li>
+            <li key={key}>{key.toUpperCase()} <span>{`${openingHours[key]}`}</span></li>
         )
     }
 
@@ -27,7 +27,7 @@ export default class StoreInfo extends Component {
                         <div className='col s4'>
                             <h2>ADRESSE</h2>
                             <ul>
-                                <li>Rasmus Rønnebergs gate 4<br /><span>6002 Ålesund</span></li>
+                                <li>Rasmus Rønnebergs gate 4<br />6002 Ålesund</li>
                                 <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
                                 <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> +47 70 11 73 00</a></li>
                                 <li><Mail size={20} className='mr-3'/><a href='mailto:'>  test@hotmail.com</a></li>
@@ -35,7 +35,7 @@ export default class StoreInfo extends Component {
                         </div>
                         <div className='col s4'>
                             <h2>ÅPNINGSTIDER</h2>
-                            <ul>
+                            <ul id='openingHours'>
                                 {this.renderInfo()}
                             </ul>
                         </div>

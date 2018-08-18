@@ -46,6 +46,14 @@
     margin-bottom: 20px;
 }
 
+#storeInfo #openingHours li {
+    margin-bottom: 0px;
+}
+
+#storeInfo #openingHours span {
+    float: right;
+}
+
 #storeInfo ul li a {
     color: #212121;
     font-weight: 600;
