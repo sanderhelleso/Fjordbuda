@@ -6,6 +6,10 @@ export function getStores() {
             tlf: '+47 95163672',
             adress: 'Rasmus Rønnebergs gate 4',
             zip: '6002 Ålesund',
+            coordinates: {
+                lat: 63.44,
+                lng: 10.4
+            },
             openingHours: {
                 Mandag: '09.00 - 17.00',
                 Tirsdag: '09.00 - 17.00',

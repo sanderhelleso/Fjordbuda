@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import StoreMap from './StoreMap';
 import StoreInfo from './StoreInfo';
 import { renderStoreTitle } from '../../globals/renderTitle';
 
@@ -19,7 +18,6 @@ export default class SelectedStore extends Component {
                     </div>
                 </header>
                 <StoreInfo />
-                <StoreMap />
             </section>
         )
     }

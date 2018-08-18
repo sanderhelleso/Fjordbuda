@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Phone, Map, Mail, CheckCircle } from 'react-feather';
+import StoreMap from './StoreMap';
 import { getBrands } from '../../globals/getBrands';
 import { getStores } from '../../globals/stores';
 import { renderStoreTitle } from '../../globals/renderTitle';
@@ -80,6 +81,7 @@ export default class StoreInfo extends Component {
                         </div>
                     </div>
                 </div>
+                <StoreMap />
             </div>
         )
     }
