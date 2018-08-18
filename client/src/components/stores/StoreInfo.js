@@ -5,21 +5,37 @@ import { getStores } from '../../globals/stores';
 import { renderStoreTitle } from '../../globals/renderTitle';
 
 export default class StoreInfo extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-    renderOpeningHours() {
-        return getStores().sort().map(store => {
+    componentWillMount() {
+        getStores().sort().map(store => {
             if (renderStoreTitle() === store.name) {
-                return Object.keys(store.openingHours).map(key => 
-                    <li key={key}>{key.toUpperCase()} <span>{`${store.openingHours[key]}`}</span></li>
-                )
+                this.setState({
+                    name: store.name,
+                    mail: store.mail,
+                    adress: store.adress,
+                    tlf: store.tlf,
+                    openingHours: store.openingHours,
+                    brands: store.brands
+                });
             }
         });
     }
 
+    renderOpeningHours() {
+        return Object.keys(this.state.openingHours).map(key => 
+            <li key={key}>{key.toUpperCase()} <span>{`${this.state.openingHours[key]}`}</span></li>
+        )
+    }
+
     renderGotBrands() {
-        return getBrands().map(brand => {
-            return <li key={brand}><CheckCircle size={22} className='mr-3' /> <span>{brand}</span></li>
-        });
+        console.log(this.state.brands);
+
+        return Object.keys(this.state.brands).map(key =>
+            <li key={key}><CheckCircle size={22} className={`mr-3 ${this.state.brands[key]}`} /> <span>{key}</span></li>
+        )
     }
 
     render() {
@@ -30,10 +46,10 @@ export default class StoreInfo extends Component {
                         <div className='col s4'>
                             <h2>ADRESSE</h2>
                             <ul>
-                                <li>Rasmus Rønnebergs gate 4<br />6002 Ålesund</li>
+                                <li>{this.state.adress}</li>
                                 <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
-                                <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> +47 70 11 73 00</a></li>
-                                <li><Mail size={20} className='mr-3'/><a href='mailto:'>  test@hotmail.com</a></li>
+                                <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> {this.state.tlf}</a></li>
+                                <li><Mail size={20} className='mr-3'/><a href='mailto:'> {this.state.mail}</a></li>
                             </ul>
                         </div>
                         <div className='col s4'>

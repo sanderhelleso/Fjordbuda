@@ -49,6 +49,11 @@
     margin-bottom: 20px;
 }
 
+#storeInfo .false {
+    stroke: #9e9e9e !important;
+    opacity: 0.5;
+}
+
 #storeInfo #openingHours li, #storeInfo #gotBrands li {
     margin-bottom: 0px;
 }
