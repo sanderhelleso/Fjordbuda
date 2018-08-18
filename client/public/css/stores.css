@@ -64,9 +64,7 @@
 
 #storeInfo ul li a {
     color: #212121;
-    font-weight: 600;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #10ddc2;
+    font-weight: 400;
 }
 
 #storeInfo ul li svg {

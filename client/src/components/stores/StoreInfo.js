@@ -34,8 +34,16 @@ export default class StoreInfo extends Component {
         console.log(this.state.brands);
 
         return Object.keys(this.state.brands).map(key =>
-            <li key={key}><CheckCircle size={22} className={`mr-3 ${this.state.brands[key]}`} /> <span>{key}</span></li>
+            <li key={key}><CheckCircle size={22} className={`mr-3 ${this.state.brands[key]}`} /> <span><a href={`/lookbook/${this.brandUrl(key.toLowerCase())}`}>{key.split('_').join(' ')}</a></span></li>
         )
+    }
+
+    brandUrl(brand) {
+        if (brand === 'norrøna') {
+            return 'norrona';
+        }
+
+        return brand.toLowerCase().split('_').join('-');
     }
 
     render() {
