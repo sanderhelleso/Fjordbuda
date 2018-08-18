@@ -18,7 +18,7 @@ export default class SelectedStore extends Component {
     }
 
     componentDidMount() {
-        document.querySelector('footer').style.marginTop = '51vh';
+        document.querySelector('footer').style.marginTop = '110vh';
     }
 
     render() {
@@ -29,10 +29,10 @@ export default class SelectedStore extends Component {
                         <h1>{this.renderStoreTitle()}</h1>
                         <h5>Rasmus Rønnebergs gate 4, Ålesund</h5>
                     </div>
-                    <div id='storeMap'>
-                        <StoreMap />
-                    </div>
                 </header>
+                <div id='storeInfo'>
+                </div>
+                <StoreMap />
             </section>
         )
     }

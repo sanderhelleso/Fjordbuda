@@ -18,13 +18,13 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 50vh;
-    z-index: 1000;
+    min-height: 60vh;
 }
 
-iframe {
-    display: none;
+#storeInfo {
+    min-height: 75vh;
 }
+
 
 #selectedStoreHeader #hero {
     position: absolute;

@@ -4,37 +4,31 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 export class StoreMap extends Component {
 
   componentDidMount() {
+      // add shadow to map
       const mapCont = document.querySelector('#storeMap').querySelectorAll('div');
-      mapCont[2].classList.add('z-depth-1');
-      mapCont[2].style.zIndex = '-1';
-      mapCont[1].style.position = 'static';
-
-      const mapBtns = Array.from(document.querySelector('#storeMap').querySelectorAll('div'));
-      mapBtns.forEach(map => {
-        console.log(map);
-      });
-
+      mapCont[1].classList.add('z-depth-1');
   }
 
   render() {
     return (
-      <Map google={this.props.google}
-      style={style}
-      zoom={14} 
-      initialCenter={{
-        lat: 63.44,
-        lng: 10.4
-      }}>
-          <Marker onClick={this.onMarkerClick} name={'Current location'} />
-      </Map>
+      <div id='storeMap'>
+        <Map google={this.props.google}
+        style={style}
+        zoom={14} 
+        initialCenter={{
+          lat: 63.44,
+          lng: 10.4
+        }}>
+            <Marker onClick={this.onMarkerClick} name={'Current location'} />
+        </Map>
+      </div>
     );
   }
 }
 
 const style = {
   width: '100%',
-  height: '50%',
-  top: '50%',
+  height: '100%'
 }
  
 export default GoogleApiWrapper({
