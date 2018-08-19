@@ -3,6 +3,7 @@ import { Phone, Map, Mail, CheckCircle } from 'react-feather';
 import StoreMap from './StoreMap';
 import { getStores } from '../../globals/stores';
 import { renderStoreTitle } from '../../globals/renderTitle';
+import Fade from 'react-reveal/Fade';
 
 export default class StoreInfo extends Component {
     constructor(props) {
@@ -54,30 +55,32 @@ export default class StoreInfo extends Component {
         return (
             <div id='storeInfo'>
                 <div className='container'>
-                    <div className='row'>
-                        <div className='col s4'>
-                            <h2>ADRESSE</h2>
-                            <ul>
-                                <li>{this.state.adress}<br />{this.state.zip}</li>
-                                <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
-                                <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> {this.state.tlf}</a></li>
-                                <li><Mail size={20} className='mr-3'/><a href='mailto:'> {this.state.mail}</a></li>
-                            </ul>
+                    <Fade>
+                        <div className='row'>
+                            <div className='col s4'>
+                                <h2>ADRESSE</h2>
+                                <ul>
+                                    <li>{this.state.adress}<br />{this.state.zip}</li>
+                                    <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
+                                    <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> {this.state.tlf}</a></li>
+                                    <li><Mail size={20} className='mr-3'/><a href='mailto:'> {this.state.mail}</a></li>
+                                </ul>
+                            </div>
+                            <div className='col s4'>
+                                <h2>ÅPNINGSTIDER</h2>
+                                <ul id='openingHours'>
+                                    {this.renderOpeningHours()}
+                                </ul>
+                            </div>
+                            <div className='col s4'>
+                                <h2>MERKEVARER</h2>
+                                <ul id='gotBrands'>
+                                    {this.renderGotBrands()}
+                                    <li>... og mer</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className='col s4'>
-                            <h2>ÅPNINGSTIDER</h2>
-                            <ul id='openingHours'>
-                                {this.renderOpeningHours()}
-                            </ul>
-                        </div>
-                        <div className='col s4'>
-                            <h2>MERKEVARER</h2>
-                            <ul id='gotBrands'>
-                                {this.renderGotBrands()}
-                                <li>... og mer</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </Fade>
                 </div>
                 <StoreMap coords={this.state.coordinates} all={false} />
             </div>
