@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { getStores } from '../../globals/stores';
  
 export class StoreMap extends Component {
   constructor(props) {
@@ -12,6 +13,11 @@ export class StoreMap extends Component {
       mapCont[1].classList.add('z-depth-1');
 
       console.log(this.props);
+      this.createMarker();
+  }
+
+  createMarker() {
+    console.log(getStores());
   }
 
   render() {
@@ -34,13 +40,15 @@ export class StoreMap extends Component {
 
     // render all stores on map
     else {
+      this.createMarker();
       return (
         <div id='storeMap'>
           <Map google={this.props.google}
-          style={style}
-          zoom={6}
-          >
-            <Marker onClick={this.onMarkerClick} name={'Current location'} />
+            style={style}
+            className={'map'}
+            zoom={14}>
+            <Marker position={{lat: 37.778519, lng: -122.405640}} />
+            <Marker position={{lat: 37.759703, lng: -122.428093}} />
           </Map>
         </div>
       );
