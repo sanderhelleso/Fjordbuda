@@ -58,6 +58,22 @@ export default class Stores extends Component {
                         </div>
                     </div>
                 </header>
+                <section id='storeSection' className='container'>
+                    <h5>Fjordbuda av Norge</h5>
+                    <h2>Norsk Stolthet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin maximus enim, a placerat elit congue a. Integer sed sollicitudin enim, egestas tristique ex. Nullam ante sem, consequat id malesuada vulputate, lacinia sed augue. Suspendisse eget dapibus velit, id posuere mauris. Suspendisse potenti.</p>
+                    <div className='row'>
+                        <div className='col col-s3'>
+                            <button className='btn'>123</button>
+                        </div>
+                        <div className='col col-s3'>
+                            <button className='btn'>123</button>
+                        </div>
+                        <div className='col col-s3'>
+                            <button className='btn'>123</button>
+                        </div>
+                    </div>
+                </section>
                 <StoreMap all={true} />
             </div>
         )
