@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { MapPin, ChevronDown } from 'react-feather';
+import StoreMap from './StoreMap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { getStores } from '../../globals/stores';
 
 export default class Stores extends Component {
+
+    componentDidMount() {
+        document.querySelector('footer').style.marginTop = '70vh';
+    }
 
     dropUp() {
         // check if menu is active
@@ -25,7 +30,7 @@ export default class Stores extends Component {
 
     renderStores() {
         return getStores().sort().map(store => {
-            return <a href={`${window.location.href}/${store.name.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store.name}>{store.name}</DropdownItem></a>
+            return <a key={store.name} href={`${window.location.href}/${store.name.toLowerCase().split(' ').join('-')}`}><DropdownItem key={store.name}>{store.name}</DropdownItem></a>
         });
     }
 
@@ -53,8 +58,7 @@ export default class Stores extends Component {
                         </div>
                     </div>
                 </header>
-                <section>
-                </section>
+                <StoreMap all={true} />
             </div>
         )
     }

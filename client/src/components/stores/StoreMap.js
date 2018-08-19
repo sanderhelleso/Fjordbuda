@@ -15,19 +15,36 @@ export class StoreMap extends Component {
   }
 
   render() {
-    return (
-      <div id='storeMap'>
-        <Map google={this.props.google}
-        style={style}
-        zoom={14} 
-        initialCenter={{
-          lat: this.props.coords.lat,
-          lng: this.props.coords.lng
-        }}>
+    // render specific store map
+    if (!this.props.all) {
+      return (
+        <div id='storeMap'>
+          <Map google={this.props.google}
+          style={style}
+          zoom={14} 
+          initialCenter={{
+            lat: this.props.coords.lat,
+            lng: this.props.coords.lng
+          }}>
+              <Marker onClick={this.onMarkerClick} name={'Current location'} />
+          </Map>
+        </div>
+      );
+    }
+
+    // render all stores on map
+    else {
+      return (
+        <div id='storeMap'>
+          <Map google={this.props.google}
+          style={style}
+          zoom={6}
+          >
             <Marker onClick={this.onMarkerClick} name={'Current location'} />
-        </Map>
-      </div>
-    );
+          </Map>
+        </div>
+      );
+    }
   }
 }
 

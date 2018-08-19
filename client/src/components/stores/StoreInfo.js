@@ -82,7 +82,7 @@ export default class StoreInfo extends Component {
                         </div>
                     </div>
                 </div>
-                <StoreMap coords={this.state.coordinates} />
+                <StoreMap coords={this.state.coordinates} all={false} />
             </div>
         )
     }
