@@ -3,6 +3,7 @@ import { MapPin, ChevronDown } from 'react-feather';
 import StoreMap from './StoreMap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { getStores } from '../../globals/stores';
+import { getBrands } from '../../globals/getBrands';
 import CountUp from 'react-countup';
 import Fade from 'react-reveal/Fade';
 
@@ -69,7 +70,7 @@ export default class Stores extends Component {
                         <div className='row'>
                             <div className='col col-s4'>
                                 <h5>Butikker</h5>
-                                <CountUp start={0} end={17}>
+                                <CountUp start={0} end={getStores().length}>
                                     {({ countUpRef, start }) => (
                                         <div>
                                         <h3 ref={countUpRef} />
@@ -80,7 +81,7 @@ export default class Stores extends Component {
                             </div>
                             <div className='col col-s4'>
                                 <h5>Norkse Merkevarer</h5>
-                                <CountUp start={0} end={7}>
+                                <CountUp start={0} end={getBrands().length}>
                                     {({ countUpRef, start }) => (
                                         <div>
                                         <h3 ref={countUpRef} />
@@ -90,8 +91,8 @@ export default class Stores extends Component {
                                 </CountUp>
                             </div>
                             <div className='col col-s4'>
-                                <h5>Fornøyde Kunder</h5>
-                                <CountUp start={0} end={20000}>
+                                <h5>Kunder i Året</h5>
+                                <CountUp start={0} end={500000}>
                                     {({ countUpRef, start }) => (
                                         <div>
                                         <h3 ref={countUpRef} />
