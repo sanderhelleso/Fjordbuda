@@ -12,8 +12,8 @@ export default class MainFooter extends Component {
                     <Row id='footerRow'>
                         <div id='languages' className='col-sm-6 col-md-12 col-lg-3'>
                             <ul>
-                                <li><a><Navigation size={14} className='mr-2'/> Norway</a></li>
-                                <li><a><MessageCircle size={14}className='mr-2'/> English</a></li>
+                                <li><a href='/'><Navigation size={14} className='mr-2'/> Norway</a></li>
+                                <li><a href='/en'><MessageCircle size={14}className='mr-2'/> English</a></li>
                                 <li className='space'></li>
                                 <li className='copyright'>© Vinjenaustet</li>
                             </ul>

@@ -22,7 +22,6 @@ export default class App extends Component {
     }
 
     componentWillMount() {
-        console.log(getUrl());
         this.setLang();
     }
 
@@ -47,6 +46,7 @@ export default class App extends Component {
 
     render() {
         if (this.state.lang === 'no') {
+            // norwegian routing
             return (
                 <div id='main'>
                     <BrowserRouter>
@@ -64,6 +64,31 @@ export default class App extends Component {
     
     
                             <Route path ='/' component={MainFooter} />
+                        </div>
+                    </BrowserRouter>
+                </div>
+            )
+        }
+
+        // english routing
+        else {
+            return (
+                <div id='main'>
+                    <BrowserRouter>
+                        <div>
+                            <Route path ='/en' component={TopNav} />
+                            <Route exact path='/en' component={Landing} />
+                            <Route exact path='/*' component={Loading} />
+    
+                            <Route exact path='/en/stores' component={Stores} />
+                            <Route exact path='/en/butikker/*' component={SelectedStore} />
+                            <Route exact path='/en/lookbook' component={Lookbook} />
+                            <Route exact path='/en/lookbook/*' component={Showcase} />
+                            <Route exact path='/en/history' component={History} />
+                            <Route exact path='/en/contact' component={Contact} />
+    
+    
+                            <Route path ='/en' component={MainFooter} />
                         </div>
                     </BrowserRouter>
                 </div>
