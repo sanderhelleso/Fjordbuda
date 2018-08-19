@@ -4,7 +4,7 @@ export function getStores() {
             name: 'Fjordbuda Geiranger',
             mail: 'fjorbudageiranger@gmail.com',
             tlf: '+47 95163672',
-            adress: 'Rasmus Rønnebergs gate 4',
+            adress: 'Rasmus Rønnebergs gate 12',
             zip: '6002 Ålesund',
             coordinates: {
                 lat: 63.44,
@@ -35,8 +35,8 @@ export function getStores() {
             adress: 'Rasmus Rønnebergs gate 4',
             zip: '6002 Ålesund',
             coordinates: {
-                lat: 63.44,
-                lng: 10.4
+                lat: 62.44,
+                lng: 9.4
             },
             openingHours: {
                 Mandag: '09.00 - 17.00',

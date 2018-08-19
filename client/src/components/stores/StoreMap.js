@@ -17,7 +17,9 @@ export class StoreMap extends Component {
   }
 
   createMarker() {
-    console.log(getStores());
+    return getStores().map(store => {
+      return <Marker key={store.adress} position={{lat: store.coordinates.lat, lng: store.coordinates.lng}} />
+    });
   }
 
   render() {
@@ -40,15 +42,13 @@ export class StoreMap extends Component {
 
     // render all stores on map
     else {
-      this.createMarker();
       return (
         <div id='storeMap'>
           <Map google={this.props.google}
             style={style}
             className={'map'}
             zoom={14}>
-            <Marker position={{lat: 37.778519, lng: -122.405640}} />
-            <Marker position={{lat: 37.759703, lng: -122.428093}} />
+            {this.createMarker()}
           </Map>
         </div>
       );
