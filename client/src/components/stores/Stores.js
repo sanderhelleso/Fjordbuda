@@ -3,11 +3,14 @@ import { MapPin, ChevronDown } from 'react-feather';
 import StoreMap from './StoreMap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { getStores } from '../../globals/stores';
+import CountUp from 'react-countup';
+import Fade from 'react-reveal/Fade';
 
 export default class Stores extends Component {
 
     componentDidMount() {
         document.querySelector('footer').style.marginTop = '70vh';
+        window.addEventListener('scroll', countUp);
     }
 
     dropUp() {
@@ -59,27 +62,63 @@ export default class Stores extends Component {
                     </div>
                 </header>
                 <section id='storeSection' className='container'>
-                    <h5>Fjordbuda av Norge</h5>
-                    <h2>Norsk Stolthet</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin maximus enim, a placerat elit congue a. Integer sed sollicitudin enim, egestas tristique ex. Nullam ante sem, consequat id malesuada vulputate, lacinia sed augue. Suspendisse eget dapibus velit, id posuere mauris. Suspendisse potenti.</p>
-                    <div className='row'>
-                        <div className='col col-s4'>
-                            <h5>Butikker</h5>
-                            <h3>17</h3>
+                    <Fade>
+                        <h5>Fjordbuda av Norge</h5>
+                        <h2>Norsk Stolthet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin maximus enim, a placerat elit congue a. Integer sed sollicitudin enim, egestas tristique ex. Nullam ante sem, consequat id malesuada vulputate, lacinia sed augue. Suspendisse eget dapibus velit, id posuere mauris. Suspendisse potenti.</p>
+                        <div className='row'>
+                            <div className='col col-s4'>
+                                <h5>Butikker</h5>
+                                <CountUp start={0} end={17}>
+                                    {({ countUpRef, start }) => (
+                                        <div>
+                                        <h3 ref={countUpRef} />
+                                        <button onClick={start}>Start</button>
+                                        </div>
+                                    )}
+                                </CountUp>
+                            </div>
+                            <div className='col col-s4'>
+                                <h5>Norkse Merkevarer</h5>
+                                <CountUp start={0} end={7}>
+                                    {({ countUpRef, start }) => (
+                                        <div>
+                                        <h3 ref={countUpRef} />
+                                        <button onClick={start}>Start</button>
+                                        </div>
+                                    )}
+                                </CountUp>
+                            </div>
+                            <div className='col col-s4'>
+                                <h5>Fornøyde Kunder</h5>
+                                <CountUp start={0} end={20000}>
+                                    {({ countUpRef, start }) => (
+                                        <div>
+                                        <h3 ref={countUpRef} />
+                                        <button onClick={start}>Start</button>
+                                        </div>
+                                    )}
+                                </CountUp>
+                            </div>
                         </div>
-                        <div className='col col-s4'>
-                            <h5>Norkse Merkevarer</h5>
-                            <h3>6</h3>
-                        </div>
-                        <div className='col col-s4'>
-                            <h5>Fornøyde Kunder</h5>
-                            <h3>20 000 +</h3>
-                        </div>
-                    </div>
+                    </Fade>
                 </section>
                 <StoreMap all={true} />
             </div>
         )
+    }
+}
+
+let isClicked = false;
+function countUp() {
+    const header = document.querySelector('#storesHeader');
+    if ((window.scrollY) > ((header.offsetTop + header.offsetHeight) / 2) && !isClicked) {
+        const buttons = Array.from(document.querySelector('#storeSection').querySelectorAll('button'));
+        buttons.forEach(button => {
+            button.click();
+        });
+
+        isClicked = true;
     }
 }
 

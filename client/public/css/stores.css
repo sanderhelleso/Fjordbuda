@@ -238,3 +238,7 @@
     font-weight: 800;
     color: #10ddc2;
 }
+
+#storeSection button {
+    display: none;
+}
