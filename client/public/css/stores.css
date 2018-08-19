@@ -22,8 +22,8 @@
 }
 
 #storeInfo {
-    margin-top: 15vh;
-    margin-bottom: 5vh;
+    margin-top: 10vh;
+    margin-bottom: 12.5vh;
 }
 
 #storeInfo h2 {
@@ -255,6 +255,12 @@
     }
 
     #storesHeader .row .col {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #storeInfo .row .col {
         min-width: 100%;
     }
 }

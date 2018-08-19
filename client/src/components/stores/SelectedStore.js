@@ -9,8 +9,8 @@ export default class SelectedStore extends Component {
         this.setBg(renderStoreTitle().split(' ').join('-').toLowerCase());
     }
 
+    // set specific store bg
     setBg(bgPath) {
-        console.log(bgPath);
         const headerBg = document.querySelector('#selectedStoreHeader');
         headerBg.style.background = `linear-gradient(rgba(121, 85, 72, 0.9), rgba(0, 0, 0, 0.7)),url("../img/stores/${bgPath}.jpg") no-repeat center`;
         headerBg.style.backgroundSize = 'cover'
