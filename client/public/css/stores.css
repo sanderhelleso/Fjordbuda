@@ -242,3 +242,18 @@
 #storeSection button {
     display: none;
 }
+
+@media (max-width: 768px) {
+    #storeSection .row .col {
+        min-width: 100%;
+        margin-bottom: 75px;
+    }
+    
+    #storeSection p {
+        max-width: 90%;
+    }
+
+    #storesHeader .row .col {
+        min-width: 100%;
+    }
+}
