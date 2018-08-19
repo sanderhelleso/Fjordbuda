@@ -47,7 +47,12 @@ export class StoreMap extends Component {
           <Map google={this.props.google}
             style={style}
             className={'map'}
-            zoom={14}>
+            zoom={6}
+            initialCenter={{
+              lat: 62.121,
+              lng: 7.129
+            }}>
+            
             {this.createMarker()}
           </Map>
         </div>
