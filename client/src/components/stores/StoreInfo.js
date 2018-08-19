@@ -55,9 +55,9 @@ export default class StoreInfo extends Component {
         return (
             <div id='storeInfo'>
                 <div className='container'>
-                    <Fade>
-                        <div className='row'>
-                            <div className='col s4'>
+                    <div className='row'>
+                        <div className='col s4'>
+                            <Fade>
                                 <h2>ADRESSE</h2>
                                 <ul>
                                     <li>{this.state.adress}<br />{this.state.zip}</li>
@@ -65,22 +65,26 @@ export default class StoreInfo extends Component {
                                     <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> {this.state.tlf}</a></li>
                                     <li><Mail size={20} className='mr-3'/><a href='mailto:'> {this.state.mail}</a></li>
                                 </ul>
-                            </div>
-                            <div className='col s4'>
+                            </Fade>
+                        </div>
+                        <div className='col s4'>
+                            <Fade>
                                 <h2>ÅPNINGSTIDER</h2>
                                 <ul id='openingHours'>
                                     {this.renderOpeningHours()}
                                 </ul>
-                            </div>
-                            <div className='col s4'>
-                                <h2>MERKEVARER</h2>
+                            </Fade>
+                        </div>
+                        <div className='col s4'>
+                            <Fade>
+                            <h2>MERKEVARER</h2>
                                 <ul id='gotBrands'>
                                     {this.renderGotBrands()}
                                     <li>... og mer</li>
                                 </ul>
-                            </div>
+                            </Fade>
                         </div>
-                    </Fade>
+                    </div>
                 </div>
                 <StoreMap coords={this.state.coordinates} all={false} />
             </div>
