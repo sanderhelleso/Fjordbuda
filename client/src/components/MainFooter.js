@@ -33,12 +33,10 @@ export default class MainFooter extends Component {
                         <div className='col-sm-6 col-md-6 col-lg-3'>
                             <h5>Kontakt</h5>
                             <ul>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
-                                <li><a>qweqeq</a></li>
+                                <li>6216 Geiranger</li>
+                                <li><a href='tel:+4770263012'>+47 70 26 30 12</a></li>
+                                <li><a href='mailto:jan-ivar@fiskebat.no'>jan-ivar@fiskebat.no</a></li>
+                                <li>Org nr: 967 273 414</li>
                             </ul>
                         </div>
                         <a id='semanta' href='http://semanta.no' target='_blank'>Utviklet av Semanta</a>
