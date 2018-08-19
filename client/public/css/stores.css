@@ -189,6 +189,10 @@
     box-sizing: border-box;
 }
 
+#storeSection {
+    margin-bottom: 7.5vh;
+}
+
 #storeSection h2 {
     text-align: center;
     font-size: 40px;
@@ -223,11 +227,14 @@
     text-align: center;
 }
 
-#storeSection .btn {
-    line-height: 1;
-    background-color: transparent;
-    border: 2px solid #10ddc2;
-    color: #10ddc2;
-    letter-spacing: 1px;
+#storeSection .row h5 {
+    color: #212121;
+    font-size: 16px;
     font-weight: 600;
+}
+
+#storeSection .row h3 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #10ddc2;
 }

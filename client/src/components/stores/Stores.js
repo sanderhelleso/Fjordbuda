@@ -63,14 +63,17 @@ export default class Stores extends Component {
                     <h2>Norsk Stolthet</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sollicitudin maximus enim, a placerat elit congue a. Integer sed sollicitudin enim, egestas tristique ex. Nullam ante sem, consequat id malesuada vulputate, lacinia sed augue. Suspendisse eget dapibus velit, id posuere mauris. Suspendisse potenti.</p>
                     <div className='row'>
-                        <div className='col col-s3'>
-                            <button className='btn'>123</button>
+                        <div className='col col-s4'>
+                            <h5>Butikker</h5>
+                            <h3>17</h3>
                         </div>
-                        <div className='col col-s3'>
-                            <button className='btn'>123</button>
+                        <div className='col col-s4'>
+                            <h5>Norkse Merkevarer</h5>
+                            <h3>6</h3>
                         </div>
-                        <div className='col col-s3'>
-                            <button className='btn'>123</button>
+                        <div className='col col-s4'>
+                            <h5>Fornøyde Kunder</h5>
+                            <h3>20 000 +</h3>
                         </div>
                     </div>
                 </section>
