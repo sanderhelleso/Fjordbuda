@@ -2,6 +2,7 @@ import 'animate.css';
 
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { getUrl } from '../globals/getUrl';
 
 import Loading from './Loading';
 import TopNav from './TopNav';
@@ -21,6 +22,7 @@ export default class App extends Component {
     }
 
     componentWillMount() {
+        console.log(getUrl());
         this.setLang();
     }
 
@@ -30,7 +32,7 @@ export default class App extends Component {
         const lang = navigator.language || navigator.userLanguage;
 
         // check if norwegian browser
-        if (lang === 'nb' || lang === 'nn' || lang === 'no' || lang === 'nb-NO' || lang === 'nn-NO') {
+        if (lang === 'no' && getUrl()[0] != 'en') {
             this.setState({
                 lang: 'no'
             });
