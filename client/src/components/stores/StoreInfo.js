@@ -61,7 +61,6 @@ export default class StoreInfo extends Component {
                                 <h2>ADRESSE</h2>
                                 <ul>
                                     <li>{this.state.adress}<br />{this.state.zip}</li>
-                                    <li><Map size={20} className='mr-3'/><a href='' > Veibeskrivelse</a></li>
                                     <li><Phone size={20} className='mr-3'/> <a href='tel:+4770117300'> {this.state.tlf}</a></li>
                                     <li><Mail size={20} className='mr-3'/><a href='mailto:'> {this.state.mail}</a></li>
                                 </ul>
