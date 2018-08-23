@@ -24,11 +24,11 @@ export default class Lookbook extends Component {
 
             // check if norøna due to ÆØÅ 
             if (brand.toLowerCase() === 'norrøna') {
-                return <a href={`/lookbook/norrona`}><h2 key={index}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2></a>
+                return <a key={index} href={`/lookbook/norrona`}><h2 key={index}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2></a>
             }
 
             else {
-                return <a href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><h2 key={index}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2></a>
+                return <a key={index} href={`/lookbook/${brand.toLowerCase().split(' ').join('-')}`}><h2 key={index}><span>{index}</span>{brand}<span className='categorySpan animated fadeIn'><span className='hiddenSpan'>.</span></span></h2></a>
             }
         });
 
