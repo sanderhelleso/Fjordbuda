@@ -16,6 +16,7 @@ export default class Landing extends Component {
         });
 
         setTimeout(() => {
+            document.querySelector("#topNav").querySelector('svg').style.stroke = '#ffffff';
             sliderProgress();
         }, 500);
     }

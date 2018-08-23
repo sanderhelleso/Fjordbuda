@@ -37,14 +37,6 @@ export default class TopNav extends Component {
         }, 500);
     }
 
-    componentDidMount() {
-        const logo = document.querySelector("#navLogo");
-        const toggler = document.querySelector("#topNav").querySelector('svg')
-        setTimeout(() => {
-            modifyNav(logo, toggler);
-        }, 2000);
-    }
-
     render() {
         return (
             <div id='navMenu'>
@@ -62,57 +54,58 @@ export default class TopNav extends Component {
     }
 }
 
-// set original state to be reversed
-function modifyNav(logo, toggler) {
-    prevStateLogo = logo.src;
-    prevStateNav = window.getComputedStyle(toggler).getPropertyValue('stroke');
-}
-
 let prevStateLogo;
 let prevStateNav;
 function toggleMenu(bool) {
 
     setTimeout(() => {
-        // remove mouse interaction for duration of animation
-        const toggler =  document.querySelector('#menuToggler');
-        toggler.style.pointerEvents = 'none';
-        setTimeout(() => {
-           toggler.style.pointerEvents = 'auto';
-        }, 750);
-
         const nav = document.querySelector("#topNav");
         const logo = document.querySelector("#navLogo");
         const menu = document.querySelector(".menuOverlay");
+        const toggler =  document.querySelector('#menuToggler');
+
+        // remove mouse interaction for duration of animation
+        toggler.style.pointerEvents = 'none';
+        setTimeout(() => {
+            toggler.style.pointerEvents = 'auto';
+
+            // set old state to be reversed
+            prevStateLogo = logo.src;
+            prevStateNav = window.getComputedStyle(nav.querySelector('svg')).getPropertyValue('stroke');
+            console.log(prevStateNav);
+        }, 750);
 
         // hide scrollbar
         document.body.style.overflowY = 'hidden';
         if (bool) {
 
-            setTimeout(() => {
-                toggler.querySelector('svg').style.stroke = '#ffffff !important';
-                logo.src = '../img/logo/Vinje1_white.png';
-            }, 150);
+            toggler.querySelector('svg').style.stroke = '#ffffff';
+            logo.src = '../img/logo/Vinje1_white.png';
+            
             menu.className = 'menuOverlay animated fadeIn';
             nav.className = 'navbar navbar-dark transparent'
             menu.style.display = 'block';
         }
     
         else {
-            console.log(prevStateLogo);
+            console.log(prevStateLogo, prevStateNav);
             if (prevStateLogo != undefined) {
                 logo.src = prevStateLogo;
             }
-            nav.querySelector('svg').style.stroke = prevStateNav;
-            nav.className = 'navbar navbar-dark transparent';
+
+            if (prevStateNav != undefined) {
+                nav.querySelector('svg').style.stroke = prevStateNav;
+            }
 
             document.body.style.overflowY = 'auto';
             menu.className = 'menuOverlay animated fadeOut';
+            window.scrollBy(0,1);
             setTimeout(() => {
                 menu.style.display = 'none';
             }, 750);
         } 
     }, 100);
 
-    return bool ? <X size={35} color='#ffffff' /> : <Menu size={35} color={prevStateNav} />
+    return bool ? <X size={35} /> : <Menu size={35} />
 }
 
