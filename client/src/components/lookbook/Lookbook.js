@@ -83,22 +83,23 @@ function getScreenSize() {
     const header = document.querySelector('#lookBookImg');
     
     window.addEventListener('scroll', manipulateNav);
+    console.log(123);
 
     setTimeout(() => {
         menuIcon.style.stroke = 'white';
-    }, 200);
 
-    // small screen
-    if (isSmall()) {
-        setTimeout(() => {
-            logo.src = 'img/logo/Vinje1_white.png';
-        }, 200);
-    }
+        // small screen
+        if (isSmall()) {
+            setTimeout(() => {
+                logo.src = 'img/logo/Vinje1_white.png';
+            }, 200);
+        }
 
-    // tablet +
-    else {
-        logo.src = 'img/logo/Vinje1_black.png';
-    }
+        // tablet +
+        else {
+            logo.src = 'img/logo/Vinje1_black.png';
+        }
+    }, 2000);
 
     // check if small or large
     function isSmall() {
