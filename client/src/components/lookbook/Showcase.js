@@ -23,7 +23,7 @@ export default class Showcase extends Component {
 
             logo.src = '../img/logo/Vinje1_black.png';
             navbar.querySelector('svg').style.stroke = '#212121';
-        }, 2000);
+        }, 1000);
     }
 
     render() {

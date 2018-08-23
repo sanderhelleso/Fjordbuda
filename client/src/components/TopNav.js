@@ -37,6 +37,14 @@ export default class TopNav extends Component {
         }, 500);
     }
 
+    componentDidMount() {
+        const logo = document.querySelector("#navLogo");
+        const toggler = document.querySelector("#topNav").querySelector('svg')
+        setTimeout(() => {
+            modifyNav(logo, toggler);
+        }, 2000);
+    }
+
     render() {
         return (
             <div id='navMenu'>
@@ -54,13 +62,20 @@ export default class TopNav extends Component {
     }
 }
 
+// set original state to be reversed
+function modifyNav(logo, toggler) {
+    prevStateLogo = logo.src;
+    prevStateNav = window.getComputedStyle(toggler).getPropertyValue('stroke');
+}
+
+let prevStateLogo;
+let prevStateNav;
 function toggleMenu(bool) {
 
     setTimeout(() => {
         // remove mouse interaction for duration of animation
         const toggler =  document.querySelector('#menuToggler');
         toggler.style.pointerEvents = 'none';
-        toggler.querySelector('svg').style.stroke = '#ffffff !important';
         setTimeout(() => {
            toggler.style.pointerEvents = 'auto';
         }, 750);
@@ -72,26 +87,25 @@ function toggleMenu(bool) {
         // hide scrollbar
         document.body.style.overflowY = 'hidden';
         if (bool) {
+
             setTimeout(() => {
+                toggler.querySelector('svg').style.stroke = '#ffffff !important';
                 logo.src = '../img/logo/Vinje1_white.png';
             }, 150);
             menu.className = 'menuOverlay animated fadeIn';
             nav.className = 'navbar navbar-dark transparent'
-            nav.querySelector('svg').style.stroke = '#ffffff';
             menu.style.display = 'block';
         }
     
         else {
-            logo.src = '../img/logo/Vinje1_white.png';
+            console.log(prevStateLogo);
+            if (prevStateLogo != undefined) {
+                logo.src = prevStateLogo;
+            }
+            nav.querySelector('svg').style.stroke = prevStateNav;
             nav.className = 'navbar navbar-dark transparent';
-            nav.querySelector('svg').style.stroke = '#ffffff';
 
             document.body.style.overflowY = 'auto';
-
-            // this code decides flow of navigation style depending on page
-            if (getUrl()[0] === 'historie') {
-                scrollSpy();
-            }
             menu.className = 'menuOverlay animated fadeOut';
             setTimeout(() => {
                 menu.style.display = 'none';
@@ -99,6 +113,6 @@ function toggleMenu(bool) {
         } 
     }, 100);
 
-    return bool ? <X size={35} color='#ffffff' /> : <Menu size={35} color='#212121' />
+    return bool ? <X size={35} color='#ffffff' /> : <Menu size={35} color={prevStateNav} />
 }
 
