@@ -16,6 +16,14 @@ export default class Showcase extends Component {
         if (url() === 'alle merker') {
             document.querySelector('#brandLogo').remove();
         }
+
+        setTimeout(() => {
+            const navbar = document.querySelector("#topNav");
+            const logo = document.querySelector('#navLogo');
+
+            logo.src = '../img/logo/Vinje1_black.png';
+            navbar.querySelector('svg').style.stroke = '#212121';
+        }, 2000);
     }
 
     render() {
