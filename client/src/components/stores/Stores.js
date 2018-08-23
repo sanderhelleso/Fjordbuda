@@ -4,6 +4,7 @@ import StoreMap from './StoreMap';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { getStores } from '../../globals/stores';
 import { getBrands } from '../../globals/getBrands';
+import { scrollSpy } from '../../globals/scrollSpy';
 import CountUp from 'react-countup';
 import Fade from 'react-reveal/Fade';
 
@@ -112,6 +113,7 @@ export default class Stores extends Component {
 
 let isClicked = false;
 function countUp() {
+    scrollSpy();
     const header = document.querySelector('#storesHeader');
     if ((window.scrollY) > ((header.offsetTop + header.offsetHeight) / 2) && !isClicked) {
         const buttons = Array.from(document.querySelector('#storeSection').querySelectorAll('button'));

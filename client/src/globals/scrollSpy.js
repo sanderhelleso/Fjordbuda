@@ -6,20 +6,23 @@ export function scrollSpy() {
     // navigation
     const navbar = document.querySelector("#topNav");
     const logo = document.querySelector('#navLogo');
+    const header = document.querySelector('header');
 
     console.log(getUrl());
+    // main
+    if (getUrl()[0] === '') {
+        modifyNav(header);
+    }
+    
+    // history
     if (getUrl()[0] === 'historie') {
-
-        // history
-        const header = document.querySelector("#historyHeader");
         const intro = document.querySelector('#historyIntro');
         progressBar(window.scrollY);
         modifyNav(header, intro);
     }
 
-    if (getUrl()[0] === '') {
-        // main
-        const header = document.querySelector("#mainHero");
+    // stores
+    if (getUrl()[0] === 'butikker') {
         modifyNav(header);
     }
 
