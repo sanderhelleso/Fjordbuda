@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import StoreInfo from './StoreInfo';
 import { renderStoreTitle } from '../../globals/renderTitle';
+import { scrollSpy } from '../../globals/scrollSpy';
 
 export default class SelectedStore extends Component {
 
     componentDidMount() {
         document.querySelector('footer').style.marginTop = '70vh';
         this.setBg(renderStoreTitle().split(' ').join('-').toLowerCase());
+        window.addEventListener('scroll', scrollSpy);
     }
 
     // set specific store bg
