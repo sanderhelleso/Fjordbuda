@@ -4,9 +4,6 @@ import { Row, Input, Button } from 'react-materialize';
 import { Minus } from 'react-feather';
 
 export default class Contact extends Component {
-    componentWillMount() {
-        document.title = '✉️ Kontakt | Fjordbuda';
-    }
 
     componentDidMount() {
         // run animation for contacts

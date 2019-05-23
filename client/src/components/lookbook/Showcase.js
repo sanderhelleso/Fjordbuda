@@ -4,11 +4,6 @@ import Gallery from './ClothingGallery';
 import { toTitleCase } from '../../globals/toTitleCase';
 
 export default class Showcase extends Component {
-
-    componentWillMount() {
-        document.title = `🔥 ${toTitleCase(url())} | Lookbook | Fjordbuda`;
-    }
-
     componentDidMount() {
         document.querySelector('#brandDescription').innerHTML = setDescription();
 

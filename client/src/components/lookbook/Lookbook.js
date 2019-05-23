@@ -6,7 +6,6 @@ import { getBrands } from '../../globals/getBrands';
 export default class Lookbook extends Component {
 
     componentDidMount() {
-        document.title = `🔥 Lookbook ${new Date().getFullYear()} | Fjordbuda`;
         window.addEventListener('scroll', animateLookBook);
 
         getScreenSize();
