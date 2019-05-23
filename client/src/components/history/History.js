@@ -5,7 +5,7 @@ import Landing from './Landing';
 export default class History extends Component {
 
     componentWillMount() {
-        document.title = '📖 Historie | Fjordbuda';
+        document.title = 'Historie | Fjordbuda';
     }
 
     componentDidMount() {
@@ -17,6 +17,10 @@ export default class History extends Component {
     render() {
         return (
         <div>
+            <Helmet>
+                <title>Fjordbuda - Vår historie</title>
+                <meta name="description" content="Vår historie er ikke som alle andre. Les hvordan det hele startet og vår magiske vei til hvor vi er idag." />
+            </Helmet>
             <Landing />
         </div>
         )

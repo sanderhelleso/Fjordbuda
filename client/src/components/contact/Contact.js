@@ -16,6 +16,10 @@ export default class Contact extends Component {
     render() {
         return (
         <div id='contact'>
+            <Helmet>
+                <title>Fjordbuda - Kontakt oss</title>
+                <meta name="description" content="Har du spørsmål angående produkter, lokasjon eller noe annent? Send oss gjerne en melding." />
+            </Helmet>
             <div id='square' />
             <h1>Kontakt</h1>
             <Row>

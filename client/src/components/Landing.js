@@ -1,7 +1,9 @@
+import { Helmet } from 'react-helmet'
 import React, { Component } from 'react';
 import { Slider, Slide } from 'react-materialize';
 import Hero from './Hero';
 import MainSection from './MainSection';
+
 
 export default class Landing extends Component {
 
@@ -24,6 +26,10 @@ export default class Landing extends Component {
     render() {
         return (
             <section>
+                <Helmet>
+                    <title>Fjordbuda - Norsk tradisjon og kultur</title>
+                    <meta name="description" content="Fjordbuda er en av de største leverandørene innen norske klær og suvenirer. Finn ditt Norge hos oss." />
+                </Helmet>
                 <div id='landingSection'>
                     <Hero />
                     <div className="overlay noSelect">

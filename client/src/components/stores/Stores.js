@@ -42,6 +42,10 @@ export default class Stores extends Component {
     render() {
         return (
             <div>
+                <Helmet>
+                    <title>Fjordbuda - Våre butikker</title>
+                    <meta name="description" content="Over 22 butikker spredt ut over Norge. Finn din fjordbud for norske klær og suvenirer." />
+                </Helmet>
                 <header id='storesHeader' className='z-depth-3'>
                     <div id='selectStore' className='container'>
                         <div id='selectStoreRow' className='row z-depth-5'>
