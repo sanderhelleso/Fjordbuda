@@ -10,12 +10,12 @@ export default class Landing extends Component {
     }
 
     componentDidMount() {
-        const sliderImgs = document.querySelector(".slider").querySelectorAll("img");
-        sliderImgs.forEach(img => {
-            console.log(img.style.backgroundImage);
-        });
-
         setTimeout(() => {
+            const sliderImgs = document.querySelector(".slider").querySelectorAll("img");
+                sliderImgs.forEach(img => {
+                console.log(img.style.backgroundImage);
+            });
+
             document.querySelector("#topNav").querySelector('svg').style.stroke = '#ffffff';
             sliderProgress();
         }, 500);
@@ -58,9 +58,6 @@ function sliderProgress() {
         if (percentage != 100) {
             percentage = percentage + 0.25;
             sliderBar.style.backgroundColor = "#ffffff";
-        }
-
-        else {
         }
 
         if (newActive != activeSlider) {

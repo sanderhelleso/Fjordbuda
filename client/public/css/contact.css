@@ -13,27 +13,13 @@ body {
 #contact .row #contactImg {
     padding: 0;
     background: linear-gradient(
-    rgba(255, 255, 255, 0.4), 
-    rgba(255, 255, 255, 1)),
+    rgba(255, 255, 255, 0.5), 
+    rgba(255, 255, 255, 0.5)),
     url("../img/contact/contact.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-}
-
-#contact .row #contactImg h5 {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    letter-spacing: 2px;
-    font-weight: 100;
-    font-size: 14px;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 #contactCont {
@@ -76,7 +62,7 @@ body {
 #contactCont p {
     position: absolute;
     top: 25%;
-    right: 0;
+    right: 50px;
     padding-right: 15px;
     margin-right: 25px;
     margin-left: 5px;
@@ -85,7 +71,7 @@ body {
     color: #8A99C0;
     line-height: 28px;
     letter-spacing: 1px;
-    border-right: 3px solid #10ddc2;
+    border-right: 3px solid #CFB53B;
 }
 
 #contactCont form {

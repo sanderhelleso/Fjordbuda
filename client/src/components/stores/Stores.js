@@ -46,10 +46,10 @@ export default class Stores extends Component {
                     <div id='selectStore' className='container'>
                         <div id='selectStoreRow' className='row z-depth-5'>
                             <div className='col s6 findStore'>
-                                <h5 className='noSelect'>Finn din <span>Fjordbuda</span></h5>
+                                <h5 className='noSelect'>Finn din <span>Fjordbud</span></h5>
                             </div>
                             <div className='col s6 selectStoreOption' onClick={this.dropUp} >
-                                <h5 className='noSelect'><MapPin size={22} color={'#10ddc2'} /> <span id='setStore'>Velg sted</span></h5>
+                                <h5 id="selectStoreHeading" className='noSelect'><MapPin size={22} color={'#10ddc2'} /> <span id='setStore'>Velg sted</span></h5>
                                 <span>
                                     <ChevronDown size={22} color={'#9e9e9e'} />
                                 </span>

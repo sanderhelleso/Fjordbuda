@@ -68,7 +68,7 @@
 }
 
 #storeInfo ul li svg {
-    margin-bottom: -4px;
+    margin-bottom: -8px;
     stroke: #10ddc2;
 }
 
@@ -108,8 +108,15 @@
 
 #storesHeader #selectStoreRow div {
     padding: 25px;
-    padding-top: 25px;
     padding-bottom: 10px
+}
+
+.dropdown-item {
+    padding: 10px !important;
+}
+
+.productItem {
+    cursor: default;
 }
 
 #storesHeader #selectStoreRow h5 {
@@ -186,7 +193,10 @@
 
 .selectStoreOption span svg {
     float: right;
-    box-sizing: border-box;
+}
+
+#selectStoreHeading svg {
+    margin-bottom: 40px;
 }
 
 #storeSection {

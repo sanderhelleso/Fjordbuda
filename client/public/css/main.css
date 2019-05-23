@@ -78,7 +78,6 @@ p {
     margin-right: 15px;
     transition: ease-in 0.3s;
     cursor: pointer;
-    margin-top: 20px;
     z-index: 10000000;
 }
 
@@ -177,7 +176,7 @@ video {
 #loadingLogo1 {
     filter: invert(100%);
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 1.75s;
     animation-iteration-count: infinite;
 }
 
@@ -189,7 +188,7 @@ video {
         filter: FlipV;
         -ms-filter: "FlipV";
     animation-name: fade2;
-    animation-duration: 2s;
+    animation-duration: 1.75s;
     animation-iteration-count: infinite;
 }
 
@@ -297,8 +296,9 @@ video {
     letter-spacing: 2px;
     display: block; /* Display block instead of inline */
     transition: ease-in-out 0.4s; /* Transition effects on hover (color) */
-    margin: 0 auto;
+    margin: 3rem auto;
     font-weight: 100;
+    font-family: 'Vidaloka', serif;
 }
 
 .menuOverlay a span {
@@ -313,7 +313,7 @@ video {
 #socialMedia {
     position: absolute;
     left: 15px;
-    bottom: 5px;
+    bottom: -20px;
     z-index: 1000000;
 }
 
@@ -339,8 +339,9 @@ video {
 #hashtag {
     position: absolute;
     right: 15px;
-    bottom: 15px;
+    bottom: 32px;
     z-index: 1000000;
+    font-family: 'Vidaloka', serif;
 }
 
 #hashtag h5 {

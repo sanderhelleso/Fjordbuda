@@ -35,11 +35,11 @@ export default class MainSection extends Component {
                         </Fade>
                         <Fade>
                             <div className='intro2 intro z-depth-3'>
-                                <Fade>
-                                    <h5>det beste fra Norge</h5>
-                                    <h3>Lookbook</h3>
+                            <Fade>
+                                    <h5>en fantastisk historie</h5>
+                                    <h3>Historie</h3>
                                 </Fade>
-                                <a href='/lookbook'><button className='btn'>Se merker og varer</button></a>
+                                <a href='/historie'><button className='btn'>Les historien</button></a>
                             </div>
                         </Fade>
                     </div>
@@ -50,21 +50,6 @@ export default class MainSection extends Component {
                         </Fade>
                         <Fade>
                             <div className='intro3 intro z-depth-3'>
-                                <Fade>
-                                    <h5>en fantastisk historie</h5>
-                                    <h3>Historie</h3>
-                                </Fade>
-                                <a href='/historie'><button className='btn'>Les historien</button></a>
-                            </div>
-                        </Fade>
-                    </div>
-                    <div className='introLine animated slideInUp' />
-                    <div id='section4'>
-                        <Fade>
-                            <div className='para4' />
-                        </Fade>
-                        <Fade>
-                            <div className='intro4 intro z-depth-3'>
                                 <Fade>
                                     <h5>er det noe du lurer på?</h5>
                                     <h3>Kontakt</h3>

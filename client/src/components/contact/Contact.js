@@ -20,21 +20,11 @@ export default class Contact extends Component {
             <h1>Kontakt</h1>
             <Row>
                 <div id='contactImg' className='col col-sm-4 col-md-6 col-lg-6 z-depth-5'>
-                    <h5>Let's go on an adventure</h5>
                 </div>
                 <div className='col col-sm-8 col-md-6 col-lg-6'>
                     <div id='contactCont'>
                         <p>Lurer du på noe eller har spørsmål angående produkter? Send oss gjerne en melding.</p>
-                        <form>
-                            <Row>
-                                <Input label="Navn" s={6}/>
-                                <Input type="email" label="Email" s={6} />
-                            </Row>
-                                <Input type='textarea' label="Melding" />
-                                <Button id='sendMessage' waves='light'>Send</Button>
-                            <Row>
-                            </Row>
-                        </form>
+                        
                     </div>
                 </div>
             </Row>
@@ -45,7 +35,6 @@ export default class Contact extends Component {
 
 function animateContact() {
     const headerImg = document.querySelector('#contactImg');
-    const logo = document.querySelector('#navLogo');
     const heading = document.querySelector('h1');
     const square = document.querySelector('#square');
     const paragrapgh = document.querySelector('#contactCont > p');

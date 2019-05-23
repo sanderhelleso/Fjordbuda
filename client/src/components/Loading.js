@@ -74,6 +74,6 @@ function fadeOutLoadingScreen() {
 
         setTimeout(() => {
             loadingScreen.remove();
-        }, 1000);
-    }, 2000);
+        }, 500);
+    }, 1000);
 }

@@ -39,7 +39,7 @@ export default class StoreInfo extends Component {
 
     renderGotBrands() {
         return Object.keys(this.state.brands).map(key =>
-            <li key={key}><CheckCircle size={22} className={`mr-3 ${this.state.brands[key]}`} /> <span><a href={`/lookbook/${this.brandUrl(key.toLowerCase())}`}>{key.split('_').join(' ')}</a></span></li>
+            <li key={key}><CheckCircle size={22} className={`mr-3 ${this.state.brands[key]}`} /> <span><a className="productItem">{key.split('_').join(' ')}</a></span></li>
         )
     }
 
