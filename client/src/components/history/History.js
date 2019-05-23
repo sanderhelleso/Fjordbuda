@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import React, { Component } from 'react';
 
 import Landing from './Landing';

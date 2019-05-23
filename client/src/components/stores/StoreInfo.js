@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import React, { Component } from 'react';
 import { Phone, Map, Mail, CheckCircle } from 'react-feather';
 import StoreMap from './StoreMap';
@@ -54,6 +55,10 @@ export default class StoreInfo extends Component {
     render() {
         return (
             <div id='storeInfo'>
+                <Helmet>
+                    <title>Fjordbuda - Butikk</title>
+                    <meta name="description" content={`Shop for norske klær og suvenirer hos oss.`} />
+                </Helmet>
                 <div className='container'>
                     <div className='row'>
                         <div className='col s4'>

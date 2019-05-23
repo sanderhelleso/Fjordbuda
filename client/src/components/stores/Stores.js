@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import React, { Component } from 'react';
 import { MapPin, ChevronDown } from 'react-feather';
 import StoreMap from './StoreMap';
