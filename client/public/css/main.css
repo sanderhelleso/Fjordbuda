@@ -357,7 +357,7 @@ video {
 }
 
 #hero img {
-    max-height: 175px;
+    max-height: 135px;
     width: auto;
 }
 
@@ -590,7 +590,7 @@ video {
 
 @media (max-width: 1300px) {
     #hero img {
-        max-height: 140px;
+        max-height: 110px;
         width: auto;
     }
 }
