@@ -28,16 +28,16 @@ export function scrollSpy() {
 			navbar.classList.remove('topNavOnBg');
 			navbar.classList.add('topNavOffBg');
 
-			if (logo.src != '../img/logo/Vinje1_black.png') {
-				logo.src = '../img/logo/Vinje1_black.png';
+			if (logo.src != '../img/logo/FjordB_1.png') {
+				logo.src = '../img/logo/FjordB_1.png';
 			}
 		} else {
 			navbar.classList.remove('topNavOffBg');
 			navbar.classList.remove('topNavOffBgMobile');
 			navbar.classList.add('topNavOnBg');
 
-			if (logo.src != '../img/logo/Vinje1_white.png') {
-				logo.src = '../img/logo/Vinje1_white.png';
+			if (logo.src != '../img/logo/FjordB_2.png') {
+				logo.src = '../img/logo/FjordB_2.png';
 			}
 
 			if (intro) {

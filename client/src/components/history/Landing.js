@@ -24,7 +24,7 @@ export default class Landing extends Component {
 				<header id="historyHeader" className="z-depth-2">
 					<div id="historyIntro" className="container">
 						<h1>En historie uten like</h1>
-						<p>Stiftet i den idylliske landsbyen Geiranger, Vinjenaustet er ikke som alle andre naust</p>
+						<p>Stiftet i den idylliske landsbyen Geiranger, fjordbuda er ikke som alle andre naust</p>
 					</div>
 					<span id="readMoreBtn">
 						<img src="img/history/scroll.png" />

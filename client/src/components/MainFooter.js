@@ -28,7 +28,7 @@ export default class MainFooter extends Component {
 						</div>
 						<div className="col-sm-12 col-md-6 col-lg-4">
 							<ul>
-								<li className="copyright">© Vinjenaustet</li>
+								<li className="copyright">© fjordbuda</li>
 							</ul>
 							<a id="semanta" href="http://semanta.no" target="_blank">
 								Utviklet av Semanta
