@@ -21,8 +21,8 @@ export default class MainMenu extends Component {
                     <a href="/kontakt"><span className='animated fadeInLeft leftSpan'><Minus /></span> Kontakt Oss <span className='animated fadeInRight rightSpan'><Minus /></span></a>
                 </div>
                 <div id='socialMedia'>
-                    <a href='' target='_blank'><Facebook size={35} color='#ffffff' /></a>
-                    <a href='' target='_blank'><Instagram size={35} color='#ffffff' /></a>
+                    {/* <a href='' target='_blank'><Facebook size={35} color='#ffffff' /></a> */}
+                    <a href='https://www.instagram.com/fjordbuda/' target='_blank'><Instagram size={35} color='#ffffff' /></a>
                 </div>
                 <div id='hashtag'>
                     <h5>#fjordfeeling</h5>

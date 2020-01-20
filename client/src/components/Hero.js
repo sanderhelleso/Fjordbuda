@@ -7,8 +7,8 @@ export default class Hero extends Component {
             <div id="hero">
                 <div className="container animated fadeInUp noSelect">
                     <img src='../img/logo/FjordB_2.png' />
-                    <p id="heroText">Stiftet i den lille, idylliske landsbyen Geiranger. Fjordbuda startet som et lite naust i 1993 og har siden voskt til å bli en av de største leverandørene innen norske klær og suvenirer</p>
-                    <button id='explore' className='btn z-depth-5' onClick={initExplore}>Utforsk buda</button>
+                    <p id="heroText">Stiftet i den vesle, idylliske bygda Geiranger. Fjordbuda begynte som souvenirbutikk i et ombygd naust i 1994 og har siden vokst til å bli en av de største aktørene innen salg av turistgaver og suvenirartikler på vestlandet</p>
+                    <button id='explore' className='btn z-depth-5' onClick={initExplore}>Utforsk selskapet</button>
                 </div>
             </div>
         )
