@@ -2,33 +2,53 @@ import React, { Component } from 'react';
 import { Minus, Facebook, Instagram } from 'react-feather';
 
 export default class MainMenu extends Component {
-
     componentDidMount() {
-        const menuLinks = document.querySelector('.menuOverlay-content').querySelectorAll('a');
-        menuLinks.forEach(link => {
+        const menuLinks = document
+            .querySelector('.menuOverlay-content')
+            .querySelectorAll('a');
+        menuLinks.forEach((link) => {
             link.addEventListener('mouseover', changeMenuBg);
         });
     }
-
 
     render() {
         return (
             <div className='menuOverlay'>
                 <div id='menuBg' />
-                <div className="menuOverlay-content animated fadeIn">
-                    <a href="/butikker"><span className='animated fadeInLeft leftSpan'><Minus /></span> Butikker <span className='animated fadeInRigh rightSpan'><Minus /></span></a>
-                    <a href="/historie"><span className='animated fadeInLeft leftSpan'><Minus /></span> Vår Historie <span className='animated fadeInRight rightSpan'><Minus /></span></a>
-                    <a href="/kontakt"><span className='animated fadeInLeft leftSpan'><Minus /></span> Kontakt Oss <span className='animated fadeInRight rightSpan'><Minus /></span></a>
+                <div className='menuOverlay-content animated fadeIn'>
+                    <a href='/butikker'>
+                        <span className='animated fadeInLeft leftSpan'>
+                            <Minus />
+                        </span>{' '}
+                        Butikker{' '}
+                        <span className='animated fadeInRigh rightSpan'>
+                            <Minus />
+                        </span>
+                    </a>
+                    <a href='/kontakt'>
+                        <span className='animated fadeInLeft leftSpan'>
+                            <Minus />
+                        </span>{' '}
+                        Kontakt Oss{' '}
+                        <span className='animated fadeInRight rightSpan'>
+                            <Minus />
+                        </span>
+                    </a>
                 </div>
                 <div id='socialMedia'>
                     {/* <a href='' target='_blank'><Facebook size={35} color='#ffffff' /></a> */}
-                    <a href='https://www.instagram.com/fjordbuda/' target='_blank'><Instagram size={35} color='#ffffff' /></a>
+                    <a
+                        href='https://www.instagram.com/fjordbuda/'
+                        target='_blank'
+                    >
+                        <Instagram size={35} color='#ffffff' />
+                    </a>
                 </div>
                 <div id='hashtag'>
                     <h5>#fjordfeeling</h5>
                 </div>
             </div>
-        )
+        );
     }
 }
 
@@ -36,24 +56,26 @@ export default class MainMenu extends Component {
 let lastLink;
 function changeMenuBg() {
     this.addEventListener('click', goToPage);
-    const linksArr = Array.from(document.querySelector('.menuOverlay-content').querySelectorAll('a'));
+    const linksArr = Array.from(
+        document.querySelector('.menuOverlay-content').querySelectorAll('a')
+    );
     const index = linksArr.indexOf(this);
     const bg = document.querySelector('#menuBg');
 
     // hide all spans by default
-    const spans = document.querySelector('.menuOverlay-content').querySelectorAll('span');
-    spans.forEach(span => {
+    const spans = document
+        .querySelector('.menuOverlay-content')
+        .querySelectorAll('span');
+    spans.forEach((span) => {
         span.style.display = 'none';
     });
 
     // show current spans
     const currentSpans = this.querySelectorAll('span');
-    currentSpans.forEach(span => {
+    currentSpans.forEach((span) => {
         if (span.classList.contains('rightSpan')) {
             span.className = 'animated fadeInRight rightSpan';
-        }
-
-        else {
+        } else {
             span.className = 'animated fadeInLeft leftSpan';
         }
 
@@ -87,13 +109,11 @@ function animateBg(element) {
                 element.style.transition = 'none';
                 startZoom = true;
             }, 14000);
-        }
-
-        else if (startZoom) {
+        } else if (startZoom) {
             initValue = initValue - 0.00005;
         }
 
-        element.style.transform = `scale(${initValue})`
+        element.style.transform = `scale(${initValue})`;
     }, 50);
 }
 
